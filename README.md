@@ -17,6 +17,7 @@ This revision has been completely redesigned and includes the following features
 - Three Seeed Studio Grove connectors (FDCAN, UART, and I²C), supporting both 3.3 V and 5 V peripherals
 - USB-C connector for power and data
 - Compact 85 × 52.5 mm PCB dimensions
+- Wide 6–30 V input voltage range with reverse polarity protection
 
 The hardware has been designed to be highly configurable. For example, it can be used as a controller for a **Weller WSP80** soldering iron powered from a standard 30 V / 5 A bench power supply.
 
