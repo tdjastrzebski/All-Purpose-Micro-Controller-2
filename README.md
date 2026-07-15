@@ -1,6 +1,8 @@
 # All-Purpose Micro Controller (2nd Revision)
 
-This repository contains the complete documentation for the second major revision of my [All-purpose Micro Controller](https://github.com/tdjastrzebski/All-Purpose-Power-Micro-Controller), originally released in 2022 and **positively reviewed by [Hackaday](https://hackaday.com/2022/01/31/all-purpose-micro-controller/)**. This revision incorporates numerous hardware and firmware improvements gained through extensive software and hardware development carried out over the past few years.
+This repository contains the complete documentation for the second major revision of my [All-purpose Micro Controller](https://github.com/tdjastrzebski/All-Purpose-Power-Micro-Controller), originally released in 2022 and **positively reviewed by [Hackaday](https://hackaday.com/2022/01/31/all-purpose-micro-controller/)**.
+
+This revision incorporates numerous hardware and firmware improvements gained through extensive software and hardware development carried out over the past few years.
 
 This revision has been completely redesigned and includes the following features:
 
