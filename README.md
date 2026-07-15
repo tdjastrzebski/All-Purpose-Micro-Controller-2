@@ -34,3 +34,4 @@ I developed this platform both to evaluate new hardware and software design conc
 > **Note:** This project is still under active development. Documentation, firmware examples, and hardware updates will continue to be added. *(July 2026)*
 
 ![](Images/Schematic.svg)
+![](Images/PCB-preliminary.png)
