@@ -1,0 +1,6 @@
+*.vsdx
+Hardware/APMC-backups
+Hardware/*.lck
+Hardware/**/*.bak
+Hardware/build
+Hardware/SymbolLibs/LMR516xx.bak

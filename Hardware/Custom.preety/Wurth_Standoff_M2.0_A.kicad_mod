@@ -1,0 +1,150 @@
+(footprint "Wurth_Standoff_M2.0_A"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -2.9 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "3fb3a77f-921a-486e-b4d1-e1178b4194d2")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "Wurth_Standoff_M2.0_A"
+		(at 0 2.7 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "4daeccfb-b61e-4e34-bb5a-066f092936b3")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.05)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3fabd794-0d8c-4e7f-9298-885e0684ff1a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5b6cf540-b14a-4e52-9254-10c1675d95b1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_circle
+		(center 0 0)
+		(end 2.5 0)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "Eco1.User")
+		(uuid "a1511624-6383-4b87-a78d-dda6ebd1e664")
+	)
+	(fp_circle
+		(center 0 0)
+		(end -2.5 0)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "3caa7ba6-d9d4-4bca-b216-8fbb80bf2c1b")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 1 0)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "B.Fab")
+		(uuid "9e2df052-5b43-40f3-9c5c-865bec04538c")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 1 0)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "119e1c0f-eab3-4ac6-bd3f-bf74c18f0c65")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 1 0)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "337441f7-5985-4b84-8cac-a7564ab45d0f")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 2.175 0)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "ab7c3c3e-c616-4d93-8b67-0cab5a028784")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 3.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "9df24d50-48d9-45e2-a312-0d1047379aae")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.05)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at 0 0)
+		(size 3.3 3.3)
+		(drill 2.85)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "8e757bfc-2277-47c6-8601-bf88bb673d50")
+	)
+	(pad "1" smd circle
+		(at 0 0)
+		(size 4.75 4.75)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "ae2edc01-be25-4b12-8102-b8eb386cc82d")
+	)
+	(embedded_fonts no)
+)
