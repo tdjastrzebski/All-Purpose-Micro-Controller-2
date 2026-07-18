@@ -13,7 +13,7 @@ This revision has been completely redesigned and includes the following features
 - ST [M95P32](https://www.st.com/en/memories/m95p32-i.html) ultra-low-power 32-Mbit SPI EEPROM
 - [STLINK-V3](https://www.st.com/en/development-tools/stlink-v3mini.html) Mini debugging connector
 - Rotary encoder
-- Popular [1.69" 240 × 280 LCD display](https://pl.aliexpress.com/item/1005009474858509.html)
+- Popular [1.69" 240 × 280 LCD display](https://aliexpress.com/item/1005009474858509.html)
 - Battery-backed real-time clock (RTC)
 - Three Seeed Studio Grove connectors (FDCAN, UART, and I²C), supporting both 3.3 V and 5 V peripherals
 - USB-C connector for power and data
