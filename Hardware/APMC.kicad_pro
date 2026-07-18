@@ -551,6 +551,17 @@
         "via_diameter": 0.5,
         "via_drill": 0.15,
         "wire_width": 6
+      },
+      {
+        "clearance": 0.3,
+        "name": "100V",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.3,
+        "tuning_profile": "",
+        "via_diameter": 0.7,
+        "via_drill": 0.25
       }
     ],
     "meta": {
@@ -558,7 +569,28 @@
     },
     "net_colors": null,
     "netclass_assignments": null,
-    "netclass_patterns": []
+    "netclass_patterns": [
+      {
+        "netclass": "100V",
+        "pattern": "/VIN"
+      },
+      {
+        "netclass": "100V",
+        "pattern": "/OUT?"
+      },
+      {
+        "netclass": "100V",
+        "pattern": "/POW?"
+      },
+      {
+        "netclass": "100V",
+        "pattern": "/VCC"
+      },
+      {
+        "netclass": "100V",
+        "pattern": "/SW"
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {
@@ -576,7 +608,7 @@
       "method": 0,
       "sort_order": 1
     },
-    "bom_export_filename": "${PROJECTNAME}.csv",
+    "bom_export_filename": "APMC-BOM.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
@@ -610,19 +642,19 @@
           "show": true
         },
         {
-          "group_by": true,
+          "group_by": false,
           "label": "DNP",
           "name": "${DNP}",
           "show": true
         },
         {
-          "group_by": true,
+          "group_by": false,
           "label": "Exclude from BOM",
           "name": "${EXCLUDE_FROM_BOM}",
           "show": true
         },
         {
-          "group_by": true,
+          "group_by": false,
           "label": "Exclude from Board",
           "name": "${EXCLUDE_FROM_BOARD}",
           "show": true
@@ -631,19 +663,409 @@
           "group_by": true,
           "label": "Footprint",
           "name": "Footprint",
-          "show": true
+          "show": false
         },
         {
           "group_by": false,
           "label": "Datasheet",
           "name": "Datasheet",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "5x5",
+          "name": "5x5",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "6x6",
+          "name": "6x6",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Alt",
+          "name": "Alt",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Alt 120uF tant.",
+          "name": "Alt 120uF tant.",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Alt 2",
+          "name": "Alt 2",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Alt angle",
+          "name": "Alt angle",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Alt Footprints",
+          "name": "Alt Footprints",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Alt tant.",
+          "name": "Alt tant.",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Alt vertical",
+          "name": "Alt vertical",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Alt1",
+          "name": "Alt1",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Alt2",
+          "name": "Alt2",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Alt3",
+          "name": "Alt3",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Angle55",
+          "name": "Angle55",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "AWG",
+          "name": "AWG",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "B2",
+          "name": "B2",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Bourns",
+          "name": "Bourns",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Composite",
+          "name": "Composite",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "DigiKey",
+          "name": "DigiKey",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "EC",
+          "name": "EC",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Farnell",
+          "name": "Farnell",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Ferrite",
+          "name": "Ferrite",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Ferrite 6x6",
+          "name": "Ferrite 6x6",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Ferrite 8x8",
+          "name": "Ferrite 8x8",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "FerriteCore",
+          "name": "FerriteCore",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "FerriteCore2",
+          "name": "FerriteCore2",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Field10",
+          "name": "Field10",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Field11",
+          "name": "Field11",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Field12",
+          "name": "Field12",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Field7",
+          "name": "Field7",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Field8",
+          "name": "Field8",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Field9",
+          "name": "Field9",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Ipp",
+          "name": "Ipp",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Label",
+          "name": "Label",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Label2",
+          "name": "Label2",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mfg",
+          "name": "Mfg",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Mgf",
+          "name": "Mgf",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mouser",
+          "name": "Mouser",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Murata 8x8",
+          "name": "Murata 8x8",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Note",
+          "name": "Note",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Note2",
+          "name": "Note2",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Notes",
+          "name": "Notes",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Notes3",
+          "name": "Notes3",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Notes4",
+          "name": "Notes4",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Notes5",
+          "name": "Notes5",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Notes:",
+          "name": "Notes:",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Package",
+          "name": "Package",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Pins",
+          "name": "Pins",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "R",
+          "name": "R",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Remarks",
+          "name": "Remarks",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Rermarks",
+          "name": "Rermarks",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Right-angle",
+          "name": "Right-angle",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Series",
+          "name": "Series",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Source",
+          "name": "Source",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "ST reccomended",
+          "name": "ST reccomended",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Text",
+          "name": "Text",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "the best",
+          "name": "the best",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "The smallest: ",
+          "name": "The smallest: ",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "TME",
+          "name": "TME",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Vertical",
+          "name": "Vertical",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Voltage",
+          "name": "Voltage",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Wurth 7.5x7.5",
+          "name": "Wurth 7.5x7.5",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "10x10",
+          "name": "10x10",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Description",
+          "name": "Description",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "AliExpress",
+          "name": "AliExpress",
+          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
       "include_excluded_from_bom": true,
-      "name": "Default Editing",
+      "name": "",
       "sort_asc": true,
       "sort_field": "Reference"
     },
@@ -688,7 +1110,7 @@
         "uuid": "99bd7e18-0da7-4b16-b3c4-e5dbe5a3f1f3"
       }
     ],
-    "used_designators": "M1,M4,U1-13,U201-202,U561,C1-58,C61,C69-71,C201-208,C561-564,C801-802,C806,C901,D1-13,D201,D302,D561-562,L1-2,L801,ENC1-3,J1-18,J22-23,J201-202,R1-50,R201,R205,R217-219,R561-565,RA401,Q1-16,Q501,Q561-562,#PWR1-46,#PWR52-56,#PWR201,#PWR209-216,#PWR401,#PWR561-562,Y1,X1,BT1,CA201,CA401,TP1-3,BTN1-2,H1-5,H10-13,Di1-2,SW1,FB1-2,FB802,S1-3,S5",
+    "used_designators": "M1,M4,U1-13,U201-202,U561,C1-58,C61,C69-71,C201-208,C561-564,C801-802,C806,C901,D1-13,D201,D302,D561-562,L1-2,L801,ENC1-3,J1-18,J22-23,J201-202,R1-50,R201,R205,R217-219,R561-565,RA401,Q1-16,Q501,Q561-562,#PWR1-47,#PWR52-56,#PWR201,#PWR209-216,#PWR401,#PWR561-562,Y1,X1,BT1,CA201,CA401,TP1-3,BTN1-2,H1-5,H10-13,Di1-2,SW1,FB1-2,FB802,S1-3,S5",
     "variants": []
   },
   "sheets": [
