@@ -12489,9 +12489,9 @@
 		)
 		(uuid "39f3de9f-fdf8-4b4e-838d-6fc93b191c3d")
 	)
-	(text "Vin max = 51.52 V since Vref = 2.5V"
+	(text "Vin max = 60.64 V since Vref = 2.5V"
 		(exclude_from_sim no)
-		(at 141.478 124.714 0)
+		(at 135.89 124.714 0)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -14602,7 +14602,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 113.03) (xy 140.97 113.03)
+			(xy 135.89 113.03) (xy 142.24 113.03)
 		)
 		(stroke
 			(width 0)
@@ -30391,7 +30391,7 @@
 		(dnp no)
 		(uuid "558fc2c7-78b4-409b-a138-ad9cd75fb649")
 		(property "Reference" "R19"
-			(at 130.81 115.57 0)
+			(at 130.81 116.078 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -30401,8 +30401,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "5.1k"
-			(at 130.556 117.348 0)
+		(property "Value" "4.3k"
+			(at 130.81 117.856 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -30445,7 +30445,7 @@
 				)
 			)
 		)
-		(property "Mfg" "Susumu: RR0816P-512-D"
+		(property "Mfg" "Susumu: RR0816P-432-D"
 			(at 132.08 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -30456,7 +30456,7 @@
 				)
 			)
 		)
-		(property "Mouser" "754-RR0816P-512D"
+		(property "Mouser" "754-RR0816P-432D"
 			(at 132.08 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -36333,7 +36333,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "22uF/10V"
+		(property "Value" "22uF/6.3V"
 			(at 144.526 43.688 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -38187,7 +38187,7 @@
 		(dnp no)
 		(uuid "8f7f62e6-bd68-4bff-a30d-4bcdf6f42d6e")
 		(property "Reference" "R13"
-			(at 206.502 111.252 90)
+			(at 206.756 111.252 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -38197,8 +38197,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "4.7k"
-			(at 207.518 111.252 90)
+		(property "Value" "4.3k"
+			(at 207.264 111.252 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -38241,7 +38241,7 @@
 				)
 			)
 		)
-		(property "Mfg" "Susumu: RG1608P-472-D-T5"
+		(property "Mfg" "Susumu: RR0816P-432-D"
 			(at 207.01 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -38252,7 +38252,7 @@
 				)
 			)
 		)
-		(property "Mouser" "754-RG1608P-472DT5"
+		(property "Mouser" "754-RR0816P-432D"
 			(at 207.01 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -42827,7 +42827,7 @@
 		(dnp no)
 		(uuid "ae8f43c8-f925-44eb-ac3e-7da329f64198")
 		(property "Reference" "R12"
-			(at 206.502 104.648 90)
+			(at 206.756 104.648 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -42837,8 +42837,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "4.7k"
-			(at 207.518 104.648 90)
+		(property "Value" "4.3k"
+			(at 207.264 104.648 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -42881,7 +42881,7 @@
 				)
 			)
 		)
-		(property "Mfg" "Susumu: RG1608P-472-D-T5"
+		(property "Mfg" "Susumu: RR0816P-432-D"
 			(at 207.01 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -42892,7 +42892,7 @@
 				)
 			)
 		)
-		(property "Mouser" "754-RG1608P-472DT5"
+		(property "Mouser" "754-RR0816P-432D"
 			(at 207.01 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -43812,63 +43812,8 @@
 				)
 			)
 		)
-		(property "Notes" "Vds 80V min, Vgs(th) ~1.5V, Rds(on) ≤ 10Ω"
+		(property "Notes" "Vds(max) ≥ 30V, Vgs(th) ~1.5V, Vgs(max) ≥ ±20V, Rds(on) ≤ 10Ω"
 			(at 95.25 172.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Angle55" ""
-			(at 95.25 172.72 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Vertical" ""
-			(at 95.25 172.72 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "AliExpress" ""
-			(at 95.25 172.72 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Source" ""
-			(at 95.25 172.72 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ST reccomended" ""
-			(at 95.25 172.72 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -46629,6 +46574,9 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.254)
+					(bold yes)
+					(color 132 0 132 1)
 				)
 				(justify left)
 			)
@@ -48831,63 +48779,8 @@
 				)
 			)
 		)
-		(property "Notes" "Vds 80V min, Vgs(th) ~1.5V, Rds(on) ≤ 10Ω"
+		(property "Notes" "Vds(max) ≥ 30V, Vgs(th) ~1.5V, Vgs(max) ≥ ±20V, Rds(on) ≤ 10Ω"
 			(at 88.9 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Angle55" ""
-			(at 88.9 177.8 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Vertical" ""
-			(at 88.9 177.8 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "AliExpress" ""
-			(at 88.9 177.8 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Source" ""
-			(at 88.9 177.8 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ST reccomended" ""
-			(at 88.9 177.8 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -51052,7 +50945,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "22uF/10V"
+		(property "Value" "22uF/6.3V"
 			(at 112.776 43.688 0)
 			(show_name no)
 			(do_not_autoplace no)

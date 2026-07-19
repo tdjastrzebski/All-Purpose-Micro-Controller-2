@@ -1273,64 +1273,12 @@
 				)
 			)
 		)
-		(property "Angle55" ""
+		(property "Note" "consider using LM66100 in SC-70-6 pkg instead"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "6bd8b55e-f6ba-487f-a7ec-0e51ea57e766")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Vertical" ""
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "9539850a-b5ef-41e3-b3f0-e25bdacca25b")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "AliExpress" ""
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "4d409f8a-0648-406d-9990-5e433f7fb038")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Source" ""
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "22cf8b0a-8c2e-4ae3-a685-16ce0f73a2bb")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "ST reccomended" ""
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "6424ece0-ab5b-4af7-a790-90345f92bd87")
+			(uuid "e0b3f5df-6528-4e5a-9dd2-f64b58c25fb9")
 			(effects
 				(font
 					(size 1 1)
@@ -1734,77 +1682,12 @@
 				)
 			)
 		)
-		(property "Notes" "Vds 80V min, Vgs(th) ~1.5V, Rds(on) ≤ 10Ω"
+		(property "Notes" "Vds(max) ≥ 30V, Vgs(th) ~1.5V, Vgs(max) ≥ ±20V, Rds(on) ≤ 10Ω"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "cc35eade-808b-4c9d-8c68-b2bfb2480b1d")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Angle55" ""
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "654128c9-c3c3-4363-836c-4a1341339932")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Vertical" ""
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "3f87b1d6-ae72-4f09-ae93-22565a40d7a5")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "AliExpress" ""
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "5b2ff8a8-551c-4287-b0d8-5a6004f0dbd0")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Source" ""
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "5b3804a8-87a0-4b8c-bb82-9cf47d860ff8")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "ST reccomended" ""
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "b38a9fc8-4db7-4e41-9f2f-57c27051ff43")
 			(effects
 				(font
 					(size 1 1)
@@ -8336,77 +8219,12 @@
 				)
 			)
 		)
-		(property "Notes" "Vds 80V min, Vgs(th) ~1.5V, Rds(on) ≤ 10Ω"
+		(property "Notes" "Vds(max) ≥ 30V, Vgs(th) ~1.5V, Vgs(max) ≥ ±20V, Rds(on) ≤ 10Ω"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "382693f0-52e0-4019-9a07-8260af904038")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Angle55" ""
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "ef11a49c-53f3-4ae6-9575-e46f9713d0c8")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Vertical" ""
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "6257ad85-cc94-45f6-85db-203014d6debe")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "AliExpress" ""
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "d4d27951-663d-42bf-885b-54c87b14fd15")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Source" ""
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "589304bc-aaef-4cf6-933f-f5316cd24be9")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "ST reccomended" ""
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "89a5ee1b-e389-4584-bbfb-f54ceb0ae242")
 			(effects
 				(font
 					(size 1 1)
@@ -30403,7 +30221,7 @@
 				)
 			)
 		)
-		(property "Value" "4.7k"
+		(property "Value" "4.3k"
 			(at 0 1.43 90)
 			(layer "F.Fab")
 			(uuid "f2a1452c-7526-49b3-8a16-bc3ce65afbb3")
@@ -30436,7 +30254,7 @@
 				)
 			)
 		)
-		(property "Mfg" "Susumu: RG1608P-472-D-T5"
+		(property "Mfg" "Susumu: RR0816P-432-D"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -30449,7 +30267,7 @@
 				)
 			)
 		)
-		(property "Mouser" "754-RG1608P-472DT5"
+		(property "Mouser" "754-RR0816P-432D"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -34028,7 +33846,7 @@
 				)
 			)
 		)
-		(property "Value" "4.7k"
+		(property "Value" "4.3k"
 			(at 0 1.43 90)
 			(layer "F.Fab")
 			(uuid "6059169d-5834-4e69-b349-f5bf74735fde")
@@ -34061,7 +33879,7 @@
 				)
 			)
 		)
-		(property "Mfg" "Susumu: RG1608P-472-D-T5"
+		(property "Mfg" "Susumu: RR0816P-432-D"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -34074,7 +33892,7 @@
 				)
 			)
 		)
-		(property "Mouser" "754-RG1608P-472DT5"
+		(property "Mouser" "754-RR0816P-432D"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -34827,7 +34645,7 @@
 				)
 			)
 		)
-		(property "Value" "5.1k"
+		(property "Value" "4.3k"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(uuid "a085f392-a226-412c-9484-df633c3e9abe")
@@ -34860,7 +34678,7 @@
 				)
 			)
 		)
-		(property "Mfg" "Susumu: RR0816P-512-D"
+		(property "Mfg" "Susumu: RR0816P-432-D"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -34873,7 +34691,7 @@
 				)
 			)
 		)
-		(property "Mouser" "754-RR0816P-512D"
+		(property "Mouser" "754-RR0816P-432D"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -40991,7 +40809,7 @@
 				)
 			)
 		)
-		(property "Value" "22uF/10V"
+		(property "Value" "22uF/6.3V"
 			(at 0 1.85 90)
 			(layer "F.Fab")
 			(uuid "69ff21b8-d078-4229-9c28-c77312d6e092")
@@ -42085,7 +41903,7 @@
 				)
 			)
 		)
-		(property "Value" "22uF/10V"
+		(property "Value" "22uF/6.3V"
 			(at 0 1.85 0)
 			(layer "F.Fab")
 			(uuid "41763c82-fd70-40ac-9800-ec9825281933")
