@@ -23300,7 +23300,7 @@
 				)
 			)
 		)
-		(property "Label" "3V 5V"
+		(property "Label" "3.3V 5V"
 			(at 114.046 153.67 0)
 			(hide yes)
 			(show_name no)
@@ -34805,7 +34805,7 @@
 				)
 			)
 		)
-		(property "Label" "3V 5V"
+		(property "Label" "3.3V 5V"
 			(at 124.206 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -50677,7 +50677,7 @@
 				)
 			)
 		)
-		(property "Label" "VDD"
+		(property "Label" "3.3V"
 			(at 155.956 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -51236,7 +51236,7 @@
 				)
 			)
 		)
-		(property "Label" "3V 5V"
+		(property "Label" "3.3V 5V"
 			(at 92.456 193.04 0)
 			(hide yes)
 			(show_name no)

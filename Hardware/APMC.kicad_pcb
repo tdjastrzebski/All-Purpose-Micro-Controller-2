@@ -5744,7 +5744,7 @@
 				)
 			)
 		)
-		(property "Label" "VDD"
+		(property "Label" "3.3V"
 			(at -2.125 0 0)
 			(unlocked yes)
 			(layer "F.SilkS")
@@ -33073,7 +33073,7 @@
 				)
 			)
 		)
-		(property "Label" "3V 5V"
+		(property "Label" "3.3V 5V"
 			(at 0 1.875 0)
 			(unlocked yes)
 			(layer "F.SilkS")
@@ -38795,7 +38795,7 @@
 				)
 			)
 		)
-		(property "Label" "3V 5V"
+		(property "Label" "3.3V 5V"
 			(at 0 1.875 0)
 			(unlocked yes)
 			(layer "F.SilkS")
@@ -47270,7 +47270,7 @@
 				)
 			)
 		)
-		(property "Label" "3V 5V"
+		(property "Label" "3.3V 5V"
 			(at 0 1.875 0)
 			(unlocked yes)
 			(layer "F.SilkS")
