@@ -3396,71 +3396,6 @@
 				)
 			)
 		)
-		(property "Angle55" ""
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "434aee5b-bbaa-41af-ab67-457c2b6c2eaf")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Vertical" ""
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "c61d8a82-3156-473a-a37d-c4c87ab3ad6d")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "AliExpress" ""
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "66b3dc21-e04e-49d6-8e1c-c4ec4f6eda6c")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Source" ""
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "f12cc2d2-c52d-4d3f-96ac-1b055fc7814f")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "ST reccomended" ""
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "86fb51ec-e956-448d-b56d-90fdbe974a9c")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
 		(property ki_fp_filters "Choke_* *Coil* Inductor_* L_*")
 		(path "/6079c87d-ca55-4dec-868e-7afffa2a9fb1")
 		(sheetname "/")
@@ -11013,7 +10948,7 @@
 				)
 			)
 		)
-		(property "Mfg" "Susumu: RG1608P-512-D-T5"
+		(property "Mfg" "Susumu: RR0816P-512-D"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -11026,7 +10961,7 @@
 				)
 			)
 		)
-		(property "Mouser" "754-RG1608P-512DT5"
+		(property "Mouser" "754-RR0816P-512D"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -15720,7 +15655,7 @@
 				)
 			)
 		)
-		(property "Mfg" "Susumu: RG1608P-512-D-T5"
+		(property "Mfg" "Susumu: RR0816P-512-D"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -15733,7 +15668,7 @@
 				)
 			)
 		)
-		(property "Mouser" "754-RG1608P-512DT5"
+		(property "Mouser" "754-RR0816P-512D"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -27761,7 +27696,7 @@
 				)
 			)
 		)
-		(property "Mfg" "MCC: BAT46WSHE3-TP"
+		(property "Mfg" "Diotec: BAT46WS"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -27774,25 +27709,12 @@
 				)
 			)
 		)
-		(property "Mouser" "833-BAT46WSHE3-TP"
+		(property "Mouser" "637-BAT46WS"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "aae03674-16ab-4b6f-af41-ca4c7ac8cdf8")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Notes" "100V, 150mA"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "30c4277a-5afc-4dd4-8b0b-e316640e64e5")
 			(effects
 				(font
 					(size 1 1)
@@ -27806,71 +27728,6 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0e4e58e8-1b37-4d5c-8db5-3db49fed2725")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Angle55" ""
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "653066bb-a43d-4cb3-9fd7-c87f0fb7d62d")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Vertical" ""
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "67f3f82d-fd01-4f09-8ab4-a02ff0110ab2")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "AliExpress" ""
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "d861f0df-f3e5-4bb7-82aa-353280ca2530")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Source" ""
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "e8d969c6-5b51-4e8b-a0fa-f28591fe91dd")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "ST reccomended" ""
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "609082f7-e1d8-4287-9370-8d4b48119118")
 			(effects
 				(font
 					(size 1 1)
@@ -30259,7 +30116,7 @@
 				)
 			)
 		)
-		(property "Mouser" "621-DMP6023LE-13"
+		(property "Mouser" "512-FDT86102LZ"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -30272,7 +30129,7 @@
 				)
 			)
 		)
-		(property "Mfg" "DiodesInc: DMP6023LE-13"
+		(property "Mfg" "OnSemi: FDT86102LZ"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -30285,7 +30142,7 @@
 				)
 			)
 		)
-		(property "Remarks" "any P-CH SOT-223-3 Mosfet with Vgs(th)max<2V, Vds>60V, Id>5A, low Rds(on)"
+		(property "Remarks" "any N-CH SOT-223-3 Mosfet with Vgs(th)max<2V, Vds>70V, Id>5A, low Rds(on)"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -30298,7 +30155,7 @@
 				)
 			)
 		)
-		(property "Alt" "MCC: MCT090P10L-TP"
+		(property "Alt" "TSMC: TSM950N10CW RPG"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -30491,7 +30348,7 @@
 			(size 2 1.5)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
-			(net "/VIN")
+			(net "/VCC")
 			(pinfunction "D_2")
 			(pintype "passive")
 			(uuid "cac81c25-b6fa-4da6-a2a7-7469a8ada609")
@@ -30501,7 +30358,7 @@
 			(size 2 3.8)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
-			(net "/VIN")
+			(net "/VCC")
 			(pinfunction "D_2")
 			(pintype "passive")
 			(uuid "2e7eb899-196a-41dd-b532-ddb2b2713565")
@@ -30511,7 +30368,7 @@
 			(size 2 1.5)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
-			(net "/VCC")
+			(net "/VIN")
 			(pinfunction "S_3")
 			(pintype "passive")
 			(uuid "35020b8d-f1b4-4419-9f58-fcc2243327cd")
@@ -31636,6 +31493,46 @@
 		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_line
+			(start 4.55 5.15)
+			(end 4.55 6.05)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "cb1faf7b-eb60-4e9b-9794-4d7af966d382")
+		)
+		(fp_line
+			(start 4.55 1.1)
+			(end 4.55 2.85)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "7d5d0851-8aec-4d0c-b82e-c3f7e6b2c00a")
+		)
+		(fp_line
+			(start -4.55 5.15)
+			(end -4.55 6.05)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "b9e247f4-a2ab-40ab-86f8-b83da2bd1a87")
+		)
+		(fp_line
+			(start -4.55 1.1)
+			(end -4.55 2.85)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "d2527af8-2b2e-405e-9933-3cb93651224f")
+		)
 		(fp_rect
 			(start -5 -1.3)
 			(end 5 6.1)
@@ -32716,64 +32613,12 @@
 				)
 			)
 		)
-		(property "Angle55" ""
+		(property "Alt2" "M95P32-IXMNT, Package_SO:SO-8_3.9x4.9mm_P1.27mm (better availability)"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "3e5d8b9d-4e4f-42f1-9b50-7aa93acb94c1")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Vertical" ""
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "e95d5f26-c264-4cdb-b69b-7d168948eeb1")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "AliExpress" ""
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "df39baa3-3f5b-41d0-8250-40d33cc61f2c")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Source" ""
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "0959d463-c2a0-42e2-a835-dc67e4bdc833")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "ST reccomended" ""
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "83bd68e0-f26e-4b9e-a14d-6c7721bcbf36")
+			(uuid "93e6d9bf-6598-43f3-9da9-6e1b8e535ec6")
 			(effects
 				(font
 					(size 1 1)
@@ -35015,7 +34860,7 @@
 				)
 			)
 		)
-		(property "Mfg" "Susumu: RG1608P-512-D-T5"
+		(property "Mfg" "Susumu: RR0816P-512-D"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -35028,7 +34873,7 @@
 				)
 			)
 		)
-		(property "Mouser" "754-RG1608P-512DT5"
+		(property "Mouser" "754-RR0816P-512D"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -35047,71 +34892,6 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6a3ad7dd-609d-43ac-8d2c-cdd168ed5a57")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Angle55" ""
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "23737875-cca1-494d-9a45-d061446d7034")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Vertical" ""
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "3721fc62-8815-4acb-935e-c830f8bcebee")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "AliExpress" ""
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "c51fa749-2c68-4137-828f-e5769cbb06c8")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Source" ""
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "24bff0ee-d289-4cd2-afa4-4f9e91a73194")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "ST reccomended" ""
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "df2f084f-9ce6-40d3-a7f3-f96f81c2fc0a")
 			(effects
 				(font
 					(size 1 1)
@@ -37030,6 +36810,96 @@
 		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_line
+			(start 2.45 1.45)
+			(end 2.45 1.7)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "8da7d9b8-0e40-4a16-b801-913b80fb9042")
+		)
+		(fp_line
+			(start 2.45 -0.25)
+			(end 2.45 0.25)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "55c18ca6-96ab-41a2-9b93-5b00a0a336f3")
+		)
+		(fp_line
+			(start 2.45 -1.85)
+			(end 2.45 -1.45)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "42783128-7524-4517-b1b9-73b0af77aaca")
+		)
+		(fp_line
+			(start 1.35 1.85)
+			(end 1.65 1.85)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "94124576-fb7f-4dfa-9215-59103068cbca")
+		)
+		(fp_line
+			(start -2.45 1.85)
+			(end -1.35 1.85)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "65e96d63-6738-4f0d-a16b-539aa3cba5ea")
+		)
+		(fp_line
+			(start -2.45 1.45)
+			(end -2.45 1.85)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "8e7cf7b8-cf76-46eb-af40-35286baccea0")
+		)
+		(fp_line
+			(start -2.45 -0.25)
+			(end -2.45 0.25)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "fe9c42e8-566e-4427-af7e-f0ab81e2bb36")
+		)
+		(fp_line
+			(start -2.45 -1.45)
+			(end -2.45 -1.85)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "87e5525d-f50f-4f59-b225-e034ae4b0e8b")
+		)
+		(fp_line
+			(start -2.45 -1.85)
+			(end 2.45 -1.85)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "40af6de2-423d-49c1-8ec9-96d663b2f438")
+		)
 		(fp_rect
 			(start -3.5 -1.9)
 			(end 3.5 2.6)
@@ -49070,7 +48940,7 @@
 				)
 			)
 		)
-		(property "Mfg" "MCC: BAT46WSHE3-TP"
+		(property "Mfg" "Diotec: BAT46WS"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -49083,7 +48953,7 @@
 				)
 			)
 		)
-		(property "Mouser" "833-BAT46WSHE3-TP"
+		(property "Mouser" "637-BAT46WS"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -49096,90 +48966,12 @@
 				)
 			)
 		)
-		(property "Notes" "100V, 150mA"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "539d08d0-ca96-4393-bfc9-9e7057faf4e2")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Alt" "BAT46WJF, BAT46WSHE3-TP, GSBAT46WS, NSR02100HT1G"
+		(property "Alt" "BAT46WS, BAT46WJF, BAT46WSHE3-TP, GSBAT46WS, NSR02100HT1G"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c244f05e-99a0-4d9d-a565-767e04d5341d")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Angle55" ""
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "600e6e41-6fbd-4725-a31d-2e11d4223382")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Vertical" ""
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "820de426-ff14-43d9-829b-f8a2c8a3090b")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "AliExpress" ""
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "0fa24620-058d-475c-8846-a1ef8f226bec")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Source" ""
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "e73891ed-76b0-4884-a5f8-dd4ea7f21c90")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "ST reccomended" ""
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "b4b058f2-cc6f-4bdd-8ea9-8191644cdc08")
 			(effects
 				(font
 					(size 1 1)
@@ -53614,7 +53406,7 @@
 		(uuid "a6575c05-7e4b-4d52-99cb-4ec5092927f1")
 	)
 	(via
-		(at 77.125 24.875)
+		(at 77.125 24.75)
 		(size 0.7)
 		(drill 0.35)
 		(layers "F.Cu" "B.Cu")
