@@ -1,0 +1,10 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "XTR200") (type "KiCad") (uri "${KIPRJMOD}/SymbolLibs/XTR200.kicad_sym") (options "") (descr ""))
+	(lib (name "Headers_Jumpers") (type "KiCad") (uri "${KIPRJMOD}/SymbolLibs/Headers_Jumpers.kicad_sym") (options "") (descr ""))
+	(lib (name "LMR516xx") (type "KiCad") (uri "${KIPRJMOD}/SymbolLibs/LMR516xx.kicad_sym") (options "") (descr ""))
+	(lib (name "TPS6216x") (type "KiCad") (uri "${KIPRJMOD}/SymbolLibs/TPS6216x.kicad_sym") (options "") (descr ""))
+	(lib (name "RC_Arrays") (type "KiCad") (uri "${KIPRJMOD}/SymbolLibs/RC_Arrays.kicad_sym") (options "") (descr ""))
+	(lib (name "PCA9306") (type "KiCad") (uri "${KIPRJMOD}/SymbolLibs/PCA9306.kicad_sym") (options "") (descr ""))
+	(lib (name "M95P32") (type "KiCad") (uri "${KIPRJMOD}/SymbolLibs/M95P32.kicad_sym") (options "") (descr ""))
+)
