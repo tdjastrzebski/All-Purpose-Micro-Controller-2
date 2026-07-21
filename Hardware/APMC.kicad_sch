@@ -22427,7 +22427,7 @@
 				)
 			)
 		)
-		(property "Mfg" "Yageo: RT0603BRD07681KL"
+		(property "Mfg" "Panasonic: ERA-6AEB6813V"
 			(at 49.53 143.51 0)
 			(hide yes)
 			(show_name no)
@@ -22438,7 +22438,7 @@
 				)
 			)
 		)
-		(property "Mouser" "603-RT0603BRD07681KL"
+		(property "Mouser" "667-ERA-6AEB6813V"
 			(at 49.53 143.51 0)
 			(hide yes)
 			(show_name no)
@@ -40835,7 +40835,7 @@
 				)
 			)
 		)
-		(property "Mfg" "Vishay: MCT0603MD1504BP500"
+		(property "Mfg" "Susumu: RG2012P-155-B-T5"
 			(at 49.53 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -40846,7 +40846,7 @@
 				)
 			)
 		)
-		(property "Mouser" "594-MCT0603MD1504BP5"
+		(property "Mouser" "754-RG2012P-155B-T5"
 			(at 49.53 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -41866,61 +41866,6 @@
 		)
 		(property "Remarks" "0.1%, 25 ppm/°C"
 			(at 39.37 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Angle55" ""
-			(at 39.37 143.51 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Vertical" ""
-			(at 39.37 143.51 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "AliExpress" ""
-			(at 39.37 143.51 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Source" ""
-			(at 39.37 143.51 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ST reccomended" ""
-			(at 39.37 143.51 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -44527,61 +44472,6 @@
 		)
 		(property "Remarks" "0.1%, 25 ppm/°C"
 			(at 39.37 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Angle55" ""
-			(at 39.37 161.29 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Vertical" ""
-			(at 39.37 161.29 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "AliExpress" ""
-			(at 39.37 161.29 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Source" ""
-			(at 39.37 161.29 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ST reccomended" ""
-			(at 39.37 161.29 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -48587,61 +48477,6 @@
 				)
 			)
 		)
-		(property "Angle55" ""
-			(at 39.37 177.8 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Vertical" ""
-			(at 39.37 177.8 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "AliExpress" ""
-			(at 39.37 177.8 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Source" ""
-			(at 39.37 177.8 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ST reccomended" ""
-			(at 39.37 177.8 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "dc02dda9-fc8e-4f22-8bf9-ef6544036ef5")
 		)
@@ -49291,7 +49126,7 @@
 				)
 			)
 		)
-		(property "Mfg" "Panasonic: ERA-3AEB304V"
+		(property "Mfg" "Susumu: RG2012P-304-B-T5"
 			(at 49.53 127 0)
 			(hide yes)
 			(show_name no)
@@ -49302,7 +49137,7 @@
 				)
 			)
 		)
-		(property "Mouser" "667-ERA-3AEB304V"
+		(property "Mouser" "754-RG2012P-304-BT5"
 			(at 49.53 127 0)
 			(hide yes)
 			(show_name no)
@@ -52879,17 +52714,6 @@
 		)
 		(property "Remarks" "0.1%, 25 ppm/°C"
 			(at 49.53 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ST reccomended" ""
-			(at 49.53 177.8 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
