@@ -1,0 +1,6 @@
+Drivers/**
+Middlewares/**
+**/build/**
+**/cmake/**
+**/Debug/**
+**/Release/**

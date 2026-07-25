@@ -1,0 +1,26 @@
+BasedOnStyle: Google
+Language: Cpp
+
+IndentWidth: 4
+TabWidth: 4
+UseTab: ForIndentation
+IndentCaseLabels: false
+ColumnLimit: 0
+
+DerivePointerAlignment: false
+PointerAlignment: Left
+
+BreakBeforeBraces: Attach
+AllowShortFunctionsOnASingleLine: All
+AllowShortIfStatementsOnASingleLine: AllIfsAndElse
+
+SpaceBeforeParens: ControlStatements
+
+SortIncludes: false
+IncludeBlocks: Preserve
+
+CommentPragmas: '^ *USER CODE BEGIN|^ *USER CODE END'
+MaxEmptyLinesToKeep: 2
+KeepEmptyLinesAtTheStartOfBlocks: false
+
+IndentPPDirectives: AfterHash

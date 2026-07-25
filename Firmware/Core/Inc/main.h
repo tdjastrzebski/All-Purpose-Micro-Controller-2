@@ -59,16 +59,25 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define LvglTickTimer htim6
+#define LvglTaskTimer htim7
+#define RtcTimer hrtc
+#define LcdPwmTimer htim16
+#define EncoderTimer htim4
+#define LcdSpi hspi1
+#define BoardSpi hspi3
 #define EF1_Pin GPIO_PIN_13
 #define EF1_GPIO_Port GPIOC
+#define EF1_EXTI_IRQn EXTI13_IRQn
 #define OCS32_A_Pin GPIO_PIN_14
 #define OCS32_A_GPIO_Port GPIOC
 #define OSC32_B_Pin GPIO_PIN_15
 #define OSC32_B_GPIO_Port GPIOC
-#define OSC_IN_Pin GPIO_PIN_0
-#define OSC_IN_GPIO_Port GPIOH
+#define OSC16_Pin GPIO_PIN_0
+#define OSC16_GPIO_Port GPIOH
 #define EF2_Pin GPIO_PIN_1
 #define EF2_GPIO_Port GPIOH
+#define EF2_EXTI_IRQn EXTI1_IRQn
 #define PWM1_Pin GPIO_PIN_0
 #define PWM1_GPIO_Port GPIOA
 #define LCD_SCK_Pin GPIO_PIN_1
@@ -95,8 +104,10 @@ void Error_Handler(void);
 #define STLINK_TX_GPIO_Port GPIOB
 #define BTN1_Pin GPIO_PIN_12
 #define BTN1_GPIO_Port GPIOB
+#define BTN1_EXTI_IRQn EXTI12_IRQn
 #define BTN2_Pin GPIO_PIN_15
 #define BTN2_GPIO_Port GPIOB
+#define BTN2_EXTI_IRQn EXTI15_IRQn
 #define PWM0_Pin GPIO_PIN_8
 #define PWM0_GPIO_Port GPIOA
 #define UART_TX_Pin GPIO_PIN_9
