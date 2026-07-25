@@ -66,6 +66,8 @@ void Error_Handler(void);
 #define EncoderTimer htim4
 #define LcdSpi hspi1
 #define BoardSpi hspi3
+#define Out1PwmTimer htim2
+#define Out2PwmTimer htim5
 #define EF1_Pin GPIO_PIN_13
 #define EF1_GPIO_Port GPIOC
 #define EF1_EXTI_IRQn EXTI13_IRQn

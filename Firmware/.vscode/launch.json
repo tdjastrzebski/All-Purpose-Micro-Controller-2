@@ -5,19 +5,9 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Debug with ST-Link",
-            "cwd": "${workspaceFolder}",
-            "executable": "BUILD/debug/${workspaceRootFolderName}.elf",
-            "request": "launch",
-            "type": "cortex-debug",
-            "runToEntryPoint": "main",
-            "showDevDebugOutput": "none",
-            "servertype": "stlink"
-        },
-        {
             "type": "stlinkgdbtarget",
             "request": "launch",
-            "name": "STM32Cube: Launch ST-Link GDB Server",
+            "name": "STM32Cube: STM32 Launch ST-Link GDB Server",
             "origin": "snippet",
             "cwd": "${workspaceFolder}",
             "preBuild": "${command:st-stm32-ide-debug-launch.build}",
@@ -36,9 +26,9 @@
             "showDevDebugOutput": "vscode",
             "cwd": "${workspaceRoot}",
             "executable": "BUILD/debug/${workspaceRootFolderName}.elf",
-            "svdFile": "STM32U5Gx.svd",
+            "svdFile": "STM32U575.svd",
             "runToEntryPoint": "main",
-            "device": "STM32U5G9ZJTxQ",
+            "device": "STM32U575CITX",
             "searchDir": ["${env:OpenOCD}/scripts"],
             "serverArgs": [
                 "-c adapter serial 003D002F3133511035333335"
@@ -67,16 +57,14 @@
             "showDevDebugOutput": "both",
             "cwd": "${workspaceRoot}",
             "executable": "BUILD/debug/${workspaceRootFolderName}.elf",
-            "device": "H",
-            "targetId": "STM32U5G9ZJTxQ",
-            "svdFile": "STM32U5Gx.svd",
+            "device": "STM32U575CITX",
+            "targetId": "STM32U575CITX",
+            "svdFile": "STM32U575.svd",
             "runToEntryPoint": "main",
             "interface": "swd",
             "serverArgs": [
-                "--uid",
-                "003D002F3133511035333335",
-                "--pack",
-                "./../Keil.STM32U5xx_DFP.3.0.0.pack"
+                "--uid", "003D002F3133511035333335",
+                "--pack", "Keil.STM32U5xx_DFP.3.0.0.pack"
             ]
         }
     ]

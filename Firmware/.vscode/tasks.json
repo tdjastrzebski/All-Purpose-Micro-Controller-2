@@ -103,7 +103,7 @@
                 "--base-address",
                 "0x08000000",
                 "--target",
-                "STM32U5G9ZJTxQ",
+                "STM32U575CITX",
                 "--connect",
                 "halt",
                 "--frequency",
@@ -111,7 +111,7 @@
                 "--uid",
                 "003D002F3133511035333335",
                 "--pack",
-                "./../Keil.STM32U5xx_DFP.3.0.0.pack"
+                "Keil.STM32U5xx_DFP.3.0.0.pack"
             ],
             "options": {
                 "cwd": "${workspaceRoot}"
@@ -135,7 +135,7 @@
                 "--base-address",
                 "0x08000000",
                 "--target",
-                "STM32U5G9ZJTxQ",
+                "STM32U575CITX",
                 "--connect",
                 "halt",
                 "--frequency",
@@ -143,7 +143,7 @@
                 "--uid",
                 "003D002F3133511035333335",
                 "--pack",
-                "./../Keil.STM32U5xx_DFP.3.0.0.pack"
+                "Keil.STM32U5xx_DFP.3.0.0.pack"
             ],
             "options": {
                 "cwd": "${workspaceRoot}"

@@ -20,8 +20,10 @@ extern TIM_HandleTypeDef LcdPwmTimer;
 extern SPI_HandleTypeDef LcdSpi;
 extern SPI_HandleTypeDef BoardSpi;
 extern RTC_HandleTypeDef RtcTimer;
+extern TIM_HandleTypeDef htim1;
 
 static timer_ctx _lcdPwmTimer = {.tim = &LcdPwmTimer, .channel = timer_ch1};
+static timer_ctx _ledPwmTimer = {.tim = &htim1, .channel = timer_ch1};
 static spi_channel_dev_ctx _lcd_spi = {.channel = &LcdSpi, .cs_port = LCD_CS_GPIO_Port, .cs_pin = LCD_CS_Pin};
 static spi_channel_dev_ctx _board_spi = {.channel = &BoardSpi, .cs_port = SPI_CS1_GPIO_Port, .cs_pin = SPI_CS1_Pin};
 
@@ -37,8 +39,8 @@ void Init(void) {
 }
 
 void PostInit(void) {
-	// rtc_SetDate(26, 07, 25, 6);
-	// rtc_SetTime(19, 41, 00);
+	// rtc_SetDate(26, 07, 26, 6);
+	// rtc_SetTime(1, 42, 30);
 
 	HAL_Delay(100);  // wait a bit more
 	time_t dateTime = rtc_GetDateTime();
@@ -55,6 +57,7 @@ void PostInit(void) {
 
 	timer_init(16000000.0);
 	timer_start_pwm(&_lcdPwmTimer, 100.0, 0.5);
+	timer_start_pwm(&_ledPwmTimer, 100.0, 0.1);
 
 	st7789_Init(&_lcd_spi);
 
@@ -98,6 +101,7 @@ void MainLoop(void) {
 	shift++;
 	shift %= 32;
 	HAL_Delay(200);
+
 }
 
 static void _rtcAlarmAEventCallback(RTC_HandleTypeDef* hrtc) {
