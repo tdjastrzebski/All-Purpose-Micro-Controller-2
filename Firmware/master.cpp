@@ -41,7 +41,7 @@ void Init(void) {
 
 void PostInit(void) {
 	// rtc_SetDate(26, 07, 26, 6);
-	// rtc_SetTime(12, 46, 00);
+	// rtc_SetTime(14, 06, 30);
 
 	HAL_Delay(100);  // wait a bit more
 	time_t dateTime = rtc_GetDateTime();
@@ -70,9 +70,9 @@ void PostInit(void) {
 	if (status != HAL_OK) isOk = false;
 	if (data[0] != 0x20 || data[1] != 0 || data[2] != 0x16) isOk = false;
 	if (isOk) {
-		printf(GREEN("ext eeprom memory test passed") "\n");
+		my_printf(GREEN("ext eeprom memory test passed") "\n");
 	} else {
-		printf(RED("ext eeprom memory test failed") "\n");
+		my_printf(RED("ext eeprom memory test failed") "\n");
 	}
 
 	// Draw a single green pixel at (120, 140)
@@ -107,6 +107,7 @@ void MainLoop(void) {
 static void _rtcAlarmAEventCallback(RTC_HandleTypeDef* hrtc) {
 	time_t dateTime = rtc_GetDateTime();
 	tm* dt = gmtime(&dateTime);
+	my_printf(BLUE("RTC alarm %.2i:%.2i:%.2i *") "\n", dt->tm_hour, dt->tm_min, dt->tm_sec);
 	lvgl_showTime(dt);
 }
 
