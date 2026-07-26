@@ -99,7 +99,7 @@ void MainLoop(void) {
 	static uint32_t pattern = 0xF0F0CCC0;
 	static uint32_t shift = 0;
 	static uint32_t count = 0;
-	
+
 	if (count == 0) {
 		HAL_GPIO_WritePin(STATUS_LED_GPIO_Port, STATUS_LED_Pin, (pattern >> shift) & 0x1 ? GPIO_PIN_SET : GPIO_PIN_RESET);
 		shift++;
@@ -108,15 +108,15 @@ void MainLoop(void) {
 	count++;
 	count %= 20;
 
-    const float MinBrightness = 0.05f;
-    const float MaxBrightness = 0.80f;
-    const float Period = 2.5f;     // seconds
-    float t = HAL_GetTick() * 0.001f;
-    float phase = 2.0f * 3.1415926f * t / Period;
-    float x = (expf(sinf(phase)) - expf(-1.0f)) / (expf(1.0f) - expf(-1.0f));
+	const float MinBrightness = 0.05f;
+	const float MaxBrightness = 0.80f;
+	const float Period = 2.5f;  // seconds
+	float t = HAL_GetTick() * 0.001f;
+	float phase = 2.0f * 3.1415926f * t / Period;
+	float x = (expf(sinf(phase)) - expf(-1.0f)) / (expf(1.0f) - expf(-1.0f));
 	float dutyCycle = MinBrightness + (MaxBrightness - MinBrightness) * x;
 	timer_start_pwm(&_ledPwmTimer, 100.0, dutyCycle);
-	
+
 	HAL_Delay(10);
 }
 
