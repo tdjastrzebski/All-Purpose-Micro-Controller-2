@@ -5,7 +5,7 @@
 
 #define DC_LOW() HAL_GPIO_WritePin(LCD_DC_GPIO_Port, LCD_DC_Pin, GPIO_PIN_RESET)
 #define DC_HIGH() HAL_GPIO_WritePin(LCD_DC_GPIO_Port, LCD_DC_Pin, GPIO_PIN_SET)
-#define Y_OFFSET 20  // st7789V3 internally has 240x320 buffer, 240x280 LCD uses buffer from 20th line
+#define X_OFFSET 20  // st7789V3 internally has 240x320 buffer, 240x280 LCD uses buffer from 20th line
 
 // references: https://files.waveshare.com/wiki/common/ST7789VW.pdf
 
@@ -60,7 +60,7 @@ void st7789_Init(spi_channel_dev_ctx* dev_ctx) {
 
 	// 9.1.28 MADCTL (36h): Memory Data Access Control
 	st7789_WriteCommand(dev_ctx, 0x36);
-	st7789_WriteData(dev_ctx, 0x00);
+	st7789_WriteData(dev_ctx, 0xA0); // orientation horizontal
 
 	// INVON - invert color bits
 	st7789_WriteCommand(dev_ctx, 0x21);
@@ -72,8 +72,8 @@ void st7789_Init(spi_channel_dev_ctx* dev_ctx) {
 
 void st7789_SetWindow(spi_channel_dev_ctx* dev_ctx, uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1) {
 	uint8_t data[4];
-	y0 += Y_OFFSET;
-	y1 += Y_OFFSET;
+	x0 += X_OFFSET;
+	x1 += X_OFFSET;
 
 	st7789_WriteCommand(dev_ctx, 0x2A);  // Column addr (CASET)
 	data[0] = x0 >> 8;

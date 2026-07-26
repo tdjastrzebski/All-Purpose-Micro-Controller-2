@@ -4,8 +4,8 @@ extern "C" {
 
 #include <time.h>
 
-#define SCREEN_WIDTH 240
-#define SCREEN_HEIGHT 280
+#define SCREEN_WIDTH 280
+#define SCREEN_HEIGHT 240
 
 void lvgl_init(void);
 void lvgl_showNumber(int8_t number);

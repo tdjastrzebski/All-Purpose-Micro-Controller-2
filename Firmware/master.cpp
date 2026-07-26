@@ -41,7 +41,7 @@ void Init(void) {
 
 void PostInit(void) {
 	// rtc_SetDate(26, 07, 26, 6);
-	// rtc_SetTime(1, 42, 30);
+	// rtc_SetTime(12, 46, 00);
 
 	HAL_Delay(100);  // wait a bit more
 	time_t dateTime = rtc_GetDateTime();
