@@ -39,4 +39,4 @@ I developed this platform both to evaluate new hardware and software design conc
 ![](Images/PCB-preliminary.png)
 ![](Images/2026-07-26.jpg)
 ![](Images/2026-07-26B.jpg)
-![](Images/APMC-2.0.mp4)
+![](Images/APMC-2.0.gif)
