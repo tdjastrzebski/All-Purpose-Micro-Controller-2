@@ -107,7 +107,6 @@ void MainLoop(void) {
 static void _rtcAlarmAEventCallback(RTC_HandleTypeDef* hrtc) {
 	time_t dateTime = rtc_GetDateTime();
 	tm* dt = gmtime(&dateTime);
-	my_printf(BLUE("RTC alarm %.2i:%.2i:%.2i *") "\n", dt->tm_hour, dt->tm_min, dt->tm_sec);
 	lvgl_showTime(dt);
 }
 
