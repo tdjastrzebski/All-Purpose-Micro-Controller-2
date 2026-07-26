@@ -92,6 +92,32 @@ void PostInit(void) {
 	RtcTimer.AlarmAEventCallback = _rtcAlarmAEventCallback;
 
 	lvgl_init();
+
+	GPIO_TypeDef* gpio = (GPIO_TypeDef*)GPIOB_BASE;
+	uint32_t moder = gpio->MODER;
+	uint32_t otyper = gpio->OTYPER;
+	uint32_t ospeedr = gpio->OSPEEDR;
+	uint32_t pupdr = gpio->PUPDR;
+	uint32_t idr = gpio->IDR;
+	uint32_t odr = gpio->ODR;
+	uint32_t afrl = gpio->AFR[0];
+	uint32_t afrh = gpio->AFR[1];
+
+	uint32_t pin = 15;
+	uint32_t mode = (GPIOB->MODER >> (pin * 2)) & 0x3;
+	uint32_t type = (GPIOB->OTYPER >> pin) & 0x1;
+	uint32_t speed = (GPIOB->OSPEEDR >> (pin * 2)) & 0x3;
+	uint32_t pupd = (GPIOB->PUPDR >> (pin * 2)) & 0x3;
+	uint32_t level = (GPIOB->IDR >> pin) & 0x1;
+	uint32_t output = (GPIOB->ODR >> pin) & 0x1;
+
+	uint32_t af;
+	if (pin < 8)
+		af = (GPIOB->AFR[0] >> (pin * 4)) & 0xF;
+	else
+		af = (GPIOB->AFR[1] >> ((pin - 8) * 4)) & 0xF;
+
+	printf("pin %i, mode %i, type %i, speed %i, pupd %i, level %i, output %i, af %i\n", pin, mode, type, speed, pupd, level, output, af);
 }
 
 void MainLoop(void) {
@@ -101,7 +127,6 @@ void MainLoop(void) {
 	shift++;
 	shift %= 32;
 	HAL_Delay(200);
-
 }
 
 static void _rtcAlarmAEventCallback(RTC_HandleTypeDef* hrtc) {

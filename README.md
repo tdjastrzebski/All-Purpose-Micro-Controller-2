@@ -37,3 +37,4 @@ I developed this platform both to evaluate new hardware and software design conc
 
 ![](Images/Schematic.svg)
 ![](Images/PCB-preliminary.png)
+![](Images/2026-07-26.jpg)
