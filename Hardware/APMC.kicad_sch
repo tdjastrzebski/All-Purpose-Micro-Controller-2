@@ -6,7 +6,7 @@
 	(paper "A")
 	(title_block
 		(title "All-purpose Micro Controller (APMC)")
-		(date "2026-07-21")
+		(date "2026-07-26")
 		(rev "2.0.1")
 		(company "Copyright © 2026 Tomasz Jastrzębski")
 		(comment 1 "License: CC BY-NC-ND 4.0")
@@ -515,6 +515,798 @@
 						)
 					)
 					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Connector:Conn_01x08_Pin"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x08_Pin"
+				(at 0 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x08, script generated"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_01x08_Pin_1_1"
+				(rectangle
+					(start 0.8636 7.747)
+					(end 0 7.493)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 5.207)
+					(end 0 4.953)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 -4.953)
+					(end 0 -5.207)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 -7.493)
+					(end 0 -7.747)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 -10.033)
+					(end 0 -10.287)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 7.62) (xy 0.8636 7.62)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 5.08) (xy 0.8636 5.08)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 2.54) (xy 0.8636 2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy 0.8636 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -2.54) (xy 0.8636 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -5.08) (xy 0.8636 -5.08)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -7.62) (xy 0.8636 -7.62)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -10.16) (xy 0.8636 -10.16)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 5.08 7.62 180)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 5.08 180)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 2.54 180)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 3.81)
+					(name "Pin_5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -5.08 180)
+					(length 3.81)
+					(name "Pin_6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -7.62 180)
+					(length 3.81)
+					(name "Pin_7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -10.16 180)
+					(length 3.81)
+					(name "Pin_8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Connector:Screw_Terminal_01x05"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Screw_Terminal_01x05"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Generic screw terminal, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "screw terminal"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "TerminalBlock*:*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Screw_Terminal_01x05_1_1"
+				(rectangle
+					(start -1.27 6.35)
+					(end 1.27 -6.35)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.5334 5.4102) (xy 0.3302 4.572)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.5334 2.8702) (xy 0.3302 2.032)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.5334 0.3302) (xy 0.3302 -0.508)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.5334 -2.2098) (xy 0.3302 -3.048)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.5334 -4.7498) (xy 0.3302 -5.588)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.3556 5.588) (xy 0.508 4.7498)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.3556 3.048) (xy 0.508 2.2098)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.3556 0.508) (xy 0.508 -0.3302)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.3556 -2.032) (xy 0.508 -2.8702)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.3556 -4.572) (xy 0.508 -5.4102)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 5.08)
+					(radius 0.635)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 2.54)
+					(radius 0.635)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 0)
+					(radius 0.635)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 -2.54)
+					(radius 0.635)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 -5.08)
+					(radius 0.635)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 5.08 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -5.08 0)
+					(length 3.81)
+					(name "Pin_5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1641,7 +2433,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector_Generic:Conn_01x05"
+		(symbol "Connector_Generic:Conn_01x08"
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -1652,7 +2444,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "J"
-				(at 0 7.62 0)
+				(at 0 10.16 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -1661,8 +2453,8 @@
 					)
 				)
 			)
-			(property "Value" "Conn_01x05"
-				(at 0 -7.62 0)
+			(property "Value" "Conn_01x08"
+				(at 0 -12.7 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -1693,7 +2485,7 @@
 					)
 				)
 			)
-			(property "Description" "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(property "Description" "Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1726,16 +2518,27 @@
 					)
 				)
 			)
-			(symbol "Conn_01x05_1_1"
+			(symbol "Conn_01x08_1_1"
 				(rectangle
-					(start -1.27 6.35)
-					(end 1.27 -6.35)
+					(start -1.27 8.89)
+					(end 1.27 -11.43)
 					(stroke
 						(width 0.254)
 						(type default)
 					)
 					(fill
 						(type background)
+					)
+				)
+				(rectangle
+					(start -1.27 7.747)
+					(end 0 7.493)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
 					)
 				)
 				(rectangle
@@ -1793,8 +2596,30 @@
 						(type none)
 					)
 				)
+				(rectangle
+					(start -1.27 -7.493)
+					(end 0 -7.747)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -10.033)
+					(end 0 -10.287)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(pin passive line
-					(at -5.08 5.08 0)
+					(at -5.08 7.62 0)
 					(length 3.81)
 					(name "Pin_1"
 						(effects
@@ -1812,7 +2637,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 2.54 0)
+					(at -5.08 5.08 0)
 					(length 3.81)
 					(name "Pin_2"
 						(effects
@@ -1830,7 +2655,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 0 0)
+					(at -5.08 2.54 0)
 					(length 3.81)
 					(name "Pin_3"
 						(effects
@@ -1848,7 +2673,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -2.54 0)
+					(at -5.08 0 0)
 					(length 3.81)
 					(name "Pin_4"
 						(effects
@@ -1866,7 +2691,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -5.08 0)
+					(at -5.08 -2.54 0)
 					(length 3.81)
 					(name "Pin_5"
 						(effects
@@ -1876,6 +2701,60 @@
 						)
 					)
 					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -5.08 0)
+					(length 3.81)
+					(name "Pin_6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -7.62 0)
+					(length 3.81)
+					(name "Pin_7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -10.16 0)
+					(length 3.81)
+					(name "Pin_8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2382,570 +3261,6 @@
 						)
 					)
 					(number "14"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Connector_Generic:Conn_02x08_Odd_Even"
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "J"
-				(at 1.27 10.16 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Conn_02x08_Odd_Even"
-				(at 1.27 -12.7 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Generic connector, double row, 02x08, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "connector"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "Connector*:*_2x??_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Conn_02x08_Odd_Even_1_1"
-				(rectangle
-					(start -1.27 8.89)
-					(end 3.81 -11.43)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(rectangle
-					(start -1.27 7.747)
-					(end 0 7.493)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 5.207)
-					(end 0 4.953)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 2.667)
-					(end 0 2.413)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 0.127)
-					(end 0 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -2.413)
-					(end 0 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -4.953)
-					(end 0 -5.207)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -7.493)
-					(end 0 -7.747)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -10.033)
-					(end 0 -10.287)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 3.81 7.747)
-					(end 2.54 7.493)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 3.81 5.207)
-					(end 2.54 4.953)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 3.81 2.667)
-					(end 2.54 2.413)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 3.81 0.127)
-					(end 2.54 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 3.81 -2.413)
-					(end 2.54 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 3.81 -4.953)
-					(end 2.54 -5.207)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 3.81 -7.493)
-					(end 2.54 -7.747)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 3.81 -10.033)
-					(end 2.54 -10.287)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 7.62 0)
-					(length 3.81)
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 7.62 180)
-					(length 3.81)
-					(name "Pin_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 5.08 0)
-					(length 3.81)
-					(name "Pin_3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 5.08 180)
-					(length 3.81)
-					(name "Pin_4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 2.54 0)
-					(length 3.81)
-					(name "Pin_5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 2.54 180)
-					(length 3.81)
-					(name "Pin_6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "Pin_7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 0 180)
-					(length 3.81)
-					(name "Pin_8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 3.81)
-					(name "Pin_9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 -2.54 180)
-					(length 3.81)
-					(name "Pin_10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -5.08 0)
-					(length 3.81)
-					(name "Pin_11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 -5.08 180)
-					(length 3.81)
-					(name "Pin_12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -7.62 0)
-					(length 3.81)
-					(name "Pin_13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 -7.62 180)
-					(length 3.81)
-					(name "Pin_14"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "14"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -10.16 0)
-					(length 3.81)
-					(name "Pin_15"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "15"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 -10.16 180)
-					(length 3.81)
-					(name "Pin_16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "16"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -13451,10 +13766,6 @@
 		(uuid "fac25c3b-448b-4425-bca2-c02dc9206d0e")
 	)
 	(no_connect
-		(at 172.72 127)
-		(uuid "00e62e05-f07b-42da-84d8-42446e5874b5")
-	)
-	(no_connect
 		(at 115.57 40.64)
 		(uuid "3821ada1-6b8a-4cf4-b090-5b6550473e7b")
 	)
@@ -13475,24 +13786,8 @@
 		(uuid "53052d12-6eb1-4015-9701-ee5e351bccc0")
 	)
 	(no_connect
-		(at 172.72 129.54)
-		(uuid "580b75db-a051-490f-87d3-e3d3dce96710")
-	)
-	(no_connect
-		(at 172.72 134.62)
-		(uuid "799b55fd-6418-4ab9-895a-9e8f05a5344a")
-	)
-	(no_connect
 		(at 189.23 48.26)
 		(uuid "8512e2d8-0293-4117-9f80-83b5649bd91e")
-	)
-	(no_connect
-		(at 172.72 116.84)
-		(uuid "95e9d729-4e07-49b0-856a-dca4bc858446")
-	)
-	(no_connect
-		(at 172.72 132.08)
-		(uuid "a2d5a207-d734-4872-ab1e-6bf89f2143fa")
 	)
 	(no_connect
 		(at 248.92 19.05)
@@ -13509,18 +13804,6 @@
 	(no_connect
 		(at 248.92 29.21)
 		(uuid "c18084c1-b593-4dc1-953d-ed1668c0404a")
-	)
-	(no_connect
-		(at 172.72 121.92)
-		(uuid "c512c8cd-bf8a-410b-aa49-a487819ef195")
-	)
-	(no_connect
-		(at 172.72 124.46)
-		(uuid "ed3c30c3-bb3e-43c1-9cf2-95d0cf8fb85a")
-	)
-	(no_connect
-		(at 172.72 119.38)
-		(uuid "fd09aebc-6dfe-4107-8153-d63172fb473d")
 	)
 	(wire
 		(pts
@@ -22132,7 +22415,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_01x05")
+		(lib_id "Connector:Screw_Terminal_01x05")
 		(at 64.77 83.82 180)
 		(unit 1)
 		(body_style 1)
@@ -22185,7 +22468,7 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "Generic screw terminal, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"
 			(at 64.77 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -23273,7 +23556,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 180.34 104.14 90)
+		(at 180.34 102.87 90)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -23284,7 +23567,7 @@
 		(dnp no)
 		(uuid "0e816340-e68d-4ed3-a666-3a6c3576a7e6")
 		(property "Reference" "H11"
-			(at 179.07 101.346 90)
+			(at 179.07 100.076 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23294,7 +23577,7 @@
 			)
 		)
 		(property "Value" "Standoff_M2x4.0"
-			(at 176.53 105.283 90)
+			(at 176.53 104.013 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23306,7 +23589,7 @@
 			)
 		)
 		(property "Footprint" "Custom:Wurth_Standoff_M2.0_A"
-			(at 180.34 104.14 0)
+			(at 180.34 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23317,7 +23600,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 180.34 104.14 0)
+			(at 180.34 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23328,7 +23611,7 @@
 			)
 		)
 		(property "Description" "M2 L=4.0, D=4.35, d=2.8"
-			(at 180.34 104.14 0)
+			(at 180.34 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23339,7 +23622,7 @@
 			)
 		)
 		(property "Mfg" "Wurth: 9774040243R"
-			(at 180.34 104.14 90)
+			(at 180.34 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23350,7 +23633,7 @@
 			)
 		)
 		(property "Mouser" "710-9774040243R"
-			(at 180.34 104.14 90)
+			(at 180.34 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23361,7 +23644,7 @@
 			)
 		)
 		(property "Remarks" "D ≤ 4.35, L = 4.0 mm"
-			(at 180.34 104.14 90)
+			(at 180.34 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23372,7 +23655,7 @@
 			)
 		)
 		(property "Angle55" ""
-			(at 180.34 104.14 90)
+			(at 180.34 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23383,7 +23666,7 @@
 			)
 		)
 		(property "Vertical" ""
-			(at 180.34 104.14 90)
+			(at 180.34 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23394,7 +23677,7 @@
 			)
 		)
 		(property "AliExpress" ""
-			(at 180.34 104.14 90)
+			(at 180.34 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23405,7 +23688,7 @@
 			)
 		)
 		(property "Source" ""
-			(at 180.34 104.14 90)
+			(at 180.34 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23416,7 +23699,7 @@
 			)
 		)
 		(property "ST reccomended" ""
-			(at 180.34 104.14 90)
+			(at 180.34 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23427,7 +23710,7 @@
 			)
 		)
 		(property "5x5" ""
-			(at 180.34 104.14 90)
+			(at 180.34 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23438,7 +23721,7 @@
 			)
 		)
 		(property "AWG" ""
-			(at 180.34 104.14 90)
+			(at 180.34 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23449,7 +23732,7 @@
 			)
 		)
 		(property "Alt 120uF tant." ""
-			(at 180.34 104.14 90)
+			(at 180.34 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23460,7 +23743,7 @@
 			)
 		)
 		(property "Alt 2" ""
-			(at 180.34 104.14 90)
+			(at 180.34 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23471,7 +23754,7 @@
 			)
 		)
 		(property "Alt Footprints" ""
-			(at 180.34 104.14 90)
+			(at 180.34 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23482,7 +23765,7 @@
 			)
 		)
 		(property "Alt tant." ""
-			(at 180.34 104.14 90)
+			(at 180.34 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23493,7 +23776,7 @@
 			)
 		)
 		(property "Alt3" ""
-			(at 180.34 104.14 90)
+			(at 180.34 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23504,7 +23787,7 @@
 			)
 		)
 		(property "B2" ""
-			(at 180.34 104.14 90)
+			(at 180.34 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23515,7 +23798,7 @@
 			)
 		)
 		(property "Ferrite 6x6" ""
-			(at 180.34 104.14 90)
+			(at 180.34 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23526,7 +23809,7 @@
 			)
 		)
 		(property "Field7" ""
-			(at 180.34 104.14 90)
+			(at 180.34 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23537,7 +23820,7 @@
 			)
 		)
 		(property "Ipp" ""
-			(at 180.34 104.14 90)
+			(at 180.34 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23548,7 +23831,7 @@
 			)
 		)
 		(property "Label2" ""
-			(at 180.34 104.14 90)
+			(at 180.34 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23559,7 +23842,7 @@
 			)
 		)
 		(property "Mgf" ""
-			(at 180.34 104.14 90)
+			(at 180.34 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23570,7 +23853,7 @@
 			)
 		)
 		(property "Note2" ""
-			(at 180.34 104.14 90)
+			(at 180.34 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23581,7 +23864,7 @@
 			)
 		)
 		(property "Notes3" ""
-			(at 180.34 104.14 90)
+			(at 180.34 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23592,7 +23875,7 @@
 			)
 		)
 		(property "Notes4" ""
-			(at 180.34 104.14 90)
+			(at 180.34 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23603,7 +23886,7 @@
 			)
 		)
 		(property "Notes5" ""
-			(at 180.34 104.14 90)
+			(at 180.34 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23614,7 +23897,7 @@
 			)
 		)
 		(property "Notes:" ""
-			(at 180.34 104.14 90)
+			(at 180.34 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23625,7 +23908,7 @@
 			)
 		)
 		(property "TME" ""
-			(at 180.34 104.14 90)
+			(at 180.34 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23636,7 +23919,7 @@
 			)
 		)
 		(property "The smallest: " ""
-			(at 180.34 104.14 90)
+			(at 180.34 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23647,7 +23930,7 @@
 			)
 		)
 		(property "Voltage" ""
-			(at 180.34 104.14 90)
+			(at 180.34 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23658,7 +23941,7 @@
 			)
 		)
 		(property "Wurth 7.5x7.5" ""
-			(at 180.34 104.14 90)
+			(at 180.34 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23669,7 +23952,7 @@
 			)
 		)
 		(property "the best" ""
-			(at 180.34 104.14 90)
+			(at 180.34 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -31178,7 +31461,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 173.99 110.49 90)
+		(at 173.99 109.22 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -31188,7 +31471,7 @@
 		(dnp no)
 		(uuid "2af90c6c-9675-4143-9198-c9441d305d3c")
 		(property "Reference" "#PWR043"
-			(at 180.34 110.49 0)
+			(at 180.34 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -31199,7 +31482,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 172.72 113.03 0)
+			(at 172.72 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -31210,7 +31493,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 173.99 110.49 0)
+			(at 173.99 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -31221,7 +31504,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 173.99 110.49 0)
+			(at 173.99 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -31232,7 +31515,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 173.99 110.49 0)
+			(at 173.99 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34233,7 +34516,7 @@
 	)
 	(symbol
 		(lib_id "Headers_Jumpers:Header_01x08")
-		(at 168.91 124.46 0)
+		(at 165.1 124.46 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -34244,7 +34527,7 @@
 		(dnp no)
 		(uuid "3cd3508a-dc8a-45de-a54d-67e90c08ba1f")
 		(property "Reference" "Di1"
-			(at 168.91 114.3 0)
+			(at 165.1 114.3 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -34254,7 +34537,7 @@
 			)
 		)
 		(property "Value" "LCD 240x280 1.69\""
-			(at 166.37 124.46 90)
+			(at 162.56 124.46 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -34264,7 +34547,7 @@
 			)
 		)
 		(property "Footprint" "Custom:Display_240x280_1.69_Generic"
-			(at 168.91 124.46 0)
+			(at 165.1 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34275,7 +34558,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 168.91 124.46 0)
+			(at 165.1 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34286,7 +34569,7 @@
 			)
 		)
 		(property "Description" "240x280 1.69\" LCD display"
-			(at 168.91 124.46 0)
+			(at 165.1 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34297,7 +34580,7 @@
 			)
 		)
 		(property "Mfg" "?"
-			(at 168.91 124.46 0)
+			(at 165.1 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34308,7 +34591,7 @@
 			)
 		)
 		(property "Source" "e.g. https://aliexpress.com/item/1005009710952964.html, https://www.ebay.com/itm/326812723168"
-			(at 168.91 124.46 0)
+			(at 165.1 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34319,7 +34602,7 @@
 			)
 		)
 		(property "ST reccomended" ""
-			(at 168.91 124.46 0)
+			(at 165.1 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34330,7 +34613,7 @@
 			)
 		)
 		(property "5x5" ""
-			(at 168.91 124.46 0)
+			(at 165.1 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34341,7 +34624,7 @@
 			)
 		)
 		(property "AWG" ""
-			(at 168.91 124.46 0)
+			(at 165.1 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34352,7 +34635,7 @@
 			)
 		)
 		(property "Alt 120uF tant." ""
-			(at 168.91 124.46 0)
+			(at 165.1 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34363,7 +34646,7 @@
 			)
 		)
 		(property "Alt 2" ""
-			(at 168.91 124.46 0)
+			(at 165.1 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34374,7 +34657,7 @@
 			)
 		)
 		(property "Alt Footprints" ""
-			(at 168.91 124.46 0)
+			(at 165.1 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34385,7 +34668,7 @@
 			)
 		)
 		(property "Alt tant." ""
-			(at 168.91 124.46 0)
+			(at 165.1 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34396,7 +34679,7 @@
 			)
 		)
 		(property "Alt3" ""
-			(at 168.91 124.46 0)
+			(at 165.1 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34407,7 +34690,7 @@
 			)
 		)
 		(property "B2" ""
-			(at 168.91 124.46 0)
+			(at 165.1 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34418,7 +34701,7 @@
 			)
 		)
 		(property "Ferrite 6x6" ""
-			(at 168.91 124.46 0)
+			(at 165.1 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34429,7 +34712,7 @@
 			)
 		)
 		(property "Field7" ""
-			(at 168.91 124.46 0)
+			(at 165.1 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34440,7 +34723,7 @@
 			)
 		)
 		(property "Ipp" ""
-			(at 168.91 124.46 0)
+			(at 165.1 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34451,7 +34734,7 @@
 			)
 		)
 		(property "Label2" ""
-			(at 168.91 124.46 0)
+			(at 165.1 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34462,7 +34745,7 @@
 			)
 		)
 		(property "Mgf" ""
-			(at 168.91 124.46 0)
+			(at 165.1 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34473,7 +34756,7 @@
 			)
 		)
 		(property "Note2" ""
-			(at 168.91 124.46 0)
+			(at 165.1 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34484,7 +34767,7 @@
 			)
 		)
 		(property "Notes3" ""
-			(at 168.91 124.46 0)
+			(at 165.1 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34495,7 +34778,7 @@
 			)
 		)
 		(property "Notes4" ""
-			(at 168.91 124.46 0)
+			(at 165.1 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34506,7 +34789,7 @@
 			)
 		)
 		(property "Notes5" ""
-			(at 168.91 124.46 0)
+			(at 165.1 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34517,7 +34800,7 @@
 			)
 		)
 		(property "Notes:" ""
-			(at 168.91 124.46 0)
+			(at 165.1 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34528,7 +34811,7 @@
 			)
 		)
 		(property "TME" ""
-			(at 168.91 124.46 0)
+			(at 165.1 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34539,7 +34822,7 @@
 			)
 		)
 		(property "The smallest: " ""
-			(at 168.91 124.46 0)
+			(at 165.1 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34550,7 +34833,7 @@
 			)
 		)
 		(property "Voltage" ""
-			(at 168.91 124.46 0)
+			(at 165.1 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34561,7 +34844,7 @@
 			)
 		)
 		(property "Wurth 7.5x7.5" ""
-			(at 168.91 124.46 0)
+			(at 165.1 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34572,7 +34855,7 @@
 			)
 		)
 		(property "the best" ""
-			(at 168.91 124.46 0)
+			(at 165.1 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -40314,8 +40597,9 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_02x08_Odd_Even")
-		(at 177.8 124.46 0)
+		(lib_id "Connector_Generic:Conn_01x08")
+		(at 180.34 124.46 0)
+		(mirror y)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -40325,7 +40609,7 @@
 		(dnp no)
 		(uuid "4df6d650-cc83-41f4-923b-becb2c31b01c")
 		(property "Reference" "J12"
-			(at 177.8 137.16 0)
+			(at 180.34 114.3 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -40334,7 +40618,7 @@
 				)
 			)
 		)
-		(property "Value" "Conn_02x08"
+		(property "Value" "Conn_01x08"
 			(at 179.07 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -40345,8 +40629,8 @@
 				)
 			)
 		)
-		(property "Footprint" "Custom:Harwin_M20-7810845_2x08_P2.54mm_Vertical"
-			(at 177.8 124.46 0)
+		(property "Footprint" "Custom:PinHeader_1x08_P2.54mm_Vertical"
+			(at 180.34 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -40357,7 +40641,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 177.8 124.46 0)
+			(at 180.34 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -40367,8 +40651,8 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, double row, 02x08, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 177.8 124.46 0)
+		(property "Description" ""
+			(at 180.34 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -40378,8 +40662,8 @@
 				)
 			)
 		)
-		(property "Mfg" "Harwin: M20-7810845"
-			(at 177.8 124.46 0)
+		(property "Mfg" "3M: 929870-01-08-30"
+			(at 180.34 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -40389,8 +40673,8 @@
 				)
 			)
 		)
-		(property "Alt" "Harwin: M20-7810845, M20-7810845R (2x8, 3.55mm), GCT: BG125-08-A-1-1-0440-N-D (5mm), Greenconn: CSHC106-0802A004C1AC (5mm)"
-			(at 177.8 124.46 0)
+		(property "Alt" "3M: 929870-01-08-RA, 929984-01-08-RK (H: 3.8mm), Samtec: SL-108-xx, SX-108-xx"
+			(at 180.34 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -40400,8 +40684,8 @@
 				)
 			)
 		)
-		(property "Mouser" "855-M20-7810845"
-			(at 177.8 124.46 0)
+		(property "Mouser" "517-929870-01-08-30"
+			(at 180.34 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -40412,271 +40696,7 @@
 			)
 		)
 		(property "Alt2" "expensive spring-loaded connector Mill-Max: 821-22-008-10-002101"
-			(at 177.8 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ST reccomended" ""
-			(at 177.8 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "5x5" ""
-			(at 177.8 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "AWG" ""
-			(at 177.8 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt 120uF tant." ""
-			(at 177.8 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt 2" ""
-			(at 177.8 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt Footprints" ""
-			(at 177.8 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt tant." ""
-			(at 177.8 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt3" ""
-			(at 177.8 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "B2" ""
-			(at 177.8 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Ferrite 6x6" ""
-			(at 177.8 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Field7" ""
-			(at 177.8 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Ipp" ""
-			(at 177.8 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Label2" ""
-			(at 177.8 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mgf" ""
-			(at 177.8 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Note2" ""
-			(at 177.8 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes3" ""
-			(at 177.8 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes4" ""
-			(at 177.8 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes5" ""
-			(at 177.8 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes:" ""
-			(at 177.8 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "TME" ""
-			(at 177.8 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "The smallest: " ""
-			(at 177.8 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 177.8 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Wurth 7.5x7.5" ""
-			(at 177.8 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "the best" ""
-			(at 177.8 124.46 0)
+			(at 180.34 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -40709,30 +40729,6 @@
 		)
 		(pin "1"
 			(uuid "b732ac59-9adf-48de-9a92-346a33bcbafa")
-		)
-		(pin "12"
-			(uuid "c8c48138-d638-40e5-be2f-1e2a0cad763e")
-		)
-		(pin "11"
-			(uuid "0cb4921f-4843-4315-99a6-c3e21ff1bfae")
-		)
-		(pin "13"
-			(uuid "255c7c5e-bf78-42d2-a1b6-6942c65585dc")
-		)
-		(pin "15"
-			(uuid "36d68cd5-c0a1-4fde-a60f-1a1cb4a8e29a")
-		)
-		(pin "16"
-			(uuid "adf3d968-4948-4e83-9710-83b38649c652")
-		)
-		(pin "10"
-			(uuid "8608016b-8df4-49ea-858b-0805d99a060c")
-		)
-		(pin "9"
-			(uuid "c5b3cd9b-2cf0-4e5a-86f8-ffdccae5e207")
-		)
-		(pin "14"
-			(uuid "05f1d7a5-b1b0-4c75-9826-76704c69f155")
 		)
 		(instances
 			(project "APMC"
@@ -43738,7 +43734,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 173.99 104.14 90)
+		(at 173.99 102.87 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -43748,7 +43744,7 @@
 		(dnp no)
 		(uuid "57c907d0-3487-4013-b714-5612139f7b6b")
 		(property "Reference" "#PWR035"
-			(at 180.34 104.14 0)
+			(at 180.34 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -43759,7 +43755,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 172.72 106.68 0)
+			(at 172.72 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -43770,7 +43766,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 173.99 104.14 0)
+			(at 173.99 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -43781,7 +43777,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 173.99 104.14 0)
+			(at 173.99 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -43792,7 +43788,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 173.99 104.14 0)
+			(at 173.99 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -43816,7 +43812,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 171.45 104.14 90)
+		(at 171.45 102.87 90)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -43827,7 +43823,7 @@
 		(dnp no)
 		(uuid "57e84c0a-e8cf-442f-b265-e5350fd9931b")
 		(property "Reference" "H12"
-			(at 170.18 101.346 90)
+			(at 170.18 100.076 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -43837,7 +43833,7 @@
 			)
 		)
 		(property "Value" "Standoff_M2x4.0"
-			(at 167.64 105.283 90)
+			(at 167.64 104.013 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -43849,7 +43845,7 @@
 			)
 		)
 		(property "Footprint" "Custom:Wurth_Standoff_M2.0_A"
-			(at 171.45 104.14 0)
+			(at 171.45 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -43860,7 +43856,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 171.45 104.14 0)
+			(at 171.45 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -43871,7 +43867,7 @@
 			)
 		)
 		(property "Description" "M2 L=4.0, D=4.35, d=2.8"
-			(at 171.45 104.14 0)
+			(at 171.45 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -43882,7 +43878,7 @@
 			)
 		)
 		(property "Mfg" "Wurth: 9774040243R"
-			(at 171.45 104.14 90)
+			(at 171.45 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -43893,7 +43889,7 @@
 			)
 		)
 		(property "Mouser" "710-9774040243R"
-			(at 171.45 104.14 90)
+			(at 171.45 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -43904,7 +43900,7 @@
 			)
 		)
 		(property "Remarks" "D ≤ 4.35, L = 4.0 mm"
-			(at 171.45 104.14 90)
+			(at 171.45 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -43915,7 +43911,7 @@
 			)
 		)
 		(property "Angle55" ""
-			(at 171.45 104.14 90)
+			(at 171.45 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -43926,7 +43922,7 @@
 			)
 		)
 		(property "Vertical" ""
-			(at 171.45 104.14 90)
+			(at 171.45 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -43937,7 +43933,7 @@
 			)
 		)
 		(property "AliExpress" ""
-			(at 171.45 104.14 90)
+			(at 171.45 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -43948,7 +43944,7 @@
 			)
 		)
 		(property "Source" ""
-			(at 171.45 104.14 90)
+			(at 171.45 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -43959,7 +43955,7 @@
 			)
 		)
 		(property "ST reccomended" ""
-			(at 171.45 104.14 90)
+			(at 171.45 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -43970,7 +43966,7 @@
 			)
 		)
 		(property "5x5" ""
-			(at 171.45 104.14 90)
+			(at 171.45 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -43981,7 +43977,7 @@
 			)
 		)
 		(property "AWG" ""
-			(at 171.45 104.14 90)
+			(at 171.45 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -43992,7 +43988,7 @@
 			)
 		)
 		(property "Alt 120uF tant." ""
-			(at 171.45 104.14 90)
+			(at 171.45 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -44003,7 +43999,7 @@
 			)
 		)
 		(property "Alt 2" ""
-			(at 171.45 104.14 90)
+			(at 171.45 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -44014,7 +44010,7 @@
 			)
 		)
 		(property "Alt Footprints" ""
-			(at 171.45 104.14 90)
+			(at 171.45 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -44025,7 +44021,7 @@
 			)
 		)
 		(property "Alt tant." ""
-			(at 171.45 104.14 90)
+			(at 171.45 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -44036,7 +44032,7 @@
 			)
 		)
 		(property "Alt3" ""
-			(at 171.45 104.14 90)
+			(at 171.45 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -44047,7 +44043,7 @@
 			)
 		)
 		(property "B2" ""
-			(at 171.45 104.14 90)
+			(at 171.45 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -44058,7 +44054,7 @@
 			)
 		)
 		(property "Ferrite 6x6" ""
-			(at 171.45 104.14 90)
+			(at 171.45 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -44069,7 +44065,7 @@
 			)
 		)
 		(property "Field7" ""
-			(at 171.45 104.14 90)
+			(at 171.45 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -44080,7 +44076,7 @@
 			)
 		)
 		(property "Ipp" ""
-			(at 171.45 104.14 90)
+			(at 171.45 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -44091,7 +44087,7 @@
 			)
 		)
 		(property "Label2" ""
-			(at 171.45 104.14 90)
+			(at 171.45 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -44102,7 +44098,7 @@
 			)
 		)
 		(property "Mgf" ""
-			(at 171.45 104.14 90)
+			(at 171.45 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -44113,7 +44109,7 @@
 			)
 		)
 		(property "Note2" ""
-			(at 171.45 104.14 90)
+			(at 171.45 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -44124,7 +44120,7 @@
 			)
 		)
 		(property "Notes3" ""
-			(at 171.45 104.14 90)
+			(at 171.45 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -44135,7 +44131,7 @@
 			)
 		)
 		(property "Notes4" ""
-			(at 171.45 104.14 90)
+			(at 171.45 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -44146,7 +44142,7 @@
 			)
 		)
 		(property "Notes5" ""
-			(at 171.45 104.14 90)
+			(at 171.45 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -44157,7 +44153,7 @@
 			)
 		)
 		(property "Notes:" ""
-			(at 171.45 104.14 90)
+			(at 171.45 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -44168,7 +44164,7 @@
 			)
 		)
 		(property "TME" ""
-			(at 171.45 104.14 90)
+			(at 171.45 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -44179,7 +44175,7 @@
 			)
 		)
 		(property "The smallest: " ""
-			(at 171.45 104.14 90)
+			(at 171.45 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -44190,7 +44186,7 @@
 			)
 		)
 		(property "Voltage" ""
-			(at 171.45 104.14 90)
+			(at 171.45 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -44201,7 +44197,7 @@
 			)
 		)
 		(property "Wurth 7.5x7.5" ""
-			(at 171.45 104.14 90)
+			(at 171.45 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -44212,7 +44208,7 @@
 			)
 		)
 		(property "the best" ""
-			(at 171.45 104.14 90)
+			(at 171.45 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -50151,7 +50147,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 182.88 110.49 90)
+		(at 182.88 109.22 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -50161,7 +50157,7 @@
 		(dnp no)
 		(uuid "70909ff4-7833-433d-bf90-a0d2fadc70df")
 		(property "Reference" "#PWR042"
-			(at 189.23 110.49 0)
+			(at 189.23 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -50172,7 +50168,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 181.61 113.03 0)
+			(at 181.61 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -50183,7 +50179,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 182.88 110.49 0)
+			(at 182.88 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -50194,7 +50190,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 182.88 110.49 0)
+			(at 182.88 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -50205,7 +50201,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 182.88 110.49 0)
+			(at 182.88 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -54021,7 +54017,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_01x05")
+		(lib_id "Connector:Screw_Terminal_01x05")
 		(at 19.05 152.4 180)
 		(unit 1)
 		(body_style 1)
@@ -54074,7 +54070,7 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "Generic screw terminal, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"
 			(at 19.05 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -69497,7 +69493,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 171.45 110.49 90)
+		(at 171.45 109.22 90)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -69508,7 +69504,7 @@
 		(dnp no)
 		(uuid "b1ebfea0-26f5-4bec-821f-bd993606083a")
 		(property "Reference" "H13"
-			(at 170.18 107.696 90)
+			(at 170.18 106.426 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -69518,7 +69514,7 @@
 			)
 		)
 		(property "Value" "Standoff_M2x4.0"
-			(at 167.64 111.633 90)
+			(at 167.64 110.363 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69530,7 +69526,7 @@
 			)
 		)
 		(property "Footprint" "Custom:Wurth_Standoff_M2.0_A"
-			(at 171.45 110.49 0)
+			(at 171.45 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69541,7 +69537,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 171.45 110.49 0)
+			(at 171.45 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69552,7 +69548,7 @@
 			)
 		)
 		(property "Description" "M2 L=4.0, D=4.35, d=2.8"
-			(at 171.45 110.49 0)
+			(at 171.45 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69563,7 +69559,7 @@
 			)
 		)
 		(property "Mfg" "Wurth: 9774040243R"
-			(at 171.45 110.49 90)
+			(at 171.45 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69574,7 +69570,7 @@
 			)
 		)
 		(property "Mouser" "710-9774040243R"
-			(at 171.45 110.49 90)
+			(at 171.45 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69585,7 +69581,7 @@
 			)
 		)
 		(property "Remarks" "D ≤ 4.35, L = 4.0 mm"
-			(at 171.45 110.49 90)
+			(at 171.45 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69596,7 +69592,7 @@
 			)
 		)
 		(property "Angle55" ""
-			(at 171.45 110.49 90)
+			(at 171.45 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69607,7 +69603,7 @@
 			)
 		)
 		(property "Vertical" ""
-			(at 171.45 110.49 90)
+			(at 171.45 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69618,7 +69614,7 @@
 			)
 		)
 		(property "AliExpress" ""
-			(at 171.45 110.49 90)
+			(at 171.45 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69629,7 +69625,7 @@
 			)
 		)
 		(property "Source" ""
-			(at 171.45 110.49 90)
+			(at 171.45 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69640,7 +69636,7 @@
 			)
 		)
 		(property "ST reccomended" ""
-			(at 171.45 110.49 90)
+			(at 171.45 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69651,7 +69647,7 @@
 			)
 		)
 		(property "5x5" ""
-			(at 171.45 110.49 90)
+			(at 171.45 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69662,7 +69658,7 @@
 			)
 		)
 		(property "AWG" ""
-			(at 171.45 110.49 90)
+			(at 171.45 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69673,7 +69669,7 @@
 			)
 		)
 		(property "Alt 120uF tant." ""
-			(at 171.45 110.49 90)
+			(at 171.45 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69684,7 +69680,7 @@
 			)
 		)
 		(property "Alt 2" ""
-			(at 171.45 110.49 90)
+			(at 171.45 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69695,7 +69691,7 @@
 			)
 		)
 		(property "Alt Footprints" ""
-			(at 171.45 110.49 90)
+			(at 171.45 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69706,7 +69702,7 @@
 			)
 		)
 		(property "Alt tant." ""
-			(at 171.45 110.49 90)
+			(at 171.45 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69717,7 +69713,7 @@
 			)
 		)
 		(property "Alt3" ""
-			(at 171.45 110.49 90)
+			(at 171.45 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69728,7 +69724,7 @@
 			)
 		)
 		(property "B2" ""
-			(at 171.45 110.49 90)
+			(at 171.45 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69739,7 +69735,7 @@
 			)
 		)
 		(property "Ferrite 6x6" ""
-			(at 171.45 110.49 90)
+			(at 171.45 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69750,7 +69746,7 @@
 			)
 		)
 		(property "Field7" ""
-			(at 171.45 110.49 90)
+			(at 171.45 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69761,7 +69757,7 @@
 			)
 		)
 		(property "Ipp" ""
-			(at 171.45 110.49 90)
+			(at 171.45 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69772,7 +69768,7 @@
 			)
 		)
 		(property "Label2" ""
-			(at 171.45 110.49 90)
+			(at 171.45 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69783,7 +69779,7 @@
 			)
 		)
 		(property "Mgf" ""
-			(at 171.45 110.49 90)
+			(at 171.45 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69794,7 +69790,7 @@
 			)
 		)
 		(property "Note2" ""
-			(at 171.45 110.49 90)
+			(at 171.45 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69805,7 +69801,7 @@
 			)
 		)
 		(property "Notes3" ""
-			(at 171.45 110.49 90)
+			(at 171.45 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69816,7 +69812,7 @@
 			)
 		)
 		(property "Notes4" ""
-			(at 171.45 110.49 90)
+			(at 171.45 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69827,7 +69823,7 @@
 			)
 		)
 		(property "Notes5" ""
-			(at 171.45 110.49 90)
+			(at 171.45 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69838,7 +69834,7 @@
 			)
 		)
 		(property "Notes:" ""
-			(at 171.45 110.49 90)
+			(at 171.45 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69849,7 +69845,7 @@
 			)
 		)
 		(property "TME" ""
-			(at 171.45 110.49 90)
+			(at 171.45 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69860,7 +69856,7 @@
 			)
 		)
 		(property "The smallest: " ""
-			(at 171.45 110.49 90)
+			(at 171.45 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69871,7 +69867,7 @@
 			)
 		)
 		(property "Voltage" ""
-			(at 171.45 110.49 90)
+			(at 171.45 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69882,7 +69878,7 @@
 			)
 		)
 		(property "Wurth 7.5x7.5" ""
-			(at 171.45 110.49 90)
+			(at 171.45 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69893,7 +69889,7 @@
 			)
 		)
 		(property "the best" ""
-			(at 171.45 110.49 90)
+			(at 171.45 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -76030,7 +76026,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_01x05")
+		(lib_id "Connector:Screw_Terminal_01x05")
 		(at 17.78 80.01 180)
 		(unit 1)
 		(body_style 1)
@@ -76083,7 +76079,7 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "Generic screw terminal, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"
 			(at 17.78 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -77175,6 +77171,147 @@
 			(project "APMC"
 				(path "/99bd7e18-0da7-4b16-b3c4-e5dbe5a3f1f3"
 					(reference "C8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x08_Pin")
+		(at 170.18 124.46 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp yes)
+		(uuid "cdfb6ab4-fa18-4a11-938f-1cc17ee0eef1")
+		(property "Reference" "J15"
+			(at 172.72 114.3 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Pins 1x08"
+			(at 172.72 136.652 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 170.18 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 170.18 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x08, script generated"
+			(at 170.18 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mfg" "Samtec: BBL-108-T-F"
+			(at 170.18 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser" "200-BBL108TF"
+			(at 170.18 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Alt" "Samtec: BBL-108-xx, DigiKey: ED5932-08-ND, DigiKey: 335-40-108-00-160000"
+			(at 170.18 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Remarks" "Pins to be used with Samtec SL-108-xx and SX-108-xx round pin sockets"
+			(at 170.18 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "6"
+			(uuid "13d66c4c-49e4-439f-83f0-6c966541a675")
+		)
+		(pin "2"
+			(uuid "eda7fffc-a5cf-4131-888d-f4ff421ea9c5")
+		)
+		(pin "3"
+			(uuid "dd34f0a4-b928-4b56-8f29-5b0e3565af36")
+		)
+		(pin "8"
+			(uuid "3f9c7b8c-3ae8-43dc-912f-5542f64c6aff")
+		)
+		(pin "5"
+			(uuid "ae1b2f89-194b-4e78-aa34-e364fb725c67")
+		)
+		(pin "4"
+			(uuid "3f593f9b-73f9-457e-bdbc-8db301862999")
+		)
+		(pin "7"
+			(uuid "98e3cf3a-e2df-421c-8d1a-a6d2511c751d")
+		)
+		(pin "1"
+			(uuid "78180abc-97e8-4734-9df0-1279fefdae19")
+		)
+		(instances
+			(project "APMC"
+				(path "/99bd7e18-0da7-4b16-b3c4-e5dbe5a3f1f3"
+					(reference "J15")
 					(unit 1)
 				)
 			)
@@ -84595,7 +84732,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 182.88 104.14 90)
+		(at 182.88 102.87 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -84605,7 +84742,7 @@
 		(dnp no)
 		(uuid "e53d4acc-533e-493a-843e-db1491612164")
 		(property "Reference" "#PWR037"
-			(at 189.23 104.14 0)
+			(at 189.23 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -84616,7 +84753,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 181.61 106.68 0)
+			(at 181.61 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -84627,7 +84764,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 182.88 104.14 0)
+			(at 182.88 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -84638,7 +84775,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 182.88 104.14 0)
+			(at 182.88 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -84649,7 +84786,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 182.88 104.14 0)
+			(at 182.88 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -88110,7 +88247,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 180.34 110.49 90)
+		(at 180.34 109.22 90)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -88121,7 +88258,7 @@
 		(dnp no)
 		(uuid "f2eeaf56-b281-442c-a589-7f9b391f5b1a")
 		(property "Reference" "H10"
-			(at 179.07 107.696 90)
+			(at 179.07 106.426 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -88131,7 +88268,7 @@
 			)
 		)
 		(property "Value" "Standoff_M2x4.0"
-			(at 176.53 111.633 90)
+			(at 176.53 110.363 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -88143,7 +88280,7 @@
 			)
 		)
 		(property "Footprint" "Custom:Wurth_Standoff_M2.0_A"
-			(at 180.34 110.49 0)
+			(at 180.34 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -88154,7 +88291,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 180.34 110.49 0)
+			(at 180.34 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -88165,7 +88302,7 @@
 			)
 		)
 		(property "Description" "M2 L=4.0, D=4.35, d=2.8"
-			(at 180.34 110.49 0)
+			(at 180.34 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -88176,7 +88313,7 @@
 			)
 		)
 		(property "Mfg" "Wurth: 9774040243R"
-			(at 180.34 110.49 90)
+			(at 180.34 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -88187,7 +88324,7 @@
 			)
 		)
 		(property "Mouser" "710-9774040243R"
-			(at 180.34 110.49 90)
+			(at 180.34 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -88198,7 +88335,7 @@
 			)
 		)
 		(property "Remarks" "D ≤ 4.35, L = 4.0 mm"
-			(at 180.34 110.49 90)
+			(at 180.34 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -88209,7 +88346,7 @@
 			)
 		)
 		(property "Angle55" ""
-			(at 180.34 110.49 90)
+			(at 180.34 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -88220,7 +88357,7 @@
 			)
 		)
 		(property "Vertical" ""
-			(at 180.34 110.49 90)
+			(at 180.34 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -88231,7 +88368,7 @@
 			)
 		)
 		(property "AliExpress" ""
-			(at 180.34 110.49 90)
+			(at 180.34 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -88242,7 +88379,7 @@
 			)
 		)
 		(property "Source" ""
-			(at 180.34 110.49 90)
+			(at 180.34 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -88253,7 +88390,7 @@
 			)
 		)
 		(property "ST reccomended" ""
-			(at 180.34 110.49 90)
+			(at 180.34 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -88264,7 +88401,7 @@
 			)
 		)
 		(property "5x5" ""
-			(at 180.34 110.49 90)
+			(at 180.34 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -88275,7 +88412,7 @@
 			)
 		)
 		(property "AWG" ""
-			(at 180.34 110.49 90)
+			(at 180.34 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -88286,7 +88423,7 @@
 			)
 		)
 		(property "Alt 120uF tant." ""
-			(at 180.34 110.49 90)
+			(at 180.34 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -88297,7 +88434,7 @@
 			)
 		)
 		(property "Alt 2" ""
-			(at 180.34 110.49 90)
+			(at 180.34 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -88308,7 +88445,7 @@
 			)
 		)
 		(property "Alt Footprints" ""
-			(at 180.34 110.49 90)
+			(at 180.34 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -88319,7 +88456,7 @@
 			)
 		)
 		(property "Alt tant." ""
-			(at 180.34 110.49 90)
+			(at 180.34 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -88330,7 +88467,7 @@
 			)
 		)
 		(property "Alt3" ""
-			(at 180.34 110.49 90)
+			(at 180.34 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -88341,7 +88478,7 @@
 			)
 		)
 		(property "B2" ""
-			(at 180.34 110.49 90)
+			(at 180.34 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -88352,7 +88489,7 @@
 			)
 		)
 		(property "Ferrite 6x6" ""
-			(at 180.34 110.49 90)
+			(at 180.34 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -88363,7 +88500,7 @@
 			)
 		)
 		(property "Field7" ""
-			(at 180.34 110.49 90)
+			(at 180.34 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -88374,7 +88511,7 @@
 			)
 		)
 		(property "Ipp" ""
-			(at 180.34 110.49 90)
+			(at 180.34 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -88385,7 +88522,7 @@
 			)
 		)
 		(property "Label2" ""
-			(at 180.34 110.49 90)
+			(at 180.34 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -88396,7 +88533,7 @@
 			)
 		)
 		(property "Mgf" ""
-			(at 180.34 110.49 90)
+			(at 180.34 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -88407,7 +88544,7 @@
 			)
 		)
 		(property "Note2" ""
-			(at 180.34 110.49 90)
+			(at 180.34 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -88418,7 +88555,7 @@
 			)
 		)
 		(property "Notes3" ""
-			(at 180.34 110.49 90)
+			(at 180.34 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -88429,7 +88566,7 @@
 			)
 		)
 		(property "Notes4" ""
-			(at 180.34 110.49 90)
+			(at 180.34 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -88440,7 +88577,7 @@
 			)
 		)
 		(property "Notes5" ""
-			(at 180.34 110.49 90)
+			(at 180.34 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -88451,7 +88588,7 @@
 			)
 		)
 		(property "Notes:" ""
-			(at 180.34 110.49 90)
+			(at 180.34 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -88462,7 +88599,7 @@
 			)
 		)
 		(property "TME" ""
-			(at 180.34 110.49 90)
+			(at 180.34 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -88473,7 +88610,7 @@
 			)
 		)
 		(property "The smallest: " ""
-			(at 180.34 110.49 90)
+			(at 180.34 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -88484,7 +88621,7 @@
 			)
 		)
 		(property "Voltage" ""
-			(at 180.34 110.49 90)
+			(at 180.34 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -88495,7 +88632,7 @@
 			)
 		)
 		(property "Wurth 7.5x7.5" ""
-			(at 180.34 110.49 90)
+			(at 180.34 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -88506,7 +88643,7 @@
 			)
 		)
 		(property "the best" ""
-			(at 180.34 110.49 90)
+			(at 180.34 109.22 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
