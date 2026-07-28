@@ -8,7 +8,7 @@ This revision has been completely redesigned and includes the following features
 
 - [STM32U575CI](https://www.st.com/en/microcontrollers-microprocessors/stm32u575ci.html) MCU with 2 MB Flash, 786 kB SRAM, running at up to 160 MHz
 - Two programmable power outputs
-- Two DAC-controlled precision constant-voltage or constant-current outputs (up to 9 V or 25 mA each) implemented with the [XTR200](https://www.ti.com/product/XTR200) 3-wire current/voltage transmitter
+- Two DAC-controlled precision constant-voltage or constant-current outputs (up to 9 V or 25 mA each) implemented with the [XTR200](https://www.ti.com/product/XTR200) current/voltage transmitter
 - Four analog inputs based on the Texas Instruments [ADS112S14](https://www.ti.com/product/ADS112S14) 4-/8-channel 16-bit ADC (pin-compatible 24-bit [ADS122S14](https://www.ti.com/product/ADS122S14) also supported)
 - ST [M95P32](https://www.st.com/en/memories/m95p32-i.html) ultra-low-power 32-Mbit SPI EEPROM
 - [STLINK-V3](https://www.st.com/en/development-tools/stlink-v3mini.html) Mini debugging connector
