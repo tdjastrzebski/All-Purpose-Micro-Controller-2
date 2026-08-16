@@ -31,7 +31,7 @@ I developed this platform both to evaluate new hardware and software design conc
 ## License
 
 - The [Firmware](Firmware) is released under the MIT License.
-- The [Hardware](Hardware) (KiCad design files) is released under the Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0) License.
+- The [Hardware](Hardware) (KiCad design files) is released under the Attribution-NonCommercial-NoDerivatives 4.0 (CC BY-NC-ND 4.0) International License.
 
 > **Note:** This project is still under active development. Documentation, firmware examples, and hardware updates will continue to be added. *(July 2026)*
 

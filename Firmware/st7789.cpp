@@ -60,7 +60,7 @@ void st7789_Init(spi_channel_dev_ctx* dev_ctx) {
 
 	// 9.1.28 MADCTL (36h): Memory Data Access Control
 	st7789_WriteCommand(dev_ctx, 0x36);
-	st7789_WriteData(dev_ctx, 0xA0); // orientation horizontal
+	st7789_WriteData(dev_ctx, 0xA0); // 0x00 portrait, 0xC0 portrait, 0xA0 horizontal, 0x60 horizontal
 
 	// INVON - invert color bits
 	st7789_WriteCommand(dev_ctx, 0x21);

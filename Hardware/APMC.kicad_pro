@@ -280,7 +280,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": "2.0.1"
+      "sch_revision": "2.1"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -598,6 +598,7 @@
       "netlist": "",
       "plot": "",
       "specctra_dsn": "",
+      "step": "",
       "vrml": ""
     },
     "page_layout_descr_file": ""
@@ -1060,6 +1061,24 @@
           "label": "AliExpress",
           "name": "AliExpress",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Note3",
+          "name": "Note3",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Receptacles",
+          "name": "Receptacles",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Fixed5V",
+          "name": "Fixed5V",
+          "show": false
         }
       ],
       "filter_string": "",
@@ -1110,7 +1129,7 @@
         "uuid": "99bd7e18-0da7-4b16-b3c4-e5dbe5a3f1f3"
       }
     ],
-    "used_designators": "M1,M4,U1-14,U201-202,U561,C1-58,C61,C69-72,C201-208,C561-564,C801-802,C806,C901,D1-13,D201,D302,D561-562,L1-2,L801,ENC1-3,J1-18,J22-23,J201-202,R1-50,R201,R205,R217-219,R561-565,RA401,Q1-16,Q501,Q561-562,#PWR1-48,#PWR50-56,#PWR201,#PWR209-216,#PWR401,#PWR561-562,Y1,X1,BT1,CA201,CA401,TP1-3,BTN1-2,H1-5,H10-13,Di1-2,SW1,FB1-2,FB802,S1-3,S5",
+    "used_designators": "U1-17,U201-202,U506-507,U561,U801,M1,M4,C1-61,C69-72,C201-208,C502,C561-564,C801-802,C806,C901,L1-2,L801,ENC1-3,D1-16,D57,D201,D302,D561-562,R1-53,R201,R205,R217-219,R505,R509,R561-565,J1-18,J22-23,J201-202,Q1-16,Q501,Q561-562,RA401,#PWR1-63,#PWR201,#PWR209-216,#PWR401,#PWR561-562,Y1,X1,BT1,TP1-3,CA201,CA401,H1-5,H10-13,BTN1-4,Di1-2,SW1,FB1-3,FB802,S1-3,S5,CAP1",
     "variants": []
   },
   "sheets": [
