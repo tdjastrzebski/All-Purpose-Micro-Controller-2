@@ -6,7 +6,7 @@
 	(paper "A")
 	(title_block
 		(title "All-purpose Micro Controller (APMC)")
-		(date "2026-08-15")
+		(date "2026-08-22")
 		(rev "2.1")
 		(company "Copyright © 2026 Tomasz Jastrzębski")
 		(comment 1 "License: CC BY-NC-ND 4.0")
@@ -26738,7 +26738,7 @@
 				)
 			)
 		)
-		(property "Value" "Standoff_M2x4.0"
+		(property "Value" "Standoff_M2x3.0"
 			(at 179.07 109.093 90)
 			(hide yes)
 			(show_name no)
@@ -26772,7 +26772,7 @@
 				)
 			)
 		)
-		(property "Description" "M2 L=4.0, D=4.35, d=2.8"
+		(property "Description" "M2 L=3.0, D=4.35, d=2.8"
 			(at 182.88 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -26783,7 +26783,7 @@
 				)
 			)
 		)
-		(property "Mfg" "Wurth: 9774040243R"
+		(property "Mfg" "Wurth: 9774030243R"
 			(at 182.88 107.95 90)
 			(hide yes)
 			(show_name no)
@@ -26794,7 +26794,7 @@
 				)
 			)
 		)
-		(property "Mouser" "710-9774040243R"
+		(property "Mouser" "710-9774030243R"
 			(at 182.88 107.95 90)
 			(hide yes)
 			(show_name no)
@@ -26805,326 +26805,7 @@
 				)
 			)
 		)
-		(property "Remarks" "D ≤ 4.35, L = 4.0 mm"
-			(at 182.88 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Angle55" ""
-			(at 182.88 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Vertical" ""
-			(at 182.88 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "AliExpress" ""
-			(at 182.88 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Source" ""
-			(at 182.88 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ST reccomended" ""
-			(at 182.88 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "5x5" ""
-			(at 182.88 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "AWG" ""
-			(at 182.88 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt 120uF tant." ""
-			(at 182.88 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt 2" ""
-			(at 182.88 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt Footprints" ""
-			(at 182.88 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt tant." ""
-			(at 182.88 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt3" ""
-			(at 182.88 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "B2" ""
-			(at 182.88 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Ferrite 6x6" ""
-			(at 182.88 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Field7" ""
-			(at 182.88 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Ipp" ""
-			(at 182.88 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Label2" ""
-			(at 182.88 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mgf" ""
-			(at 182.88 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Note2" ""
-			(at 182.88 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes3" ""
-			(at 182.88 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes4" ""
-			(at 182.88 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes5" ""
-			(at 182.88 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes:" ""
-			(at 182.88 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "TME" ""
-			(at 182.88 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "The smallest: " ""
-			(at 182.88 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 182.88 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Wurth 7.5x7.5" ""
-			(at 182.88 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "the best" ""
-			(at 182.88 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Rermarks" ""
+		(property "Alt" "L: 4.0 mm >> Wurth: 9774040243R"
 			(at 182.88 107.95 90)
 			(hide yes)
 			(show_name no)
@@ -30073,7 +29754,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "M2.5x7"
+		(property "Value" "M2.5x6"
 			(at 22.733 196.85 0)
 			(hide yes)
 			(show_name no)
@@ -30118,7 +29799,7 @@
 				)
 			)
 		)
-		(property "Mfg" "Harwin: R25-1000702"
+		(property "Mfg" "Harwin: R25-1000602"
 			(at 21.59 199.39 90)
 			(hide yes)
 			(show_name no)
@@ -30129,7 +29810,7 @@
 				)
 			)
 		)
-		(property "Mouser" "855-R25-1000702"
+		(property "Mouser" "855-R25-1000602"
 			(at 21.59 199.39 90)
 			(hide yes)
 			(show_name no)
@@ -43019,7 +42700,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "M2.5x7"
+		(property "Value" "M2.5x6"
 			(at 32.893 196.85 0)
 			(hide yes)
 			(show_name no)
@@ -43064,7 +42745,7 @@
 				)
 			)
 		)
-		(property "Mfg" "Harwin: R25-1000702"
+		(property "Mfg" "Harwin: R25-1000602"
 			(at 31.75 199.39 90)
 			(hide yes)
 			(show_name no)
@@ -43075,7 +42756,7 @@
 				)
 			)
 		)
-		(property "Mouser" "855-R25-1000702"
+		(property "Mouser" "855-R25-1000602"
 			(at 31.75 199.39 90)
 			(hide yes)
 			(show_name no)
@@ -47681,7 +47362,7 @@
 				)
 			)
 		)
-		(property "Value" "Standoff_M2x4.0"
+		(property "Value" "Standoff_M2x3.0"
 			(at 170.18 109.093 90)
 			(hide yes)
 			(show_name no)
@@ -47715,7 +47396,7 @@
 				)
 			)
 		)
-		(property "Description" "M2 L=4.0, D=4.35, d=2.8"
+		(property "Description" "M2 L=3.0, D=4.35, d=2.8"
 			(at 173.99 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -47726,7 +47407,7 @@
 				)
 			)
 		)
-		(property "Mfg" "Wurth: 9774040243R"
+		(property "Mfg" "Wurth: 9774030243R"
 			(at 173.99 107.95 90)
 			(hide yes)
 			(show_name no)
@@ -47737,7 +47418,7 @@
 				)
 			)
 		)
-		(property "Mouser" "710-9774040243R"
+		(property "Mouser" "710-9774030243R"
 			(at 173.99 107.95 90)
 			(hide yes)
 			(show_name no)
@@ -47748,326 +47429,7 @@
 				)
 			)
 		)
-		(property "Remarks" "D ≤ 4.35, L = 4.0 mm"
-			(at 173.99 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Angle55" ""
-			(at 173.99 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Vertical" ""
-			(at 173.99 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "AliExpress" ""
-			(at 173.99 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Source" ""
-			(at 173.99 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ST reccomended" ""
-			(at 173.99 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "5x5" ""
-			(at 173.99 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "AWG" ""
-			(at 173.99 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt 120uF tant." ""
-			(at 173.99 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt 2" ""
-			(at 173.99 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt Footprints" ""
-			(at 173.99 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt tant." ""
-			(at 173.99 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt3" ""
-			(at 173.99 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "B2" ""
-			(at 173.99 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Ferrite 6x6" ""
-			(at 173.99 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Field7" ""
-			(at 173.99 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Ipp" ""
-			(at 173.99 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Label2" ""
-			(at 173.99 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mgf" ""
-			(at 173.99 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Note2" ""
-			(at 173.99 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes3" ""
-			(at 173.99 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes4" ""
-			(at 173.99 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes5" ""
-			(at 173.99 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes:" ""
-			(at 173.99 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "TME" ""
-			(at 173.99 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "The smallest: " ""
-			(at 173.99 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 173.99 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Wurth 7.5x7.5" ""
-			(at 173.99 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "the best" ""
-			(at 173.99 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Rermarks" ""
+		(property "Alt" "L: 4.0 mm >> Wurth: 9774040243R"
 			(at 173.99 107.95 90)
 			(hide yes)
 			(show_name no)
@@ -56247,7 +55609,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "M2.5x7"
+		(property "Value" "M2.5x6"
 			(at 27.813 196.85 0)
 			(hide yes)
 			(show_name no)
@@ -56292,7 +55654,7 @@
 				)
 			)
 		)
-		(property "Mfg" "Harwin: R25-1000702"
+		(property "Mfg" "Harwin: R25-1000602"
 			(at 26.67 199.39 90)
 			(hide yes)
 			(show_name no)
@@ -56303,7 +55665,7 @@
 				)
 			)
 		)
-		(property "Mouser" "855-R25-1000702"
+		(property "Mouser" "855-R25-1000602"
 			(at 26.67 199.39 90)
 			(hide yes)
 			(show_name no)
@@ -59646,260 +59008,7 @@
 				)
 			)
 		)
-		(property "5x5" ""
-			(at 132.08 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "AWG" ""
-			(at 132.08 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt 120uF tant." ""
-			(at 132.08 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt 2" ""
-			(at 132.08 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt Footprints" ""
-			(at 132.08 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt tant." ""
-			(at 132.08 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt3" ""
-			(at 132.08 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "B2" ""
-			(at 132.08 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Ferrite 6x6" ""
-			(at 132.08 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Field7" ""
-			(at 132.08 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Ipp" ""
-			(at 132.08 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Label2" ""
-			(at 132.08 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mgf" ""
-			(at 132.08 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Note2" ""
-			(at 132.08 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes3" ""
-			(at 132.08 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes4" ""
-			(at 132.08 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes5" ""
-			(at 132.08 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes:" ""
-			(at 132.08 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "TME" ""
-			(at 132.08 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "The smallest: " ""
-			(at 132.08 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 132.08 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Wurth 7.5x7.5" ""
-			(at 132.08 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "the best" ""
-			(at 132.08 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Rermarks" ""
+		(property "Remarks" "height 2.8 mm (max)"
 			(at 132.08 26.67 90)
 			(hide yes)
 			(show_name no)
@@ -73878,7 +72987,7 @@
 				)
 			)
 		)
-		(property "Value" "Standoff_M2x4.0"
+		(property "Value" "Standoff_M2x3.0"
 			(at 170.18 115.443 90)
 			(hide yes)
 			(show_name no)
@@ -73912,7 +73021,7 @@
 				)
 			)
 		)
-		(property "Description" "M2 L=4.0, D=4.35, d=2.8"
+		(property "Description" "M2 L=3.0, D=4.35, d=2.8"
 			(at 173.99 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -73934,7 +73043,7 @@
 				)
 			)
 		)
-		(property "Mouser" "710-9774040243R"
+		(property "Mouser" "710-9774030243R"
 			(at 173.99 114.3 90)
 			(hide yes)
 			(show_name no)
@@ -73945,326 +73054,7 @@
 				)
 			)
 		)
-		(property "Remarks" "D ≤ 4.35, L = 4.0 mm"
-			(at 173.99 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Angle55" ""
-			(at 173.99 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Vertical" ""
-			(at 173.99 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "AliExpress" ""
-			(at 173.99 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Source" ""
-			(at 173.99 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ST reccomended" ""
-			(at 173.99 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "5x5" ""
-			(at 173.99 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "AWG" ""
-			(at 173.99 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt 120uF tant." ""
-			(at 173.99 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt 2" ""
-			(at 173.99 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt Footprints" ""
-			(at 173.99 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt tant." ""
-			(at 173.99 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt3" ""
-			(at 173.99 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "B2" ""
-			(at 173.99 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Ferrite 6x6" ""
-			(at 173.99 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Field7" ""
-			(at 173.99 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Ipp" ""
-			(at 173.99 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Label2" ""
-			(at 173.99 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mgf" ""
-			(at 173.99 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Note2" ""
-			(at 173.99 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes3" ""
-			(at 173.99 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes4" ""
-			(at 173.99 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes5" ""
-			(at 173.99 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes:" ""
-			(at 173.99 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "TME" ""
-			(at 173.99 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "The smallest: " ""
-			(at 173.99 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 173.99 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Wurth 7.5x7.5" ""
-			(at 173.99 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "the best" ""
-			(at 173.99 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Rermarks" ""
+		(property "Alt" "L: 4.0 mm >> Wurth: 9774040243R"
 			(at 173.99 114.3 90)
 			(hide yes)
 			(show_name no)
@@ -93205,7 +91995,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "M2.5x7"
+		(property "Value" "M2.5x6"
 			(at 17.653 196.85 0)
 			(hide yes)
 			(show_name no)
@@ -93250,7 +92040,7 @@
 				)
 			)
 		)
-		(property "Mfg" "Harwin: R25-1000702"
+		(property "Mfg" "Harwin: R25-1000602"
 			(at 16.51 199.39 90)
 			(hide yes)
 			(show_name no)
@@ -93261,7 +92051,7 @@
 				)
 			)
 		)
-		(property "Mouser" "855-R25-1000702"
+		(property "Mouser" "855-R25-1000602"
 			(at 16.51 199.39 90)
 			(hide yes)
 			(show_name no)
@@ -93272,7 +92062,7 @@
 				)
 			)
 		)
-		(property "Alt" "Harwin: R25-1000702, Wurth: 970070151, 970070154, 970070155"
+		(property "Alt2" "M2.5x7 >> Harwin: R25-1000702, Wurth: 970070151, 970070154, 970070155"
 			(at 16.51 199.39 90)
 			(hide yes)
 			(show_name no)
@@ -93283,260 +92073,7 @@
 				)
 			)
 		)
-		(property "5x5" ""
-			(at 16.51 199.39 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "AWG" ""
-			(at 16.51 199.39 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt 120uF tant." ""
-			(at 16.51 199.39 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt 2" ""
-			(at 16.51 199.39 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt Footprints" ""
-			(at 16.51 199.39 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt tant." ""
-			(at 16.51 199.39 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt3" ""
-			(at 16.51 199.39 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "B2" ""
-			(at 16.51 199.39 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Ferrite 6x6" ""
-			(at 16.51 199.39 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Field7" ""
-			(at 16.51 199.39 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Ipp" ""
-			(at 16.51 199.39 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Label2" ""
-			(at 16.51 199.39 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mgf" ""
-			(at 16.51 199.39 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Note2" ""
-			(at 16.51 199.39 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes3" ""
-			(at 16.51 199.39 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes4" ""
-			(at 16.51 199.39 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes5" ""
-			(at 16.51 199.39 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes:" ""
-			(at 16.51 199.39 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "TME" ""
-			(at 16.51 199.39 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "The smallest: " ""
-			(at 16.51 199.39 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 16.51 199.39 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Wurth 7.5x7.5" ""
-			(at 16.51 199.39 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "the best" ""
-			(at 16.51 199.39 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Rermarks" ""
+		(property "Alt" "M2.5x6 >> Harwin: R25-1000602"
 			(at 16.51 199.39 90)
 			(hide yes)
 			(show_name no)
@@ -94336,7 +92873,7 @@
 				)
 			)
 		)
-		(property "Value" "Standoff_M2x4.0"
+		(property "Value" "Standoff_M2x3.0"
 			(at 179.07 115.443 90)
 			(hide yes)
 			(show_name no)
@@ -94370,7 +92907,7 @@
 				)
 			)
 		)
-		(property "Description" "M2 L=4.0, D=4.35, d=2.8"
+		(property "Description" "M2 L=3.0, D=4.35, d=2.8"
 			(at 182.88 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -94381,7 +92918,7 @@
 				)
 			)
 		)
-		(property "Mfg" "Wurth: 9774040243R"
+		(property "Mfg" "Wurth: 9774030243R"
 			(at 182.88 114.3 90)
 			(hide yes)
 			(show_name no)
@@ -94392,7 +92929,7 @@
 				)
 			)
 		)
-		(property "Mouser" "710-9774040243R"
+		(property "Mouser" "710-9774030243R"
 			(at 182.88 114.3 90)
 			(hide yes)
 			(show_name no)
@@ -94403,326 +92940,7 @@
 				)
 			)
 		)
-		(property "Remarks" "D ≤ 4.35, L = 4.0 mm"
-			(at 182.88 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Angle55" ""
-			(at 182.88 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Vertical" ""
-			(at 182.88 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "AliExpress" ""
-			(at 182.88 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Source" ""
-			(at 182.88 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ST reccomended" ""
-			(at 182.88 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "5x5" ""
-			(at 182.88 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "AWG" ""
-			(at 182.88 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt 120uF tant." ""
-			(at 182.88 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt 2" ""
-			(at 182.88 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt Footprints" ""
-			(at 182.88 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt tant." ""
-			(at 182.88 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt3" ""
-			(at 182.88 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "B2" ""
-			(at 182.88 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Ferrite 6x6" ""
-			(at 182.88 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Field7" ""
-			(at 182.88 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Ipp" ""
-			(at 182.88 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Label2" ""
-			(at 182.88 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mgf" ""
-			(at 182.88 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Note2" ""
-			(at 182.88 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes3" ""
-			(at 182.88 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes4" ""
-			(at 182.88 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes5" ""
-			(at 182.88 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes:" ""
-			(at 182.88 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "TME" ""
-			(at 182.88 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "The smallest: " ""
-			(at 182.88 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 182.88 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Wurth 7.5x7.5" ""
-			(at 182.88 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "the best" ""
-			(at 182.88 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Rermarks" ""
+		(property "Alt" "L: 4.0 mm >> Wurth: 9774040243R"
 			(at 182.88 114.3 90)
 			(hide yes)
 			(show_name no)
