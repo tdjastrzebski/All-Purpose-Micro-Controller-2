@@ -14826,19 +14826,6 @@
 		)
 		(uuid "d1c26f60-6c4f-4686-af39-7850e97ed0c9")
 	)
-	(text ">> For Schurter MCS-18a switche use\nMill-Max 0300-2-15-01-47-01-10-0 (0.635 - 0.94 mm)\n0300-1 L:2.8 mm\n0300-2 L:4.75 mm\n8300-0 L:3.55 mm\nor similar single pin female receptacle\n>> For SameSky (CUI) TS27 switch use TS27-CAP\n(e.g. TS27-68-24-G-260-D)\nwhat to use for TS26? (e.g. TS26-68-25-G-260-SMT-TR)"
-		(exclude_from_sim no)
-		(at 215.138 172.212 0)
-		(effects
-			(font
-				(size 1.016 1.016)
-				(thickness 0.127)
-				(color 0 0 194 1)
-			)
-			(justify left top)
-		)
-		(uuid "dd07c0d2-62cd-4098-8639-f4e22d16a46a")
-	)
 	(text "Select R21, R28, R33, and R35 according to the required input range.\nE.g. use a 300 kΩ, 681 kΩ, or 1.5 MΩ resistor\nfor the 65 V, 30 V, and 15 V ranges, respectively."
 		(exclude_from_sim no)
 		(at 16.002 187.452 0)
