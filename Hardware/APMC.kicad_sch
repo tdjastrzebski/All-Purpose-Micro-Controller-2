@@ -6,7 +6,7 @@
 	(paper "A")
 	(title_block
 		(title "All-purpose Micro Controller (APMC)")
-		(date "2026-08-22")
+		(date "2026-08-23")
 		(rev "2.1")
 		(company "Copyright © 2026 Tomasz Jastrzębski")
 		(comment 1 "License: CC BY-NC-ND 4.0")
@@ -14797,7 +14797,7 @@
 	)
 	(text "V_{out} = 3.75V * V_{in} → 9.375 V (max)\nI_{out} = 10 * V_{in}/R_{set} → 25m mA (max)\nOutput voltage headroom = 2.3 V (max)\nMaximum output voltage = 18.75 V (V_{IN} = 5V)"
 		(exclude_from_sim no)
-		(at 65.786 55.88 0)
+		(at 65.532 58.166 0)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -14964,7 +14964,7 @@
 		(uuid "22f56d1a-3046-4e24-9d6b-6b4e7adee4fa")
 	)
 	(junction
-		(at 116.84 50.8)
+		(at 116.84 54.61)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "259b49cc-ce04-4b1f-bc92-f1981b972282")
@@ -15006,7 +15006,7 @@
 		(uuid "33d0cf7e-bc77-469c-b858-08436cf89b3c")
 	)
 	(junction
-		(at 107.95 50.8)
+		(at 107.95 54.61)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "342c0b1e-7c2e-4051-aba7-7a051613124f")
@@ -15408,7 +15408,7 @@
 		(uuid "a795e5c9-f3cc-4b9f-bc91-bbceb7d880b2")
 	)
 	(junction
-		(at 132.08 50.8)
+		(at 132.08 54.61)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ba02a513-a389-4bbf-815f-efb3c12f3125")
@@ -15723,7 +15723,7 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 50.8) (xy 109.22 50.8)
+			(xy 107.95 54.61) (xy 109.22 54.61)
 		)
 		(stroke
 			(width 0)
@@ -16763,7 +16763,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 48.26) (xy 132.08 50.8)
+			(xy 132.08 52.07) (xy 132.08 54.61)
 		)
 		(stroke
 			(width 0)
@@ -17453,7 +17453,7 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 50.8) (xy 116.84 52.07)
+			(xy 116.84 54.61) (xy 116.84 55.88)
 		)
 		(stroke
 			(width 0)
@@ -18653,7 +18653,7 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 50.8) (xy 107.95 50.8)
+			(xy 104.14 54.61) (xy 107.95 54.61)
 		)
 		(stroke
 			(width 0)
@@ -18853,7 +18853,7 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 50.8) (xy 116.84 50.8)
+			(xy 114.3 54.61) (xy 116.84 54.61)
 		)
 		(stroke
 			(width 0)
@@ -19633,7 +19633,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 50.8) (xy 132.08 53.34)
+			(xy 132.08 54.61) (xy 132.08 57.15)
 		)
 		(stroke
 			(width 0)
@@ -20023,7 +20023,7 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 50.8) (xy 107.95 52.07)
+			(xy 107.95 54.61) (xy 107.95 55.88)
 		)
 		(stroke
 			(width 0)
@@ -21972,7 +21972,7 @@
 		(uuid "709d982f-cfa8-4d89-a216-779b7ee8cd81")
 	)
 	(label "5V"
-		(at 106.68 50.8 180)
+		(at 106.68 54.61 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -29148,7 +29148,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "M2.5x7"
+		(property "Value" "button cap"
 			(at 257.683 140.97 0)
 			(hide yes)
 			(show_name no)
@@ -35979,7 +35979,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Custom:PinHeader_2x07_P1.27mm_Horizontal-UP"
+		(property "Footprint" "Custom:PinHeader_2x07_P1.27mm_Horizontal-UP-0.15"
 			(at 189.23 92.71 0)
 			(hide yes)
 			(show_name no)
@@ -36078,270 +36078,6 @@
 			)
 		)
 		(property "Notes" "order 8+6 pin from DigiKey"
-			(at 189.23 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "5x5" ""
-			(at 189.23 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "AWG" ""
-			(at 189.23 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt 120uF tant." ""
-			(at 189.23 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt 2" ""
-			(at 189.23 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt Footprints" ""
-			(at 189.23 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt tant." ""
-			(at 189.23 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt3" ""
-			(at 189.23 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "B2" ""
-			(at 189.23 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Ferrite 6x6" ""
-			(at 189.23 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Field7" ""
-			(at 189.23 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Ipp" ""
-			(at 189.23 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Label2" ""
-			(at 189.23 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mgf" ""
-			(at 189.23 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Note2" ""
-			(at 189.23 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes3" ""
-			(at 189.23 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes4" ""
-			(at 189.23 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes5" ""
-			(at 189.23 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes:" ""
-			(at 189.23 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "TME" ""
-			(at 189.23 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "The smallest: " ""
-			(at 189.23 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 189.23 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Wurth 7.5x7.5" ""
-			(at 189.23 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "the best" ""
-			(at 189.23 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Rermarks" ""
 			(at 189.23 92.71 0)
 			(hide yes)
 			(show_name no)
@@ -44824,7 +44560,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 116.84 54.61 0)
+		(at 116.84 58.42 0)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -44835,7 +44571,7 @@
 		(dnp no)
 		(uuid "5156efd1-b4e6-4faf-ae78-906555519e2a")
 		(property "Reference" "C38"
-			(at 117.094 52.832 0)
+			(at 117.094 56.642 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -44846,7 +44582,7 @@
 			)
 		)
 		(property "Value" "1uF/10V"
-			(at 117.094 56.642 0)
+			(at 117.094 60.452 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -44860,7 +44596,7 @@
 			)
 		)
 		(property "Footprint" "Custom:C_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 116.84 54.61 0)
+			(at 116.84 58.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -44871,7 +44607,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 116.84 54.61 0)
+			(at 116.84 58.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -44882,7 +44618,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 116.84 54.61 0)
+			(at 116.84 58.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -44893,7 +44629,7 @@
 			)
 		)
 		(property "Mfg" "TDK: CGA3E2X5R1A105M080AA"
-			(at 116.84 54.61 0)
+			(at 116.84 58.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -44904,7 +44640,7 @@
 			)
 		)
 		(property "Mouser" "810-CGA3E2X5R1A105MA"
-			(at 116.84 54.61 0)
+			(at 116.84 58.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -44915,7 +44651,7 @@
 			)
 		)
 		(property "Rermarks" ""
-			(at 116.84 54.61 0)
+			(at 116.84 58.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -45449,7 +45185,7 @@
 	)
 	(symbol
 		(lib_id "Amplifier_Operational:OPA2333xxDRB")
-		(at 124.46 48.26 90)
+		(at 124.46 52.07 90)
 		(unit 3)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -45459,7 +45195,7 @@
 		(dnp no)
 		(uuid "54665056-e360-425e-ab28-32d273dd85ca")
 		(property "Reference" "U14"
-			(at 121.92 48.006 90)
+			(at 121.92 51.816 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -45470,7 +45206,7 @@
 			)
 		)
 		(property "Value" "OPA2387DSG"
-			(at 122.936 46.228 90)
+			(at 122.936 50.038 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -45480,7 +45216,7 @@
 			)
 		)
 		(property "Footprint" "Custom:WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm"
-			(at 124.46 48.26 0)
+			(at 124.46 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -45491,7 +45227,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.ti.com/product/OPA2333P"
-			(at 124.46 48.26 0)
+			(at 124.46 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -45502,7 +45238,7 @@
 			)
 		)
 		(property "Description" "1.8-V, 17-µA, two-channel, micropower zero-drift CMOS operational amplifier"
-			(at 124.46 48.26 0)
+			(at 124.46 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -45513,7 +45249,7 @@
 			)
 		)
 		(property "Mfg" "TI: OPA2387DSGR"
-			(at 124.46 48.26 0)
+			(at 124.46 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -45524,7 +45260,7 @@
 			)
 		)
 		(property "Mouser" "595-OPA2387DSGR"
-			(at 124.46 48.26 0)
+			(at 124.46 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -45535,7 +45271,7 @@
 			)
 		)
 		(property "Alt" "OPA2387DSG, OPA2333P, OPA2392DSG, TLV2825DSG"
-			(at 124.46 48.26 0)
+			(at 124.46 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -45546,7 +45282,7 @@
 			)
 		)
 		(property "Remarks" "Use low offset, low drift, *low voltage output swing from rail* op-amp in WSON (2x2 mm) package"
-			(at 124.46 48.26 0)
+			(at 124.46 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -45557,7 +45293,7 @@
 			)
 		)
 		(property "Rermarks" ""
-			(at 124.46 48.26 90)
+			(at 124.46 52.07 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -47853,7 +47589,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 107.95 54.61 180)
+		(at 107.95 58.42 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -47863,7 +47599,7 @@
 		(dnp no)
 		(uuid "58fc00ce-cfd9-4879-904d-f4990ae6325a")
 		(property "Reference" "C43"
-			(at 107.696 52.832 0)
+			(at 107.696 56.642 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -47874,7 +47610,7 @@
 			)
 		)
 		(property "Value" "1uF/10V"
-			(at 107.696 56.642 0)
+			(at 107.696 60.452 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -47888,7 +47624,7 @@
 			)
 		)
 		(property "Footprint" "Custom:C_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 107.95 54.61 0)
+			(at 107.95 58.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -47899,7 +47635,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 107.95 54.61 0)
+			(at 107.95 58.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -47910,7 +47646,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 107.95 54.61 0)
+			(at 107.95 58.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -47921,7 +47657,7 @@
 			)
 		)
 		(property "Mfg" "TDK: CGA3E2X5R1A105M080AA"
-			(at 107.95 54.61 0)
+			(at 107.95 58.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -47932,7 +47668,7 @@
 			)
 		)
 		(property "Mouser" "810-CGA3E2X5R1A105MA"
-			(at 107.95 54.61 0)
+			(at 107.95 58.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -47943,7 +47679,7 @@
 			)
 		)
 		(property "Rermarks" ""
-			(at 107.95 54.61 0)
+			(at 107.95 58.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -50051,270 +49787,6 @@
 			)
 		)
 		(property "10x10" "DD1274AS-H-330M=P3, MSS1048-333MLC, CDRH104NP-330MC, 7447714330, SRR1050HA-330Y, SRR1050A-330Y, MSS1038-333MLC, MSS1038T-333MLC, MSS1048T-333MLC"
-			(at 92.71 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "5x5" ""
-			(at 92.71 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "AWG" ""
-			(at 92.71 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt 120uF tant." ""
-			(at 92.71 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt 2" ""
-			(at 92.71 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt Footprints" ""
-			(at 92.71 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt tant." ""
-			(at 92.71 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt3" ""
-			(at 92.71 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "B2" ""
-			(at 92.71 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Ferrite 6x6" ""
-			(at 92.71 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Field7" ""
-			(at 92.71 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Ipp" ""
-			(at 92.71 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Label2" ""
-			(at 92.71 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mgf" ""
-			(at 92.71 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Note2" ""
-			(at 92.71 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes3" ""
-			(at 92.71 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes4" ""
-			(at 92.71 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes5" ""
-			(at 92.71 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes:" ""
-			(at 92.71 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "TME" ""
-			(at 92.71 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "The smallest: " ""
-			(at 92.71 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 92.71 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Wurth 7.5x7.5" ""
-			(at 92.71 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "the best" ""
-			(at 92.71 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Rermarks" ""
 			(at 92.71 26.67 90)
 			(hide yes)
 			(show_name no)
@@ -55240,270 +54712,6 @@
 				)
 			)
 		)
-		(property "5x5" ""
-			(at 77.47 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "AWG" ""
-			(at 77.47 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt 120uF tant." ""
-			(at 77.47 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt 2" ""
-			(at 77.47 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt Footprints" ""
-			(at 77.47 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt tant." ""
-			(at 77.47 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Alt3" ""
-			(at 77.47 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "B2" ""
-			(at 77.47 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Ferrite 6x6" ""
-			(at 77.47 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Field7" ""
-			(at 77.47 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Ipp" ""
-			(at 77.47 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Label2" ""
-			(at 77.47 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mgf" ""
-			(at 77.47 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Note2" ""
-			(at 77.47 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes3" ""
-			(at 77.47 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes4" ""
-			(at 77.47 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes5" ""
-			(at 77.47 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes:" ""
-			(at 77.47 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "TME" ""
-			(at 77.47 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "The smallest: " ""
-			(at 77.47 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 77.47 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Wurth 7.5x7.5" ""
-			(at 77.47 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "the best" ""
-			(at 77.47 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Rermarks" ""
-			(at 77.47 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "6"
 			(uuid "71891e77-70a6-4d9b-9b9c-6cd8d01600de")
 		)
@@ -56517,7 +55725,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 107.95 57.15 0)
+		(at 107.95 60.96 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -56527,7 +55735,7 @@
 		(dnp no)
 		(uuid "7cde4133-ba94-484c-8cca-48377ae24e25")
 		(property "Reference" "#PWR052"
-			(at 107.95 63.5 0)
+			(at 107.95 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -56538,7 +55746,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 109.982 57.15 0)
+			(at 109.982 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -56549,7 +55757,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 107.95 57.15 0)
+			(at 107.95 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -56560,7 +55768,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 107.95 57.15 0)
+			(at 107.95 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -56571,7 +55779,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 107.95 57.15 0)
+			(at 107.95 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -57499,7 +56707,7 @@
 	)
 	(symbol
 		(lib_id "Device:FerriteBead_Small")
-		(at 111.76 50.8 270)
+		(at 111.76 54.61 270)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -57510,7 +56718,7 @@
 		(dnp no)
 		(uuid "7f1e3295-4010-4cbb-9529-a71f6acc4f7e")
 		(property "Reference" "R219"
-			(at 111.76 46.99 90)
+			(at 111.76 50.8 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -57520,7 +56728,7 @@
 			)
 		)
 		(property "Value" "330R/200mA"
-			(at 111.76 48.768 90)
+			(at 111.76 52.578 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -57530,7 +56738,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 111.76 52.578 90)
+			(at 111.76 56.388 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -57541,7 +56749,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 111.76 50.8 0)
+			(at 111.76 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -57552,7 +56760,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 111.76 50.8 0)
+			(at 111.76 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -57563,7 +56771,7 @@
 			)
 		)
 		(property "Mfg" "Murata: BLM18AG331SN1D"
-			(at 111.76 50.8 0)
+			(at 111.76 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -57574,7 +56782,7 @@
 			)
 		)
 		(property "Mouser" "81-BLM18AG331SN1D"
-			(at 111.76 50.8 0)
+			(at 111.76 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -57585,7 +56793,7 @@
 			)
 		)
 		(property "Remarks" "200 mA"
-			(at 111.76 50.8 0)
+			(at 111.76 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -57596,7 +56804,7 @@
 			)
 		)
 		(property "Alt" "MH1608-601Y, BLM18AG471SH1D"
-			(at 111.76 50.8 90)
+			(at 111.76 54.61 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -57607,7 +56815,7 @@
 			)
 		)
 		(property "Rermarks" ""
-			(at 111.76 50.8 90)
+			(at 111.76 54.61 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69763,7 +68971,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 116.84 57.15 0)
+		(at 116.84 60.96 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -69773,7 +68981,7 @@
 		(dnp no)
 		(uuid "a3e50193-6126-4e76-bb51-52e4c424d0fd")
 		(property "Reference" "#PWR048"
-			(at 116.84 63.5 0)
+			(at 116.84 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69784,7 +68992,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 118.872 57.15 0)
+			(at 118.872 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69795,7 +69003,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 116.84 57.15 0)
+			(at 116.84 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69806,7 +69014,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 116.84 57.15 0)
+			(at 116.84 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -69817,7 +69025,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 116.84 57.15 0)
+			(at 116.84 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -76165,7 +75373,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 132.08 53.34 0)
+		(at 132.08 57.15 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -76175,7 +75383,7 @@
 		(dnp no)
 		(uuid "bcaaf8d9-ccb6-4db5-8294-1a99e9ce9216")
 		(property "Reference" "#PWR049"
-			(at 132.08 59.69 0)
+			(at 132.08 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -76186,7 +75394,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 134.112 53.34 0)
+			(at 134.112 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -76197,7 +75405,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 132.08 53.34 0)
+			(at 132.08 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -76208,7 +75416,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 132.08 53.34 0)
+			(at 132.08 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -76219,7 +75427,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 132.08 53.34 0)
+			(at 132.08 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
