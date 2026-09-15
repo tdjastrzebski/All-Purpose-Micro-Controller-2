@@ -6,7 +6,7 @@
 	(paper "A")
 	(title_block
 		(title "All-purpose Micro Controller (APMC)")
-		(date "2026-09-14")
+		(date "2026-09-16")
 		(rev "2.1")
 		(company "Copyright © 2026 Tomasz Jastrzębski")
 		(comment 1 "License: CC BY-NC-ND 4.0")

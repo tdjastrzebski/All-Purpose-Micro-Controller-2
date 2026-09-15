@@ -66,16 +66,12 @@ void PostInit(void) {
 
 	st7789_FillScreen(&_lcd_spi, st7789_color_black);
 
-	// uint8_t data[3]{0};
-	// bool isOk = true;
-	// status = m95p32_ReadJEDEC(&_eeprom_spi, data, 3);
-	// if (status != HAL_OK) isOk = false;
-	// if (data[0] != 0x20 || data[1] != 0 || data[2] != 0x16) isOk = false;
-	// if (isOk) {
-	// 	my_printf(GREEN("ext eeprom memory test passed") "\n");
-	// } else {
-	// 	my_printf(RED("ext eeprom memory test failed") "\n");
-	// }
+	bool isOk = m95p32_Init(&_eeprom_spi);
+	if (isOk) {
+		my_printf(GREEN("ext eeprom memory test passed") "\n");
+	} else {
+		my_printf(RED("ext eeprom memory test failed") "\n");
+	}
 
 	// Draw a single green pixel at (120, 140)
 	st7789_DrawPixel(&_lcd_spi, 120, 140, st7789_color_blue);
@@ -96,15 +92,15 @@ void PostInit(void) {
 	} else {
 		my_printf(RED("ads1x2s14_init failed") "\n");
 	}
-	
+
 	ads1x2s14_gpio_config(&_adc_spi, 0, ads1x2s14_gpio_pushPull);
 	ads1x2s14_gpio_config(&_adc_spi, 1, ads1x2s14_gpio_pushPull);
 	ads1x2s14_gpio_config(&_adc_spi, 2, ads1x2s14_gpio_pushPull);
 	ads1x2s14_gpio_config(&_adc_spi, 3, ads1x2s14_gpio_pushPull);
-	ads1x2s14_gpio_setState(&_adc_spi, 0, true); // Mode1 = current
-	ads1x2s14_gpio_setState(&_adc_spi, 1, false); // Disable1 = disabled
-	ads1x2s14_gpio_setState(&_adc_spi, 2, true); // Mode2 = current
-	ads1x2s14_gpio_setState(&_adc_spi, 3, false); // Disable2 = disabled
+	ads1x2s14_gpio_setState(&_adc_spi, 0, true);   // Mode1 = current
+	ads1x2s14_gpio_setState(&_adc_spi, 1, false);  // Disable1 = disabled
+	ads1x2s14_gpio_setState(&_adc_spi, 2, true);   // Mode2 = current
+	ads1x2s14_gpio_setState(&_adc_spi, 3, false);  // Disable2 = disabled
 
 	EncoderTimer.IC_CaptureCallback = _encoderTimerCaptureCallback;
 	RtcTimer.AlarmAEventCallback = _rtcAlarmAEventCallback;

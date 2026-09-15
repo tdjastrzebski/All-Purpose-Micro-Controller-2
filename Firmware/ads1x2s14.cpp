@@ -7,11 +7,15 @@
 #include "dwt_timer.h"
 
 // https://www.ti.com/lit/ds/symlink/ads112s14.pdf
-// max CLK frequency is 16.67 MHz (5.6 Timing Requirements)
+// max CLK frequency is 16.67 MHz (see: 5.6 Timing Requirements)
 
-static HAL_StatusTypeDef _readRegister(spi_channel_dev_ctx* dev_ctx, uint8_t regAddress, uint8_t* data);
-static HAL_StatusTypeDef _writeRegister(spi_channel_dev_ctx* dev_ctx, uint8_t regAddress, uint8_t data);
-static void _configureSpi(spi_channel_dev_ctx* dev_ctx);
+static void _chipSelect(spi_channel_dev_ctx* spi) {
+	HAL_GPIO_WritePin(spi->cs_port, spi->cs_pin, GPIO_PIN_RESET);
+}
+
+static void _chipDeSelect(spi_channel_dev_ctx* spi) {
+	HAL_GPIO_WritePin(spi->cs_port, spi->cs_pin, GPIO_PIN_SET);
+}
 
 static void _configureSpi(spi_channel_dev_ctx* dev_ctx) {
 	dev_ctx->channel->Instance->CR1 &= ~SPI_CR1_SPE;                                       // disable SPI
@@ -32,24 +36,24 @@ static HAL_StatusTypeDef _readRegister(spi_channel_dev_ctx* dev_ctx, uint8_t reg
 	_configureSpi(dev_ctx);
 
 	// first write 16 zeros to clear buffer
-	HAL_GPIO_WritePin(dev_ctx->cs_port, dev_ctx->cs_pin, GPIO_PIN_RESET);
+	_chipSelect(dev_ctx);
 	dwt_delay(1);
 	status = HAL_SPI_Transmit(dev_ctx->channel, (uint8_t*)&txData, 2, 1000);
 	dwt_delay(1);
-	HAL_GPIO_WritePin(dev_ctx->cs_port, dev_ctx->cs_pin, GPIO_PIN_SET);
+	_chipDeSelect(dev_ctx);
 	if (status != HAL_OK) return status;
 	txData = (regAddress & 0xf);
 	txData |= 0x40;
-	HAL_GPIO_WritePin(dev_ctx->cs_port, dev_ctx->cs_pin, GPIO_PIN_RESET);
+	_chipSelect(dev_ctx);
 	dwt_delay(1);
 	status = HAL_SPI_Transmit(dev_ctx->channel, (uint8_t*)&txData, 2, 1000);
 	dwt_delay(1);
-	HAL_GPIO_WritePin(dev_ctx->cs_port, dev_ctx->cs_pin, GPIO_PIN_SET);
+	_chipDeSelect(dev_ctx);
 	if (status != HAL_OK) return status;
 	dwt_delay(1);
-	HAL_GPIO_WritePin(dev_ctx->cs_port, dev_ctx->cs_pin, GPIO_PIN_RESET);
+	_chipSelect(dev_ctx);
 	status = HAL_SPI_Receive(dev_ctx->channel, (uint8_t*)&rxData, 2, 1000);
-	HAL_GPIO_WritePin(dev_ctx->cs_port, dev_ctx->cs_pin, GPIO_PIN_SET);
+	_chipDeSelect(dev_ctx);
 	if (status != HAL_OK) return status;
 	*data = rxData;
 	return status;
@@ -64,20 +68,20 @@ static HAL_StatusTypeDef _writeRegister(spi_channel_dev_ctx* dev_ctx, uint8_t re
 	_configureSpi(dev_ctx);
 
 	// first write 16 zeros to clear buffer
-	HAL_GPIO_WritePin(dev_ctx->cs_port, dev_ctx->cs_pin, GPIO_PIN_RESET);
+	_chipSelect(dev_ctx);
 	dwt_delay(1);
 	status = HAL_SPI_Transmit(dev_ctx->channel, (uint8_t*)&txData, 2, 1000);
 	dwt_delay(1);
-	HAL_GPIO_WritePin(dev_ctx->cs_port, dev_ctx->cs_pin, GPIO_PIN_SET);
+	_chipDeSelect(dev_ctx);
 	if (status != HAL_OK) return status;
 	txData = (regAddress & 0xf);
 	txData |= 0x80;
 	txData |= (data << 8);
-	HAL_GPIO_WritePin(dev_ctx->cs_port, dev_ctx->cs_pin, GPIO_PIN_RESET);
+	_chipSelect(dev_ctx);
 	dwt_delay(1);
 	status = HAL_SPI_Transmit(dev_ctx->channel, (uint8_t*)&txData, 2, 1000);
 	dwt_delay(1);
-	HAL_GPIO_WritePin(dev_ctx->cs_port, dev_ctx->cs_pin, GPIO_PIN_SET);
+	_chipDeSelect(dev_ctx);
 	return status;
 }
 

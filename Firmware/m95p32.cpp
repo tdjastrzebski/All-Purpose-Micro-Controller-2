@@ -47,6 +47,19 @@ source: https://www.st.com/resource/en/datasheet/m95p32-i.pdf
 
 static uint8_t _cmdBuff[5];
 
+static void _configureSpi(spi_channel_dev_ctx* dev_ctx) {
+	// CPOL = 0, CPHA = 0
+	// - or -
+	// CPOL = 1, CPHA = 1
+	// see: 4.2 SPI modes
+	dev_ctx->channel->Instance->CR1 &= ~SPI_CR1_SPE;                                       // disable SPI
+	dev_ctx->channel->Instance->CFG2 &= ~SPI_CFG2_CPHA;                                    // data on 1st clk edge
+	dev_ctx->channel->Instance->CFG2 &= ~SPI_CFG2_CPOL;                                    // clk polarity low
+	dev_ctx->channel->Instance->CFG2 &= ~SPI_CFG2_LSBFRST;                                 // disable LSB first
+	dev_ctx->channel->Instance->CFG2 &= ~(SPI_CFG2_SP_0 | SPI_CFG2_SP_1 | SPI_CFG2_SP_2);  // reset SPI_CFG2_SP bits - Motorola mode
+	dev_ctx->channel->Instance->CR1 |= SPI_CR1_SPE;                                        // enable SPI
+}
+
 static void _chipSelect(spi_channel_dev_ctx* spi) {
 	HAL_GPIO_WritePin(spi->cs_port, spi->cs_pin, GPIO_PIN_RESET);
 }
@@ -58,6 +71,7 @@ static void _chipDeSelect(spi_channel_dev_ctx* spi) {
 static HAL_StatusTypeDef _writeRead(spi_channel_dev_ctx* spi, uint8_t* writeData, uint16_t writeLength, uint8_t* readData, uint16_t readLength) {
 	HAL_StatusTypeDef status;
 
+	_configureSpi(spi);
 	_chipSelect(spi);
 
 	if (writeLength > 0) {
@@ -81,6 +95,7 @@ static HAL_StatusTypeDef _writeRead(spi_channel_dev_ctx* spi, uint8_t* writeData
 static HAL_StatusTypeDef _writeWithPooling(spi_channel_dev_ctx* spi, uint8_t* data1, uint16_t length1, uint8_t* data2, uint16_t length2, uint8_t delay) {
 	HAL_StatusTypeDef status;
 
+	_configureSpi(spi);
 	_chipSelect(spi);
 
 	if (length1 > 0) {
@@ -156,6 +171,15 @@ static HAL_StatusTypeDef _writeDisable(spi_channel_dev_ctx* spi) {
 	_cmdBuff[0] = CMD_WRDI;
 	HAL_StatusTypeDef ret = _writeRead(spi, _cmdBuff, 1, nullptr, 0);
 	return ret;
+}
+
+bool m95p32_Init(spi_channel_dev_ctx* spi) {
+	uint8_t data[3]{0};
+	HAL_StatusTypeDef status = m95p32_ReadJEDEC(spi, data, 3);
+	if (status != HAL_OK) return false;
+	if (data[0] != 0x20 || data[1] != 0 || data[2] != 0x16) return false;
+
+	return true;
 }
 
 /**

@@ -11,6 +11,7 @@ extern "C" {
 #define M95P32_SECTORCOUNT 1024U
 #define M95P32_BLOCKCOUNT 64U
 
+bool m95p32_Init(spi_channel_dev_ctx* spi);
 HAL_StatusTypeDef m95p32_Write(spi_channel_dev_ctx* spi, uint8_t* pData, uint32_t TarAddr, uint32_t Size);
 HAL_StatusTypeDef m95p32_Program(spi_channel_dev_ctx* spi, uint8_t* pData, uint32_t TarAddr, uint32_t Size);
 HAL_StatusTypeDef m95p32_Read(spi_channel_dev_ctx* spi, uint8_t* pData, uint32_t TarAddr, uint32_t Size);
