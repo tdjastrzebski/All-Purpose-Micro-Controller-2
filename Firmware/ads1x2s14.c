@@ -13,16 +13,14 @@ static HAL_StatusTypeDef _readRegister(spi_channel_dev_ctx* dev_ctx, uint8_t reg
 	dev_ctx->channel->Instance->CR1 &= ~SPI_CR1_SPE;       // disable SPI
 	dev_ctx->channel->Instance->CFG2 |= SPI_CFG2_CPHA;     // 2nd edge
 	dev_ctx->channel->Instance->CFG2 &= ~SPI_CFG2_CPOL;    // polarity low
-	dev_ctx->channel->Instance->CFG2 |= SPI_CFG2_LSBFRST;  // LSB first
-	dev_ctx->channel->Instance->CFG2 &= ~(SPI_CFG2_SP_0 | SPI_CFG2_SP_1 | SPI_CFG2_SP_2); // reset SPI_CFG2_SP bits
-	dev_ctx->channel->Instance->CFG2 |= SPI_TIMODE_ENABLE;
+	dev_ctx->channel->Instance->CFG2 &= ~SPI_CFG2_LSBFRST;  // disable LSB first
+	dev_ctx->channel->Instance->CFG2 &= ~(SPI_CFG2_SP_0 | SPI_CFG2_SP_1 | SPI_CFG2_SP_2); // reset SPI_CFG2_SP bits - Motorola mode
 	dev_ctx->channel->Instance->CR1 |= SPI_CR1_SPE;        // enable SPI
 
 	HAL_StatusTypeDef status;
 	uint32_t rxData = 0;
 	uint32_t txData = ((regAddress & 0xf) << 0);
 	txData |= (0x40 << 0);
-	//txData = __REV(txData);  // reverse byte order to match big-endian calling convention
 	HAL_GPIO_WritePin(dev_ctx->cs_port, dev_ctx->cs_pin, GPIO_PIN_RESET);
 	dwt_delay(1);
 	status = HAL_SPI_Transmit(dev_ctx->channel, (uint8_t*)&txData, 2, 1000);
@@ -34,7 +32,6 @@ static HAL_StatusTypeDef _readRegister(spi_channel_dev_ctx* dev_ctx, uint8_t reg
 	status = HAL_SPI_Receive(dev_ctx->channel, (uint8_t*)&rxData, 2, 1000);
 	HAL_GPIO_WritePin(dev_ctx->cs_port, dev_ctx->cs_pin, GPIO_PIN_SET);
 	if (status != HAL_OK) return status;
-	//rxData = __REV(rxData);
 	*data = rxData;
 	return status;
 }
