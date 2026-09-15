@@ -240,9 +240,9 @@ void SystemClock_Config(void)
                               |RCC_CLOCKTYPE_PCLK3;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
-  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
-  RCC_ClkInitStruct.APB3CLKDivider = RCC_HCLK_DIV1;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV8;
+  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV8;
+  RCC_ClkInitStruct.APB3CLKDivider = RCC_HCLK_DIV8;
 
   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_4) != HAL_OK)
   {
@@ -745,12 +745,12 @@ static void MX_SPI3_Init(void)
   hspi3.Init.CLKPolarity = SPI_POLARITY_LOW;
   hspi3.Init.CLKPhase = SPI_PHASE_1EDGE;
   hspi3.Init.NSS = SPI_NSS_SOFT;
-  hspi3.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_BYPASS;
+  hspi3.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_2;
   hspi3.Init.FirstBit = SPI_FIRSTBIT_MSB;
   hspi3.Init.TIMode = SPI_TIMODE_DISABLE;
   hspi3.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
   hspi3.Init.CRCPolynomial = 0x7;
-  hspi3.Init.NSSPMode = SPI_NSS_PULSE_ENABLE;
+  hspi3.Init.NSSPMode = SPI_NSS_PULSE_DISABLE;
   hspi3.Init.NSSPolarity = SPI_NSS_POLARITY_LOW;
   hspi3.Init.FifoThreshold = SPI_FIFO_THRESHOLD_01DATA;
   hspi3.Init.MasterSSIdleness = SPI_MASTER_SS_IDLENESS_00CYCLE;
@@ -1282,13 +1282,16 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, LCD_DC_Pin|STATUS_LED_Pin|LCD_CS_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, LCD_DC_Pin|STATUS_LED_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(SPI_CS2_GPIO_Port, SPI_CS2_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(LCD_CS_GPIO_Port, LCD_CS_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(SPI_CS1_GPIO_Port, SPI_CS1_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(SPI_CS2_GPIO_Port, SPI_CS2_Pin, GPIO_PIN_SET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(SPI_CS1_GPIO_Port, SPI_CS1_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin : EF1_Pin */
   GPIO_InitStruct.Pin = EF1_Pin;

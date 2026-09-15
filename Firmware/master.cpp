@@ -6,6 +6,7 @@
 
 #include "Sub_RTC.h"
 #include "Timer.h"
+#include "ads1x2s14.h"
 #include "dwt_timer.h"
 #include "lvgl_sub.h"
 #include "m95p32.h"
@@ -25,7 +26,8 @@ extern TIM_HandleTypeDef htim1;
 static timer_ctx _lcdPwmTimer = {.tim = &LcdPwmTimer, .channel = timer_ch1};
 static timer_ctx _ledPwmTimer = {.tim = &htim1, .channel = timer_ch1};
 static spi_channel_dev_ctx _lcd_spi = {.channel = &LcdSpi, .cs_port = LCD_CS_GPIO_Port, .cs_pin = LCD_CS_Pin};
-static spi_channel_dev_ctx _board_spi = {.channel = &BoardSpi, .cs_port = SPI_CS1_GPIO_Port, .cs_pin = SPI_CS1_Pin};
+static spi_channel_dev_ctx _eeprom_spi = {.channel = &BoardSpi, .cs_port = SPI_CS1_GPIO_Port, .cs_pin = SPI_CS1_Pin};
+static spi_channel_dev_ctx _adc_spi = {.channel = &BoardSpi, .cs_port = SPI_CS2_GPIO_Port, .cs_pin = SPI_CS2_Pin};
 
 static void _encoderTimerCaptureCallback(TIM_HandleTypeDef* htim);
 static void _rtcAlarmAEventCallback(RTC_HandleTypeDef* hrtc);
@@ -56,7 +58,7 @@ void PostInit(void) {
 		Error_Handler();
 	}
 
-	timer_init(16000000.0);
+	timer_init(40000000.0);
 	timer_start_pwm(&_lcdPwmTimer, 100.0, 0.5);
 	timer_start_pwm(&_ledPwmTimer, 100.0, 0.1);
 
@@ -64,16 +66,16 @@ void PostInit(void) {
 
 	st7789_FillScreen(&_lcd_spi, st7789_color_black);
 
-	uint8_t data[3]{0};
-	bool isOk = true;
-	status = m95p32_ReadJEDEC(&_board_spi, data, 3);
-	if (status != HAL_OK) isOk = false;
-	if (data[0] != 0x20 || data[1] != 0 || data[2] != 0x16) isOk = false;
-	if (isOk) {
-		my_printf(GREEN("ext eeprom memory test passed") "\n");
-	} else {
-		my_printf(RED("ext eeprom memory test failed") "\n");
-	}
+	// uint8_t data[3]{0};
+	// bool isOk = true;
+	// status = m95p32_ReadJEDEC(&_eeprom_spi, data, 3);
+	// if (status != HAL_OK) isOk = false;
+	// if (data[0] != 0x20 || data[1] != 0 || data[2] != 0x16) isOk = false;
+	// if (isOk) {
+	// 	my_printf(GREEN("ext eeprom memory test passed") "\n");
+	// } else {
+	// 	my_printf(RED("ext eeprom memory test failed") "\n");
+	// }
 
 	// Draw a single green pixel at (120, 140)
 	st7789_DrawPixel(&_lcd_spi, 120, 140, st7789_color_blue);
@@ -87,6 +89,12 @@ void PostInit(void) {
 		st7789_DrawPixel(&_lcd_spi, 10, i, st7789_color_green);
 		st7789_DrawPixel(&_lcd_spi, 120, i, st7789_color_green);
 		st7789_DrawPixel(&_lcd_spi, 230, i, st7789_color_green);
+	}
+
+	if (true == ads1x2s14_init(&_adc_spi)) {
+		my_printf(GREEN("ads1x2s14_init OK") "\n");
+	} else {
+		my_printf(RED("ads1x2s14_init failed") "\n");
 	}
 
 	EncoderTimer.IC_CaptureCallback = _encoderTimerCaptureCallback;

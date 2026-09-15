@@ -1,0 +1,5 @@
+* RM0456 [STM32U5 series Arm®-based 32-bit MCUs - Reference manual](https://www.st.com/resource/en/reference_manual/rm0456-stm32u5-series-armbased-32bit-mcus-stmicroelectronics.pdf)
+* DS13737 [STM32U575xx - Datasheet - production data](https://www.st.com/resource/en/datasheet/stm32u575ag.pdf)
+* DS13086 [STM32U585xx - Datasheet - production data](https://www.st.com/resource/en/datasheet/stm32u585ai.pdf)
+* PM0264 [STM32 Cortex®-M33 MCUs and MPUs programming manual](https://www.st.com/resource/en/programming_manual/pm0264-stm32-cortexm33-mcus-and-mpus-programming-manual-stmicroelectronics.pdf)
+* ES0499 [STM32U575xx and STM32U585xx device errata](https://www.st.com/resource/en/errata_sheet/es0499-stm32u575xx-and-stm32u585xx-device-errata-stmicroelectronics.pdf)
