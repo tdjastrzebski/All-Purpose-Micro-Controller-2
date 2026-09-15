@@ -96,6 +96,15 @@ void PostInit(void) {
 	} else {
 		my_printf(RED("ads1x2s14_init failed") "\n");
 	}
+	
+	ads1x2s14_gpio_config(&_adc_spi, 0, ads1x2s14_gpio_pushPull);
+	ads1x2s14_gpio_config(&_adc_spi, 1, ads1x2s14_gpio_pushPull);
+	ads1x2s14_gpio_config(&_adc_spi, 2, ads1x2s14_gpio_pushPull);
+	ads1x2s14_gpio_config(&_adc_spi, 3, ads1x2s14_gpio_pushPull);
+	ads1x2s14_gpio_setState(&_adc_spi, 0, true); // Mode1 = current
+	ads1x2s14_gpio_setState(&_adc_spi, 1, false); // Disable1 = disabled
+	ads1x2s14_gpio_setState(&_adc_spi, 2, true); // Mode2 = current
+	ads1x2s14_gpio_setState(&_adc_spi, 3, false); // Disable2 = disabled
 
 	EncoderTimer.IC_CaptureCallback = _encoderTimerCaptureCallback;
 	RtcTimer.AlarmAEventCallback = _rtcAlarmAEventCallback;

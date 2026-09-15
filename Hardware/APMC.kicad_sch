@@ -21473,7 +21473,7 @@
 		)
 		(uuid "372b2cf8-f48c-4c1a-9308-60b66d0c87ac")
 	)
-	(label "IO1"
+	(label "IO0"
 		(at 64.77 144.78 180)
 		(effects
 			(font
@@ -21683,7 +21683,7 @@
 		)
 		(uuid "4ef02bcc-b1f4-485c-87ae-275a6c02baba")
 	)
-	(label "IO2"
+	(label "IO1"
 		(at 64.77 147.32 180)
 		(effects
 			(font
@@ -22633,7 +22633,7 @@
 		)
 		(uuid "b75983b4-45e5-4915-9df7-55b1632ad7f3")
 	)
-	(label "IO4"
+	(label "IO3"
 		(at 64.77 152.4 180)
 		(effects
 			(font
@@ -22813,7 +22813,7 @@
 		)
 		(uuid "c73dc241-2003-4f6b-9adb-f3f3be587962")
 	)
-	(label "IO3"
+	(label "IO2"
 		(at 97.79 102.87 0)
 		(effects
 			(font
@@ -22983,7 +22983,7 @@
 		)
 		(uuid "de073b7a-94ce-4afb-a84b-5dd6bb18f2a0")
 	)
-	(label "IO3"
+	(label "IO2"
 		(at 64.77 149.86 180)
 		(effects
 			(font
@@ -23133,7 +23133,7 @@
 		)
 		(uuid "f2c01891-e8f6-4599-a91f-18750911406a")
 	)
-	(label "IO4"
+	(label "IO3"
 		(at 97.79 105.41 0)
 		(effects
 			(font
@@ -23153,7 +23153,7 @@
 		)
 		(uuid "f3a75079-6090-4fe7-9165-8bcf2e4144e9")
 	)
-	(label "IO1"
+	(label "IO0"
 		(at 97.79 74.93 0)
 		(effects
 			(font
@@ -23183,7 +23183,7 @@
 		)
 		(uuid "f736cd51-48ea-4d05-9f85-c284ae28cff9")
 	)
-	(label "IO2"
+	(label "IO1"
 		(at 97.79 77.47 0)
 		(effects
 			(font
