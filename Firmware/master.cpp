@@ -101,6 +101,15 @@ void PostInit(void) {
 	ads1x2s14_gpio_setState(&_adc_spi, 1, false);  // Disable1 = disabled
 	ads1x2s14_gpio_setState(&_adc_spi, 2, true);   // Mode2 = current
 	ads1x2s14_gpio_setState(&_adc_spi, 3, false);  // Disable2 = disabled
+	ads1x2s14_pga_setGain(&_adc_spi, ads1x2s14_gain_05);
+	ads1x2s14_intRef_set(&_adc_spi, ads1x2s14_intRef_2_5V);
+	ads1x2s14_mux_select(&_adc_spi, ads1x2s14_mux_ain0);
+	ads1x2s14_digital_config(&_adc_spi, ads1x2s14_coding_unipolar);
+	ads1x2s14_device_config(&_adc_spi, false, false, ads1x2s14_cnvMode_singleShot, ads1x2s14_speed_512kHz);
+	ads1x2s14_cnv_start(&_adc_spi);
+	dwt_delay(10000);
+	uint8_t data[2];
+	ads1x2s14_data_read(&_adc_spi, 2, data);
 
 	EncoderTimer.IC_CaptureCallback = _encoderTimerCaptureCallback;
 	RtcTimer.AlarmAEventCallback = _rtcAlarmAEventCallback;
@@ -137,6 +146,11 @@ static void _rtcAlarmAEventCallback(RTC_HandleTypeDef* hrtc) {
 	time_t dateTime = rtc_GetDateTime();
 	tm* dt = gmtime(&dateTime);
 	lvgl_showTime(dt);
+	ads1x2s14_cnv_start(&_adc_spi);
+	dwt_delay(10000);
+	uint16_t data;
+	ads1x2s14_data_read(&_adc_spi, 2, (uint8_t *)&data);
+	//my_printf("adc %i\n", data);
 }
 
 static void _encoderTimerCaptureCallback(TIM_HandleTypeDef* htim) {

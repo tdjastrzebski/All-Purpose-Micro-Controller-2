@@ -6,6 +6,25 @@
 
 #include "dwt_timer.h"
 
+#define DEVICE_ID 0x00
+#define REVISION_ID 0x01
+#define STATUS_MSB 0x02
+#define STATUS_LSB 0x03
+#define CONVERSION_CTRL 0x04
+#define DEVICE_CFG 0x05
+#define DATA_RATE_CFG 0x06
+#define MUX_CFG 0x07
+#define GAIN_CFG 0x08
+#define REFERENCE_CFG 0x09
+#define DIGITAL_CFG 0x0a
+#define GPIO_CFG 0x0b
+#define GPIO_DATA_OUTPUT 0x0c
+#define IDAC_MAG_CFG 0x0d
+#define IDAC_MUX_CFG 0x0e
+#define REG_MAP_CRC 0x0f
+
+#define SET_BIT_STATE(value, bit, state) ((value) = ((value) & ~(1u << (bit))) | ((!!(state)) << (bit)))
+
 // https://www.ti.com/lit/ds/symlink/ads112s14.pdf
 // max CLK frequency is 16.67 MHz (see: 5.6 Timing Requirements)
 
@@ -91,7 +110,7 @@ bool ads1x2s14_init(spi_channel_dev_ctx* dev_ctx) {
 
 	// 8.1 DEVICE_ID Register (Address = 00h)
 	// read device ID
-	status = _readRegister(dev_ctx, 0x0, &data);
+	status = _readRegister(dev_ctx, DEVICE_ID, &data);
 	if (status != HAL_OK) return false;
 	data &= 0x0f;
 
@@ -105,28 +124,30 @@ bool ads1x2s14_init(spi_channel_dev_ctx* dev_ctx) {
 
 	// 8.5 CONVERSION_CTRL Register (Address = 04h) [Reset = 00h]
 	// reset device
-	status = _writeRegister(dev_ctx, 0x4, 0b010110 << 2);
+	status = _writeRegister(dev_ctx, CONVERSION_CTRL, 0b010110 << 2);
 	if (status != HAL_OK) return false;
 
 	// 5.6 Timing Requirements
 	dwt_delay(500);  // wait 500 us
 
 	// 8.2 REVISION_ID Register (Address = 01h) [Reset = XXh]
-	status = _readRegister(dev_ctx, 0x1, &data);
+	status = _readRegister(dev_ctx, REVISION_ID, &data);
 	if (status != HAL_OK) return false;
 
 	// 8.3 STATUS_MSB Register (Address = 02h) [Reset = 3Eh]
-	status = _readRegister(dev_ctx, 0x2, &data);
+	status = _readRegister(dev_ctx, STATUS_MSB, &data);
 	if (status != HAL_OK) return false;
 	if (data != 0x3e) return false;
 
 	// 8.4 STATUS_LSB Register (Address = 03h) [Reset = F0h]
-	status = _readRegister(dev_ctx, 0x3, &data);
+	status = _readRegister(dev_ctx, STATUS_LSB, &data);
 	if (status != HAL_OK) return false;
 	if (data != 0xf0) return false;
 
 	return true;
 }
+
+// 8 Registers
 
 bool ads1x2s14_gpio_config(spi_channel_dev_ctx* dev_ctx, uint8_t gpio_nbr, ads1x2s14_gpio gpio_config) {
 	// 8.12 GPIO_CFG Register (Address = 0Bh) [Reset = 00h]
@@ -134,12 +155,14 @@ bool ads1x2s14_gpio_config(spi_channel_dev_ctx* dev_ctx, uint8_t gpio_nbr, ads1x
 	HAL_StatusTypeDef status;
 	uint8_t data = 0;
 
-	status = _readRegister(dev_ctx, 0x0b, &data);
+	status = _readRegister(dev_ctx, GPIO_CFG, &data);
 	if (status != HAL_OK) return false;
+
 	uint8_t channelBits = 0x03 << (gpio_nbr * 2);
 	data &= ~channelBits;
 	data |= (gpio_config << (gpio_nbr * 2));
-	status = _writeRegister(dev_ctx, 0x0b, data);
+
+	status = _writeRegister(dev_ctx, GPIO_CFG, data);
 	if (status != HAL_OK) return false;
 
 	return true;
@@ -151,8 +174,9 @@ bool ads1x2s14_gpio_setState(spi_channel_dev_ctx* dev_ctx, uint8_t gpio_nbr, boo
 	HAL_StatusTypeDef status;
 	uint8_t data = 0;
 
-	status = _readRegister(dev_ctx, 0x0c, &data);
+	status = _readRegister(dev_ctx, GPIO_DATA_OUTPUT, &data);
 	if (status != HAL_OK) return false;
+
 	uint8_t channelBit = 0x01 << gpio_nbr;
 	data &= ~channelBit;
 	if (output_state == true) data |= channelBit;
@@ -161,7 +185,147 @@ bool ads1x2s14_gpio_setState(spi_channel_dev_ctx* dev_ctx, uint8_t gpio_nbr, boo
 	} else if (gpio_nbr == 3) {
 		data &= ~(0x01 << 7);  // reset bit 7
 	}
-	status = _writeRegister(dev_ctx, 0x0c, data);
+
+	status = _writeRegister(dev_ctx, GPIO_DATA_OUTPUT, data);
+	if (status != HAL_OK) return false;
+
+	return true;
+}
+
+bool ads1x2s14_pga_setGain(spi_channel_dev_ctx* dev_ctx, ads1x2s14_gain gain) {
+	// 8.9 GAIN_CFG Register (Address = 08h) [Reset = 01h]
+	HAL_StatusTypeDef status;
+	uint8_t data = 0;
+
+	status = _readRegister(dev_ctx, GAIN_CFG, &data);
+	if (status != HAL_OK) return false;
+
+	data &= ~0x0f;
+	data |= gain;
+
+	status = _writeRegister(dev_ctx, GAIN_CFG, data);
+	if (status != HAL_OK) return false;
+
+	return true;
+}
+
+bool ads1x2s14_mux_select(spi_channel_dev_ctx* dev_ctx, ads1x2s14_mux ainp, ads1x2s14_mux ainn = ads1x2s14_mux_gnd) {
+	// 8.8 MUX_CFG Register (Address = 07h) [Reset = 01h]
+	HAL_StatusTypeDef status;
+	uint8_t data = (ainn | (ainp << 4));
+
+	status = _writeRegister(dev_ctx, MUX_CFG, data);
+	if (status != HAL_OK) return false;
+
+	return true;
+}
+
+bool ads1x2s14_device_config(spi_channel_dev_ctx* dev_ctx, bool pwdDown, bool stdby, ads1x2s14_cnvMode cnvMode, ads1x2s14_speed speed) {
+	// 8.6 DEVICE_CFG Register (Address = 05h) [Reset = 00h]
+	HAL_StatusTypeDef status;
+	uint8_t data = 0;
+
+	status = _readRegister(dev_ctx, DEVICE_CFG, &data);
+	if (status != HAL_OK) return false;
+
+	SET_BIT_STATE(data, 7, pwdDown);
+	SET_BIT_STATE(data, 6, stdby);
+	SET_BIT_STATE(data, 2, cnvMode);
+	data &= ~0x03;
+	data |= speed;
+
+	status = _writeRegister(dev_ctx, DEVICE_CFG, data);
+	if (status != HAL_OK) return false;
+
+	return true;
+}
+
+bool ads1x2s14_cnv_start(spi_channel_dev_ctx* dev_ctx) {
+	// 8.5 CONVERSION_CTRL Register (Address = 04h) [Reset = 00h]
+	uint8_t data = 2;
+
+	HAL_StatusTypeDef status = _writeRegister(dev_ctx, DEVICE_CFG, data);
+	if (status != HAL_OK) return false;
+
+	return true;
+}
+
+bool ads1x2s14_cnv_stop(spi_channel_dev_ctx* dev_ctx) {
+	// 8.5 CONVERSION_CTRL Register (Address = 04h) [Reset = 00h]
+	uint8_t data = 1;
+
+	HAL_StatusTypeDef status = _writeRegister(dev_ctx, DEVICE_CFG, data);
+	if (status != HAL_OK) return false;
+
+	return true;
+}
+
+bool ads1x2s14_reset(spi_channel_dev_ctx* dev_ctx) {
+	// 8.5 CONVERSION_CTRL Register (Address = 04h) [Reset = 00h]
+	uint8_t data = 0b010110 << 2;
+
+	HAL_StatusTypeDef status = _writeRegister(dev_ctx, DEVICE_CFG, data);
+	if (status != HAL_OK) return false;
+
+	return true;
+}
+
+bool ads1x2s14_intRef_set(spi_channel_dev_ctx* dev_ctx, ads1x2s14_intRef intRef) {
+	// 8.10 REFERENCE_CFG Register (Address = 09h) [Reset = 00h]
+	HAL_StatusTypeDef status;
+	uint8_t data = 0;
+
+	status = _readRegister(dev_ctx, REFERENCE_CFG, &data);
+	if (status != HAL_OK) return false;
+
+	SET_BIT_STATE(data, 2, intRef);
+
+	status = _writeRegister(dev_ctx, REFERENCE_CFG, data);
+	if (status != HAL_OK) return false;
+
+	return true;
+}
+
+bool ads1x2s14_digital_config(spi_channel_dev_ctx* dev_ctx, ads1x2s14_coding coding, bool cntRead = false, bool enableRegCrc = false, bool enableSpiCrc = false, bool enableStatusHdr = false) {
+	// 8.10 8.11 DIGITAL_CFG Register (Address = 0Ah) [Reset = 00h]
+	HAL_StatusTypeDef status;
+	uint8_t data = 0;
+
+	status = _readRegister(dev_ctx, DIGITAL_CFG, &data);
+	if (status != HAL_OK) return false;
+
+	SET_BIT_STATE(data, 6, enableRegCrc);
+	SET_BIT_STATE(data, 5, enableSpiCrc);
+	SET_BIT_STATE(data, 4, enableStatusHdr);
+	SET_BIT_STATE(data, 2, cntRead);
+	SET_BIT_STATE(data, 1, coding);
+
+	status = _writeRegister(dev_ctx, DIGITAL_CFG, data);
+	if (status != HAL_OK) return false;
+
+	return true;
+}
+
+bool ads1x2s14_dataRate_config(spi_channel_dev_ctx* dev_ctx, bool globalChop, ads1x2s14_filter filter = ads1x2s14_filter_16, ads1x2s14_delay delay = ads1x2s14_delay_0) {
+	// 8.7 DATA_RATE_CFG Register (Address = 06h) [Reset = 00h]
+	uint8_t data = 0;
+
+	SET_BIT_STATE(data, 3, globalChop);
+	data |= (delay << 4);
+	data |= filter;
+
+	HAL_StatusTypeDef status = _writeRegister(dev_ctx, DIGITAL_CFG, data);
+	if (status != HAL_OK) return false;
+
+	return true;
+}
+
+bool ads1x2s14_data_read(spi_channel_dev_ctx* dev_ctx, uint8_t byteCount, uint8_t* rxData) {
+	// 7.5.5 Continuous-Read Mode
+	_configureSpi(dev_ctx);
+	_chipSelect(dev_ctx);
+	HAL_StatusTypeDef status = HAL_SPI_Receive(dev_ctx->channel, rxData, byteCount, 1000);
+	_chipDeSelect(dev_ctx);
 	if (status != HAL_OK) return false;
 
 	return true;
