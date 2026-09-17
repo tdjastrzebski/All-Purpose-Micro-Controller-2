@@ -106,7 +106,7 @@ void PostInit(void) {
 	adcReady = ads1x2s14_ref_set(&_adc_spi, ads1x2s14_ref_int2_5V);
 	adcReady = ads1x2s14_mux_select(&_adc_spi, ads1x2s14_mux_ain0);
 	adcReady = ads1x2s14_digital_config(&_adc_spi, ads1x2s14_coding_unipolar, false);
-	adcReady = ads1x2s14_dev_config(&_adc_spi, false, false, ads1x2s14_cnvMode_singleShot, ads1x2s14_speed_32kHz);
+	adcReady = ads1x2s14_dev_config(&_adc_spi, false, false, ads1x2s14_cnvMode_singleShot, ads1x2s14_speed_512kHz);
 	adcReady = ads1x2s14_cnv_start(&_adc_spi);
 	dwt_delay(1000000);
 	uint32_t data = 0;
@@ -157,7 +157,7 @@ static void _rtcAlarmAEventCallback(RTC_HandleTypeDef* hrtc) {
 	} else {
 		ads1x2s14_data_read(&_adc_spi, 2, (uint8_t*)&data);
 		ads1x2s14_status_read(&_adc_spi, &status);
-		float value = (data / 65535.0) * 65.0;
+		float value = (data / 65535.0) * 2.0 * 65.0;
 		my_printf("adc %i, cnt %i, %.2f\n", data, status.conv_count, value);
 	}
 	flag = !flag;
