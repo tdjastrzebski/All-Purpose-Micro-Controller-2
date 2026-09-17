@@ -45,21 +45,17 @@ static HAL_StatusTypeDef _readRegister(spi_channel_dev_ctx* dev_ctx, uint8_t reg
 	uint16_t rxData = 0;
 	uint16_t txData = 0;
 
-	spi_drv_configureSpi(dev_ctx, spi_drv_direction_halfDuplex, spi_drv_mode_1);
+	spi_drv_configureSpi(dev_ctx, spi_drv_direction_fullDuplex, spi_drv_mode_1);
 
-	// first write 16 zeros to clear buffer
-	_chipSelect(dev_ctx);
-	result = HAL_SPI_Transmit(dev_ctx->channel, (uint8_t*)&txData, 2, 1000);
-	_chipDeSelect(dev_ctx);
-	if (result != HAL_OK) return result;
 	txData = (regAddress & 0xf);
 	txData |= 0x40;
 	_chipSelect(dev_ctx);
-	result = HAL_SPI_Transmit(dev_ctx->channel, (uint8_t*)&txData, 2, 1000);
+	result = HAL_SPI_TransmitReceive(dev_ctx->channel, (uint8_t*)&txData, (uint8_t*)&txData, 2, 1000);
 	_chipDeSelect(dev_ctx);
 	if (result != HAL_OK) return result;
+	txData = 0;
 	_chipSelect(dev_ctx);
-	result = HAL_SPI_Receive(dev_ctx->channel, (uint8_t*)&rxData, 2, 1000);
+	result = HAL_SPI_TransmitReceive(dev_ctx->channel, (uint8_t*)&txData, (uint8_t*)&rxData, 2, 1000);
 	if (result != HAL_OK) return result;
 	*data = rxData;
 	return result;
@@ -70,19 +66,20 @@ static HAL_StatusTypeDef _writeRegister(spi_channel_dev_ctx* dev_ctx, uint8_t re
 	// 7.5.4.3 Write Register Command
 	HAL_StatusTypeDef result;
 	uint16_t txData = 0;
+	uint16_t rxData = 0;
 
-	spi_drv_configureSpi(dev_ctx, spi_drv_direction_halfDuplex, spi_drv_mode_1);
+	spi_drv_configureSpi(dev_ctx, spi_drv_direction_fullDuplex, spi_drv_mode_1);
 
 	// first write 16 zeros to clear buffer
 	_chipSelect(dev_ctx);
-	result = HAL_SPI_Transmit(dev_ctx->channel, (uint8_t*)&txData, 2, 1000);
+	result = HAL_SPI_TransmitReceive(dev_ctx->channel, (uint8_t*)&txData, (uint8_t*)&rxData, 2, 1000);
 	_chipDeSelect(dev_ctx);
 	if (result != HAL_OK) return result;
 	txData = (regAddress & 0xf);
 	txData |= 0x80;
 	txData |= (data << 8);
 	_chipSelect(dev_ctx);
-	result = HAL_SPI_Transmit(dev_ctx->channel, (uint8_t*)&txData, 2, 1000);
+	result = HAL_SPI_TransmitReceive(dev_ctx->channel, (uint8_t*)&txData, (uint8_t*)&rxData, 2, 1000);
 	_chipDeSelect(dev_ctx);
 	return result;
 }
@@ -315,10 +312,11 @@ bool ads1x2s14_dataRate_config(spi_channel_dev_ctx* dev_ctx, bool globalChop, ad
 bool ads1x2s14_data_read(spi_channel_dev_ctx* dev_ctx, uint8_t byteCount, uint8_t* rxData) {
 	// 7.5.5 Continuous-Read Mode
 	HAL_StatusTypeDef result;
+	uint8_t txData[byteCount]{0};
 
-	spi_drv_configureSpi(dev_ctx, spi_drv_direction_halfDuplex, spi_drv_mode_1);
+	spi_drv_configureSpi(dev_ctx, spi_drv_direction_fullDuplex, spi_drv_mode_1);
 	_chipSelect(dev_ctx);
-	result = HAL_SPI_Receive(dev_ctx->channel, rxData, byteCount, 1000);
+	result = HAL_SPI_TransmitReceive(dev_ctx->channel, txData, rxData, byteCount, 1000);
 	_chipDeSelect(dev_ctx);
 	if (result != HAL_OK) return false;
 
