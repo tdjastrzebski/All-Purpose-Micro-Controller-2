@@ -52,7 +52,7 @@ void PostInit(void) {
 
 	dwt_init();  // always init
 
-	HAL_StatusTypeDef status;
+	HAL_StatusTypeDef result;
 
 	if (HAL_TIM_Encoder_Start_IT(&EncoderTimer, TIM_CHANNEL_1 | TIM_CHANNEL_2) != HAL_OK) {
 		Error_Handler();
@@ -66,8 +66,8 @@ void PostInit(void) {
 
 	st7789_FillScreen(&_lcd_spi, st7789_color_black);
 
-	bool isOk = m95p32_Init(&_eeprom_spi);
-	if (isOk) {
+	bool eepromReady = m95p32_Init(&_eeprom_spi);
+	if (eepromReady) {
 		my_printf(GREEN("ext eeprom memory test passed") "\n");
 	} else {
 		my_printf(RED("ext eeprom memory test failed") "\n");
@@ -87,34 +87,37 @@ void PostInit(void) {
 		st7789_DrawPixel(&_lcd_spi, 230, i, st7789_color_green);
 	}
 
-	if (true == ads1x2s14_init(&_adc_spi)) {
+	ads1x2s14_resolution resolution = ads1x2s14_init(&_adc_spi);
+	if (resolution != ads1x2s14_resolution_unknown) {
 		my_printf(GREEN("ads1x2s14_init OK") "\n");
 	} else {
 		my_printf(RED("ads1x2s14_init failed") "\n");
 	}
-
-	ads1x2s14_gpio_config(&_adc_spi, 0, ads1x2s14_gpio_pushPull);
-	ads1x2s14_gpio_config(&_adc_spi, 1, ads1x2s14_gpio_pushPull);
-	ads1x2s14_gpio_config(&_adc_spi, 2, ads1x2s14_gpio_pushPull);
-	ads1x2s14_gpio_config(&_adc_spi, 3, ads1x2s14_gpio_pushPull);
-	ads1x2s14_gpio_setState(&_adc_spi, 0, true);   // Mode1 = current
-	ads1x2s14_gpio_setState(&_adc_spi, 1, false);  // Disable1 = disabled
-	ads1x2s14_gpio_setState(&_adc_spi, 2, true);   // Mode2 = current
-	ads1x2s14_gpio_setState(&_adc_spi, 3, false);  // Disable2 = disabled
-	ads1x2s14_pga_setGain(&_adc_spi, ads1x2s14_gain_05);
-	ads1x2s14_intRef_set(&_adc_spi, ads1x2s14_intRef_2_5V);
-	ads1x2s14_mux_select(&_adc_spi, ads1x2s14_mux_ain0);
-	ads1x2s14_digital_config(&_adc_spi, ads1x2s14_coding_unipolar);
-	ads1x2s14_device_config(&_adc_spi, false, false, ads1x2s14_cnvMode_singleShot, ads1x2s14_speed_512kHz);
-	ads1x2s14_cnv_start(&_adc_spi);
+	bool adcReady;
+	adcReady = ads1x2s14_gpio_config(&_adc_spi, 0, ads1x2s14_gpio_pushPull);
+	adcReady = ads1x2s14_gpio_config(&_adc_spi, 1, ads1x2s14_gpio_pushPull);
+	adcReady = ads1x2s14_gpio_config(&_adc_spi, 2, ads1x2s14_gpio_pushPull);
+	adcReady = ads1x2s14_gpio_config(&_adc_spi, 3, ads1x2s14_gpio_pushPull);
+	adcReady = ads1x2s14_gpio_setState(&_adc_spi, 0, true);   // Mode1 = current
+	adcReady = ads1x2s14_gpio_setState(&_adc_spi, 1, false);  // Disable1 = disabled
+	adcReady = ads1x2s14_gpio_setState(&_adc_spi, 2, true);   // Mode2 = current
+	adcReady = ads1x2s14_gpio_setState(&_adc_spi, 3, false);  // Disable2 = disabled
+	adcReady = ads1x2s14_pga_setGain(&_adc_spi, ads1x2s14_gain_05);
+	adcReady = ads1x2s14_ref_set(&_adc_spi, ads1x2s14_ref_int2_5V);
+	adcReady = ads1x2s14_mux_select(&_adc_spi, ads1x2s14_mux_ain0);
+	adcReady = ads1x2s14_digital_config(&_adc_spi, ads1x2s14_coding_unipolar, false);
+	adcReady = ads1x2s14_dev_config(&_adc_spi, false, false, ads1x2s14_cnvMode_singleShot, ads1x2s14_speed_512kHz);
+	adcReady = ads1x2s14_cnv_start(&_adc_spi);
 	dwt_delay(10000);
-	uint8_t data[2];
-	ads1x2s14_data_read(&_adc_spi, 2, data);
+	uint32_t data;
+	ads1x2s14_status status;
+	adcReady = ads1x2s14_data_read(&_adc_spi, 2, (uint8_t*)&data);
+	adcReady = ads1x2s14_status_read(&_adc_spi, &status);
+
+	lvgl_init();
 
 	EncoderTimer.IC_CaptureCallback = _encoderTimerCaptureCallback;
 	RtcTimer.AlarmAEventCallback = _rtcAlarmAEventCallback;
-
-	lvgl_init();
 }
 
 void MainLoop(void) {
@@ -148,9 +151,11 @@ static void _rtcAlarmAEventCallback(RTC_HandleTypeDef* hrtc) {
 	lvgl_showTime(dt);
 	ads1x2s14_cnv_start(&_adc_spi);
 	dwt_delay(10000);
-	uint16_t data;
-	ads1x2s14_data_read(&_adc_spi, 2, (uint8_t *)&data);
-	//my_printf("adc %i\n", data);
+	uint32_t data;
+	ads1x2s14_status status;
+	ads1x2s14_status_read(&_adc_spi, &status);
+	ads1x2s14_data_read(&_adc_spi, 2, (uint8_t*)&data);
+	my_printf("adc %i\n", data);
 }
 
 static void _encoderTimerCaptureCallback(TIM_HandleTypeDef* htim) {

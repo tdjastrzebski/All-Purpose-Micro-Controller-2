@@ -53,9 +53,10 @@ enum ads1x2s14_cnvMode : bool {
 	ads1x2s14_cnvMode_singleShot = true,
 };
 
-enum ads1x2s14_intRef : bool {
-	ads1x2s14_intRef_1_25V = false,
-	ads1x2s14_intRef_2_5V = true,
+enum ads1x2s14_ref : uint8_t {
+	ads1x2s14_ref_int1_25V = 0,
+	ads1x2s14_ref_int2_5V = 1,
+	// ads1x2s14_ref_ext = 2, // currently not supported
 };
 
 enum ads1x2s14_speed : uint8_t {
@@ -100,24 +101,42 @@ enum ads1x2s14_delay : uint8_t {
 	ads1x2s14_delay_16384 = 0b1111,  // 16384x tMOD
 };
 
-enum ads1x2s14_resolution : bool {
-	ads1x2s14_resolution_16b = false,
-	ads1x2s14_resolution_24b = true,
+enum ads1x2s14_resolution : uint8_t {
+	ads1x2s14_resolution_unknown = 0,
+	ads1x2s14_resolution_16b = 16,
+	ads1x2s14_resolution_24b = 24,
 };
 
-bool ads1x2s14_init(spi_channel_dev_ctx* dev_ctx);
+typedef struct {
+	bool reset_occured;
+	bool avdd_uv;
+	bool ref_uv;
+	bool spi_crc_fault;
+	bool reg_crc_fault;
+	bool mem_fault;
+	bool reg_write_fault;
+	bool data_ready;
+	uint8_t conv_count;
+	bool gpio3_dat_in;
+	bool gpio2_dat_in;
+	bool gpio1_dat_in;
+	bool gpio0_dat_in;
+} ads1x2s14_status;
+
+ads1x2s14_resolution ads1x2s14_init(spi_channel_dev_ctx* dev_ctx);
 bool ads1x2s14_gpio_config(spi_channel_dev_ctx* dev_ctx, uint8_t gpio_nbr, ads1x2s14_gpio gpio_config);
 bool ads1x2s14_gpio_setState(spi_channel_dev_ctx* dev_ctx, uint8_t gpio_nbr, bool output_state);
 bool ads1x2s14_pga_setGain(spi_channel_dev_ctx* dev_ctx, ads1x2s14_gain gain);
 bool ads1x2s14_mux_select(spi_channel_dev_ctx* dev_ctx, ads1x2s14_mux ainp, ads1x2s14_mux ainn = ads1x2s14_mux_gnd);
-bool ads1x2s14_device_config(spi_channel_dev_ctx* dev_ctx, bool pwdDown, bool stdby, ads1x2s14_cnvMode cnvMode, ads1x2s14_speed speed);
+bool ads1x2s14_dev_config(spi_channel_dev_ctx* dev_ctx, bool pwdDown, bool stdby, ads1x2s14_cnvMode cnvMode, ads1x2s14_speed speed);
 bool ads1x2s14_cnv_start(spi_channel_dev_ctx* dev_ctx);
 bool ads1x2s14_cnv_stop(spi_channel_dev_ctx* dev_ctx);
 bool ads1x2s14_reset(spi_channel_dev_ctx* dev_ctx);
-bool ads1x2s14_intRef_set(spi_channel_dev_ctx* dev_ctx, ads1x2s14_intRef intRef);
-bool ads1x2s14_digital_config(spi_channel_dev_ctx* dev_ctx, ads1x2s14_coding coding, bool cntRead = false, bool enableRegCrc = false, bool enableSpiCrc = false, bool enableStatusHdr = false);
-bool ads1x2s14_dataRate_config(spi_channel_dev_ctx* dev_ctx, bool globalChop, ads1x2s14_filter filter, ads1x2s14_delay delay);
-// bool ads1x2s14_status_read(spi_channel_dev_ctx* dev_ctx); // TODO: read STATUS_LSB and STATUS_MSB
+bool ads1x2s14_ref_set(spi_channel_dev_ctx* dev_ctx, ads1x2s14_ref ref);
+bool ads1x2s14_digital_config(spi_channel_dev_ctx* dev_ctx, ads1x2s14_coding coding, bool enableStatusHdr = false, bool enableSpiCrc = false, bool enableRegCrc = false, bool cntRead = false, bool sdoDualMode = false);
+bool ads1x2s14_dataRate_config(spi_channel_dev_ctx* dev_ctx, bool globalChop, ads1x2s14_filter filter = ads1x2s14_filter_16, ads1x2s14_delay delay = ads1x2s14_delay_0);
+bool ads1x2s14_status_read(spi_channel_dev_ctx* dev_ctx, ads1x2s14_status* status);
+void ads1x2s14_status_deserialize(uint16_t data, ads1x2s14_status* status);
 bool ads1x2s14_data_read(spi_channel_dev_ctx* dev_ctx, uint8_t byteCount, uint8_t* data);
 
 #ifdef __cplusplus

@@ -5,6 +5,7 @@
 #include "ads1x2s14.h"
 
 #include "dwt_timer.h"
+#include "main.h"
 
 #define DEVICE_ID 0x00
 #define REVISION_ID 0x01
@@ -30,121 +31,110 @@
 
 static void _chipSelect(spi_channel_dev_ctx* spi) {
 	HAL_GPIO_WritePin(spi->cs_port, spi->cs_pin, GPIO_PIN_RESET);
+	dwt_delay(1);
 }
 
 static void _chipDeSelect(spi_channel_dev_ctx* spi) {
 	HAL_GPIO_WritePin(spi->cs_port, spi->cs_pin, GPIO_PIN_SET);
 }
 
-static void _configureSpi(spi_channel_dev_ctx* dev_ctx) {
-	dev_ctx->channel->Instance->CR1 &= ~SPI_CR1_SPE;                                       // disable SPI
-	dev_ctx->channel->Instance->CFG2 |= SPI_CFG2_CPHA;                                     // data on 2nd clk edge
-	dev_ctx->channel->Instance->CFG2 &= ~SPI_CFG2_CPOL;                                    // clk polarity low
-	dev_ctx->channel->Instance->CFG2 &= ~SPI_CFG2_LSBFRST;                                 // disable LSB first
-	dev_ctx->channel->Instance->CFG2 &= ~(SPI_CFG2_SP_0 | SPI_CFG2_SP_1 | SPI_CFG2_SP_2);  // reset SPI_CFG2_SP bits - Motorola mode
-	dev_ctx->channel->Instance->CR1 |= SPI_CR1_SPE;                                        // enable SPI
-}
-
 static HAL_StatusTypeDef _readRegister(spi_channel_dev_ctx* dev_ctx, uint8_t regAddress, uint8_t* data) {
 	// 7.5.4 Device Commands
 	// 7.5.4.2 Read Register Command
-	HAL_StatusTypeDef status;
+	HAL_StatusTypeDef result;
 	uint16_t rxData = 0;
 	uint16_t txData = 0;
 
-	_configureSpi(dev_ctx);
+	spi_drv_configureSpi(dev_ctx, spi_drv_direction_halfDuplex, spi_drv_mode_1);
 
 	// first write 16 zeros to clear buffer
 	_chipSelect(dev_ctx);
-	dwt_delay(1);
-	status = HAL_SPI_Transmit(dev_ctx->channel, (uint8_t*)&txData, 2, 1000);
-	dwt_delay(1);
+	result = HAL_SPI_Transmit(dev_ctx->channel, (uint8_t*)&txData, 2, 1000);
 	_chipDeSelect(dev_ctx);
-	if (status != HAL_OK) return status;
+	if (result != HAL_OK) return result;
 	txData = (regAddress & 0xf);
 	txData |= 0x40;
 	_chipSelect(dev_ctx);
-	dwt_delay(1);
-	status = HAL_SPI_Transmit(dev_ctx->channel, (uint8_t*)&txData, 2, 1000);
-	dwt_delay(1);
+	result = HAL_SPI_Transmit(dev_ctx->channel, (uint8_t*)&txData, 2, 1000);
 	_chipDeSelect(dev_ctx);
-	if (status != HAL_OK) return status;
-	dwt_delay(1);
+	if (result != HAL_OK) return result;
 	_chipSelect(dev_ctx);
-	status = HAL_SPI_Receive(dev_ctx->channel, (uint8_t*)&rxData, 2, 1000);
-	_chipDeSelect(dev_ctx);
-	if (status != HAL_OK) return status;
+	result = HAL_SPI_Receive(dev_ctx->channel, (uint8_t*)&rxData, 2, 1000);
+	if (result != HAL_OK) return result;
 	*data = rxData;
-	return status;
+	return result;
 }
 
 static HAL_StatusTypeDef _writeRegister(spi_channel_dev_ctx* dev_ctx, uint8_t regAddress, uint8_t data) {
 	// 7.5.4 Device Commands
 	// 7.5.4.3 Write Register Command
-	HAL_StatusTypeDef status;
+	HAL_StatusTypeDef result;
 	uint16_t txData = 0;
 
-	_configureSpi(dev_ctx);
+	spi_drv_configureSpi(dev_ctx, spi_drv_direction_halfDuplex, spi_drv_mode_1);
 
 	// first write 16 zeros to clear buffer
 	_chipSelect(dev_ctx);
-	dwt_delay(1);
-	status = HAL_SPI_Transmit(dev_ctx->channel, (uint8_t*)&txData, 2, 1000);
-	dwt_delay(1);
+	result = HAL_SPI_Transmit(dev_ctx->channel, (uint8_t*)&txData, 2, 1000);
 	_chipDeSelect(dev_ctx);
-	if (status != HAL_OK) return status;
+	if (result != HAL_OK) return result;
 	txData = (regAddress & 0xf);
 	txData |= 0x80;
 	txData |= (data << 8);
 	_chipSelect(dev_ctx);
-	dwt_delay(1);
-	status = HAL_SPI_Transmit(dev_ctx->channel, (uint8_t*)&txData, 2, 1000);
-	dwt_delay(1);
+	result = HAL_SPI_Transmit(dev_ctx->channel, (uint8_t*)&txData, 2, 1000);
 	_chipDeSelect(dev_ctx);
-	return status;
+	return result;
 }
 
-bool ads1x2s14_init(spi_channel_dev_ctx* dev_ctx) {
-	HAL_StatusTypeDef status;
+ads1x2s14_resolution ads1x2s14_init(spi_channel_dev_ctx* dev_ctx) {
+	HAL_StatusTypeDef result;
 	uint8_t data = 0;
-
-	// 8.1 DEVICE_ID Register (Address = 00h)
-	// read device ID
-	status = _readRegister(dev_ctx, DEVICE_ID, &data);
-	if (status != HAL_OK) return false;
-	data &= 0x0f;
-
-	if (data == 0b1010) {
-		// 16 bit device
-	} else if (data == 0b1011) {
-		// 24 bit device
-	} else {
-		return false;
-	}
+	ads1x2s14_resolution resolution = ads1x2s14_resolution_unknown;
 
 	// 8.5 CONVERSION_CTRL Register (Address = 04h) [Reset = 00h]
 	// reset device
-	status = _writeRegister(dev_ctx, CONVERSION_CTRL, 0b010110 << 2);
-	if (status != HAL_OK) return false;
+	result = _writeRegister(dev_ctx, CONVERSION_CTRL, 0b010110 << 2);
+	if (result != HAL_OK) return ads1x2s14_resolution_unknown;
 
 	// 5.6 Timing Requirements
 	dwt_delay(500);  // wait 500 us
 
+	// 8.1 DEVICE_ID Register (Address = 00h)
+	// read device ID
+	result = _readRegister(dev_ctx, DEVICE_ID, &data);
+	if (result != HAL_OK) return ads1x2s14_resolution_unknown;
+	data &= 0x0f;
+
+	if (data == 0b1010) {
+		// 16 bit device
+		resolution = ads1x2s14_resolution_16b;
+	} else if (data == 0b1011) {
+		// 24 bit device
+		resolution = ads1x2s14_resolution_24b;
+	} else {
+		return ads1x2s14_resolution_unknown;
+	}
+
 	// 8.2 REVISION_ID Register (Address = 01h) [Reset = XXh]
-	status = _readRegister(dev_ctx, REVISION_ID, &data);
-	if (status != HAL_OK) return false;
+	result = _readRegister(dev_ctx, REVISION_ID, &data);
+	if (result != HAL_OK) return ads1x2s14_resolution_unknown;
 
 	// 8.3 STATUS_MSB Register (Address = 02h) [Reset = 3Eh]
-	status = _readRegister(dev_ctx, STATUS_MSB, &data);
-	if (status != HAL_OK) return false;
-	if (data != 0x3e) return false;
+	result = _readRegister(dev_ctx, STATUS_MSB, &data);
+	if (result != HAL_OK) return ads1x2s14_resolution_unknown;
+	if (data != 0x3e) return ads1x2s14_resolution_unknown;
 
 	// 8.4 STATUS_LSB Register (Address = 03h) [Reset = F0h]
-	status = _readRegister(dev_ctx, STATUS_LSB, &data);
-	if (status != HAL_OK) return false;
-	if (data != 0xf0) return false;
+	result = _readRegister(dev_ctx, STATUS_LSB, &data);
+	if (result != HAL_OK) return ads1x2s14_resolution_unknown;
+	if (data != 0xf0) return ads1x2s14_resolution_unknown;
 
-	return true;
+	// reset RESETn and all fault flags
+	result = _writeRegister(dev_ctx, STATUS_MSB, 0b11111110);
+	if (result != HAL_OK) return ads1x2s14_resolution_unknown;
+
+	return resolution;
 }
 
 // 8 Registers
@@ -152,18 +142,18 @@ bool ads1x2s14_init(spi_channel_dev_ctx* dev_ctx) {
 bool ads1x2s14_gpio_config(spi_channel_dev_ctx* dev_ctx, uint8_t gpio_nbr, ads1x2s14_gpio gpio_config) {
 	// 8.12 GPIO_CFG Register (Address = 0Bh) [Reset = 00h]
 	assert_param(gpio_nbr < 4);
-	HAL_StatusTypeDef status;
+	HAL_StatusTypeDef result;
 	uint8_t data = 0;
 
-	status = _readRegister(dev_ctx, GPIO_CFG, &data);
-	if (status != HAL_OK) return false;
+	result = _readRegister(dev_ctx, GPIO_CFG, &data);
+	if (result != HAL_OK) return false;
 
 	uint8_t channelBits = 0x03 << (gpio_nbr * 2);
 	data &= ~channelBits;
 	data |= (gpio_config << (gpio_nbr * 2));
 
-	status = _writeRegister(dev_ctx, GPIO_CFG, data);
-	if (status != HAL_OK) return false;
+	result = _writeRegister(dev_ctx, GPIO_CFG, data);
+	if (result != HAL_OK) return false;
 
 	return true;
 }
@@ -171,11 +161,11 @@ bool ads1x2s14_gpio_config(spi_channel_dev_ctx* dev_ctx, uint8_t gpio_nbr, ads1x
 bool ads1x2s14_gpio_setState(spi_channel_dev_ctx* dev_ctx, uint8_t gpio_nbr, bool output_state) {
 	// 8.13 GPIO_DATA_OUTPUT Register (Address = 0Ch) [Reset = 00h]
 	assert_param(gpio_nbr < 4);
-	HAL_StatusTypeDef status;
+	HAL_StatusTypeDef result;
 	uint8_t data = 0;
 
-	status = _readRegister(dev_ctx, GPIO_DATA_OUTPUT, &data);
-	if (status != HAL_OK) return false;
+	result = _readRegister(dev_ctx, GPIO_DATA_OUTPUT, &data);
+	if (result != HAL_OK) return false;
 
 	uint8_t channelBit = 0x01 << gpio_nbr;
 	data &= ~channelBit;
@@ -186,47 +176,47 @@ bool ads1x2s14_gpio_setState(spi_channel_dev_ctx* dev_ctx, uint8_t gpio_nbr, boo
 		data &= ~(0x01 << 7);  // reset bit 7
 	}
 
-	status = _writeRegister(dev_ctx, GPIO_DATA_OUTPUT, data);
-	if (status != HAL_OK) return false;
+	result = _writeRegister(dev_ctx, GPIO_DATA_OUTPUT, data);
+	if (result != HAL_OK) return false;
 
 	return true;
 }
 
 bool ads1x2s14_pga_setGain(spi_channel_dev_ctx* dev_ctx, ads1x2s14_gain gain) {
 	// 8.9 GAIN_CFG Register (Address = 08h) [Reset = 01h]
-	HAL_StatusTypeDef status;
+	HAL_StatusTypeDef result;
 	uint8_t data = 0;
 
-	status = _readRegister(dev_ctx, GAIN_CFG, &data);
-	if (status != HAL_OK) return false;
+	result = _readRegister(dev_ctx, GAIN_CFG, &data);
+	if (result != HAL_OK) return false;
 
 	data &= ~0x0f;
 	data |= gain;
 
-	status = _writeRegister(dev_ctx, GAIN_CFG, data);
-	if (status != HAL_OK) return false;
+	result = _writeRegister(dev_ctx, GAIN_CFG, data);
+	if (result != HAL_OK) return false;
 
 	return true;
 }
 
-bool ads1x2s14_mux_select(spi_channel_dev_ctx* dev_ctx, ads1x2s14_mux ainp, ads1x2s14_mux ainn = ads1x2s14_mux_gnd) {
+bool ads1x2s14_mux_select(spi_channel_dev_ctx* dev_ctx, ads1x2s14_mux ainp, ads1x2s14_mux ainn) {
 	// 8.8 MUX_CFG Register (Address = 07h) [Reset = 01h]
-	HAL_StatusTypeDef status;
+	HAL_StatusTypeDef result;
 	uint8_t data = (ainn | (ainp << 4));
 
-	status = _writeRegister(dev_ctx, MUX_CFG, data);
-	if (status != HAL_OK) return false;
+	result = _writeRegister(dev_ctx, MUX_CFG, data);
+	if (result != HAL_OK) return false;
 
 	return true;
 }
 
-bool ads1x2s14_device_config(spi_channel_dev_ctx* dev_ctx, bool pwdDown, bool stdby, ads1x2s14_cnvMode cnvMode, ads1x2s14_speed speed) {
+bool ads1x2s14_dev_config(spi_channel_dev_ctx* dev_ctx, bool pwdDown, bool stdby, ads1x2s14_cnvMode cnvMode, ads1x2s14_speed speed) {
 	// 8.6 DEVICE_CFG Register (Address = 05h) [Reset = 00h]
-	HAL_StatusTypeDef status;
+	HAL_StatusTypeDef result;
 	uint8_t data = 0;
 
-	status = _readRegister(dev_ctx, DEVICE_CFG, &data);
-	if (status != HAL_OK) return false;
+	result = _readRegister(dev_ctx, DEVICE_CFG, &data);
+	if (result != HAL_OK) return false;
 
 	SET_BIT_STATE(data, 7, pwdDown);
 	SET_BIT_STATE(data, 6, stdby);
@@ -234,8 +224,8 @@ bool ads1x2s14_device_config(spi_channel_dev_ctx* dev_ctx, bool pwdDown, bool st
 	data &= ~0x03;
 	data |= speed;
 
-	status = _writeRegister(dev_ctx, DEVICE_CFG, data);
-	if (status != HAL_OK) return false;
+	result = _writeRegister(dev_ctx, DEVICE_CFG, data);
+	if (result != HAL_OK) return false;
 
 	return true;
 }
@@ -244,8 +234,8 @@ bool ads1x2s14_cnv_start(spi_channel_dev_ctx* dev_ctx) {
 	// 8.5 CONVERSION_CTRL Register (Address = 04h) [Reset = 00h]
 	uint8_t data = 2;
 
-	HAL_StatusTypeDef status = _writeRegister(dev_ctx, DEVICE_CFG, data);
-	if (status != HAL_OK) return false;
+	HAL_StatusTypeDef result = _writeRegister(dev_ctx, CONVERSION_CTRL, data);
+	if (result != HAL_OK) return false;
 
 	return true;
 }
@@ -254,8 +244,8 @@ bool ads1x2s14_cnv_stop(spi_channel_dev_ctx* dev_ctx) {
 	// 8.5 CONVERSION_CTRL Register (Address = 04h) [Reset = 00h]
 	uint8_t data = 1;
 
-	HAL_StatusTypeDef status = _writeRegister(dev_ctx, DEVICE_CFG, data);
-	if (status != HAL_OK) return false;
+	HAL_StatusTypeDef result = _writeRegister(dev_ctx, CONVERSION_CTRL, data);
+	if (result != HAL_OK) return false;
 
 	return true;
 }
@@ -264,49 +254,51 @@ bool ads1x2s14_reset(spi_channel_dev_ctx* dev_ctx) {
 	// 8.5 CONVERSION_CTRL Register (Address = 04h) [Reset = 00h]
 	uint8_t data = 0b010110 << 2;
 
-	HAL_StatusTypeDef status = _writeRegister(dev_ctx, DEVICE_CFG, data);
-	if (status != HAL_OK) return false;
+	HAL_StatusTypeDef result = _writeRegister(dev_ctx, CONVERSION_CTRL, data);
+	if (result != HAL_OK) return false;
 
 	return true;
 }
 
-bool ads1x2s14_intRef_set(spi_channel_dev_ctx* dev_ctx, ads1x2s14_intRef intRef) {
+bool ads1x2s14_ref_set(spi_channel_dev_ctx* dev_ctx, ads1x2s14_ref ref) {
 	// 8.10 REFERENCE_CFG Register (Address = 09h) [Reset = 00h]
-	HAL_StatusTypeDef status;
+	assert_param(ref < 2);  // ext ref currently not supported
+	HAL_StatusTypeDef result;
 	uint8_t data = 0;
 
-	status = _readRegister(dev_ctx, REFERENCE_CFG, &data);
-	if (status != HAL_OK) return false;
+	result = _readRegister(dev_ctx, REFERENCE_CFG, &data);
+	if (result != HAL_OK) return false;
 
-	SET_BIT_STATE(data, 2, intRef);
+	SET_BIT_STATE(data, 2, ref);
 
-	status = _writeRegister(dev_ctx, REFERENCE_CFG, data);
-	if (status != HAL_OK) return false;
+	result = _writeRegister(dev_ctx, REFERENCE_CFG, data);
+	if (result != HAL_OK) return false;
 
 	return true;
 }
 
-bool ads1x2s14_digital_config(spi_channel_dev_ctx* dev_ctx, ads1x2s14_coding coding, bool cntRead = false, bool enableRegCrc = false, bool enableSpiCrc = false, bool enableStatusHdr = false) {
+bool ads1x2s14_digital_config(spi_channel_dev_ctx* dev_ctx, ads1x2s14_coding coding, bool enableStatusHdr, bool enableSpiCrc, bool enableRegCrc, bool cntRead, bool sdoDualMode) {
 	// 8.10 8.11 DIGITAL_CFG Register (Address = 0Ah) [Reset = 00h]
-	HAL_StatusTypeDef status;
+	HAL_StatusTypeDef result;
 	uint8_t data = 0;
 
-	status = _readRegister(dev_ctx, DIGITAL_CFG, &data);
-	if (status != HAL_OK) return false;
+	result = _readRegister(dev_ctx, DIGITAL_CFG, &data);
+	if (result != HAL_OK) return false;
 
 	SET_BIT_STATE(data, 6, enableRegCrc);
 	SET_BIT_STATE(data, 5, enableSpiCrc);
 	SET_BIT_STATE(data, 4, enableStatusHdr);
 	SET_BIT_STATE(data, 2, cntRead);
 	SET_BIT_STATE(data, 1, coding);
+	SET_BIT_STATE(data, 0, sdoDualMode);
 
-	status = _writeRegister(dev_ctx, DIGITAL_CFG, data);
-	if (status != HAL_OK) return false;
+	result = _writeRegister(dev_ctx, DIGITAL_CFG, data);
+	if (result != HAL_OK) return false;
 
 	return true;
 }
 
-bool ads1x2s14_dataRate_config(spi_channel_dev_ctx* dev_ctx, bool globalChop, ads1x2s14_filter filter = ads1x2s14_filter_16, ads1x2s14_delay delay = ads1x2s14_delay_0) {
+bool ads1x2s14_dataRate_config(spi_channel_dev_ctx* dev_ctx, bool globalChop, ads1x2s14_filter filter, ads1x2s14_delay delay) {
 	// 8.7 DATA_RATE_CFG Register (Address = 06h) [Reset = 00h]
 	uint8_t data = 0;
 
@@ -314,19 +306,57 @@ bool ads1x2s14_dataRate_config(spi_channel_dev_ctx* dev_ctx, bool globalChop, ad
 	data |= (delay << 4);
 	data |= filter;
 
-	HAL_StatusTypeDef status = _writeRegister(dev_ctx, DIGITAL_CFG, data);
-	if (status != HAL_OK) return false;
+	HAL_StatusTypeDef result = _writeRegister(dev_ctx, DATA_RATE_CFG, data);
+	if (result != HAL_OK) return false;
 
 	return true;
 }
 
 bool ads1x2s14_data_read(spi_channel_dev_ctx* dev_ctx, uint8_t byteCount, uint8_t* rxData) {
 	// 7.5.5 Continuous-Read Mode
-	_configureSpi(dev_ctx);
+	HAL_StatusTypeDef result;
+
+	spi_drv_configureSpi(dev_ctx, spi_drv_direction_halfDuplex, spi_drv_mode_1);
 	_chipSelect(dev_ctx);
-	HAL_StatusTypeDef status = HAL_SPI_Receive(dev_ctx->channel, rxData, byteCount, 1000);
+	result = HAL_SPI_Receive(dev_ctx->channel, rxData, byteCount, 1000);
 	_chipDeSelect(dev_ctx);
-	if (status != HAL_OK) return false;
+	if (result != HAL_OK) return false;
+
+	return true;
+}
+
+void ads1x2s14_status_deserialize(uint16_t data, ads1x2s14_status* status) {
+	uint8_t lsb = data;
+	uint8_t msb = data >> 8;
+	status->reset_occured = !(msb & (0b1 << 7));
+	status->avdd_uv = !(msb & (0b1 << 6));
+	status->ref_uv = !(msb & (0b1 << 5));
+	status->spi_crc_fault = !(msb & (0b1 << 4));
+	status->reg_crc_fault = !(msb & (0b1 << 3));
+	status->mem_fault = !(msb & (0b1 << 2));
+	status->reg_write_fault = !(msb & (0b1 << 1));
+	status->data_ready = (msb & (0b1 << 0));
+	status->conv_count = (lsb >> 4) & 0x0f;
+	status->gpio3_dat_in = (lsb & (0b1 << 3));
+	status->gpio2_dat_in = (lsb & (0b1 << 2));
+	status->gpio1_dat_in = (lsb & (0b1 << 1));
+	status->gpio0_dat_in = (lsb & (0b1 << 0));
+}
+
+bool ads1x2s14_status_read(spi_channel_dev_ctx* dev_ctx, ads1x2s14_status* status) {
+	// 8.3 STATUS_MSB Register (Address = 02h) [Reset = 3Eh]
+	// 8.4 STATUS_LSB Register (Address = 03h) [Reset = F0h]
+	uint8_t lsb;
+	uint8_t msb;
+	HAL_StatusTypeDef result;
+
+	result = _readRegister(dev_ctx, STATUS_LSB, &lsb);
+	if (result != HAL_OK) return false;
+
+	result = _readRegister(dev_ctx, STATUS_MSB, &msb);
+	if (result != HAL_OK) return false;
+
+	ads1x2s14_status_deserialize((msb << 8) | lsb, status);
 
 	return true;
 }
