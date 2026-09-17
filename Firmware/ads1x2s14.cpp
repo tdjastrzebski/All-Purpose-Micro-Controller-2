@@ -182,14 +182,8 @@ bool ads1x2s14_gpio_setState(spi_channel_dev_ctx* dev_ctx, uint8_t gpio_nbr, boo
 bool ads1x2s14_pga_setGain(spi_channel_dev_ctx* dev_ctx, ads1x2s14_gain gain) {
 	// 8.9 GAIN_CFG Register (Address = 08h) [Reset = 01h]
 	HAL_StatusTypeDef result;
-	uint8_t data = 0;
-
-	result = _readRegister(dev_ctx, GAIN_CFG, &data);
-	if (result != HAL_OK) return false;
-
-	data &= ~0x0f;
-	data |= gain;
-
+	uint8_t data = gain;
+	// TODO: allow for SYS_MON setup 
 	result = _writeRegister(dev_ctx, GAIN_CFG, data);
 	if (result != HAL_OK) return false;
 
