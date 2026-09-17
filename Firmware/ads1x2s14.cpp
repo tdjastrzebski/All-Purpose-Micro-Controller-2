@@ -257,9 +257,7 @@ bool ads1x2s14_ref_set(spi_channel_dev_ctx* dev_ctx, ads1x2s14_ref ref) {
 	HAL_StatusTypeDef result;
 	uint8_t data = 0;
 
-	result = _readRegister(dev_ctx, REFERENCE_CFG, &data);
-	if (result != HAL_OK) return false;
-
+	data &= ~0x03; // reset fits 1:0 for internal reference
 	SET_BIT_STATE(data, 2, ref);
 
 	result = _writeRegister(dev_ctx, REFERENCE_CFG, data);

@@ -57,6 +57,7 @@ enum ads1x2s14_ref : uint8_t {
 	ads1x2s14_ref_int1_25V = 0,
 	ads1x2s14_ref_int2_5V = 1,
 	// ads1x2s14_ref_ext = 2, // currently not supported
+	// ads1x2s14_ref_avdd = 4, // currently not supported
 };
 
 enum ads1x2s14_speed : uint8_t {
