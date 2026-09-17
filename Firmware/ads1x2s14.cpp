@@ -202,7 +202,7 @@ bool ads1x2s14_pga_setGain(spi_channel_dev_ctx* dev_ctx, ads1x2s14_gain gain) {
 bool ads1x2s14_mux_select(spi_channel_dev_ctx* dev_ctx, ads1x2s14_mux ainp, ads1x2s14_mux ainn) {
 	// 8.8 MUX_CFG Register (Address = 07h) [Reset = 01h]
 	HAL_StatusTypeDef result;
-	uint8_t data = (ainn | (ainp << 4));
+	uint8_t data = ((ainp << 4) | ainn);
 
 	result = _writeRegister(dev_ctx, MUX_CFG, data);
 	if (result != HAL_OK) return false;

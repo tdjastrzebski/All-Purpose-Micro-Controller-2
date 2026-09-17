@@ -108,8 +108,8 @@ void PostInit(void) {
 	adcReady = ads1x2s14_digital_config(&_adc_spi, ads1x2s14_coding_unipolar, false);
 	adcReady = ads1x2s14_dev_config(&_adc_spi, false, false, ads1x2s14_cnvMode_singleShot, ads1x2s14_speed_512kHz);
 	adcReady = ads1x2s14_cnv_start(&_adc_spi);
-	dwt_delay(10000);
-	uint32_t data;
+	dwt_delay(1000000);
+	uint32_t data = 0;
 	ads1x2s14_status status;
 	adcReady = ads1x2s14_data_read(&_adc_spi, 2, (uint8_t*)&data);
 	adcReady = ads1x2s14_status_read(&_adc_spi, &status);
@@ -149,13 +149,17 @@ static void _rtcAlarmAEventCallback(RTC_HandleTypeDef* hrtc) {
 	time_t dateTime = rtc_GetDateTime();
 	tm* dt = gmtime(&dateTime);
 	lvgl_showTime(dt);
-	ads1x2s14_cnv_start(&_adc_spi);
-	dwt_delay(10000);
-	uint32_t data;
+	static bool flag;
+	uint32_t data = 0;
 	ads1x2s14_status status;
-	ads1x2s14_status_read(&_adc_spi, &status);
-	ads1x2s14_data_read(&_adc_spi, 2, (uint8_t*)&data);
-	my_printf("adc %i\n", data);
+	if (flag) {
+		ads1x2s14_cnv_start(&_adc_spi);
+	} else {
+		ads1x2s14_data_read(&_adc_spi, 2, (uint8_t*)&data);
+		ads1x2s14_status_read(&_adc_spi, &status);
+		my_printf("adc %i, cnt %i\n", data, status.conv_count);
+	}
+	flag = !flag;
 }
 
 static void _encoderTimerCaptureCallback(TIM_HandleTypeDef* htim) {
