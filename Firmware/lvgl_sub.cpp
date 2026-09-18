@@ -8,7 +8,7 @@
 // #include "lvgl/demos/lv_demos.h"
 #include "main.h"
 #include "my_printf.h"
-#include "st7789.h"
+#include "st7789_drv.h"
 #include "terminal_colors.h"
 
 #define LV_BPP sizeof(lv_color_t)  // bytes per LV pixel

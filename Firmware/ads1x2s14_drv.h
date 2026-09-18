@@ -103,9 +103,10 @@ enum ads1x2s14_delay : uint8_t {
 };
 
 enum ads1x2s14_resolution : uint8_t {
+	// note: do not modify values, they are being relied upon
 	ads1x2s14_resolution_unknown = 0,
-	ads1x2s14_resolution_16b = 16,
-	ads1x2s14_resolution_24b = 24,
+	ads1x2s14_resolution_16b = 2,
+	ads1x2s14_resolution_24b = 3,
 };
 
 typedef struct {
@@ -137,8 +138,8 @@ bool ads1x2s14_ref_set(spi_channel_dev_ctx* dev_ctx, ads1x2s14_ref ref);
 bool ads1x2s14_digital_config(spi_channel_dev_ctx* dev_ctx, ads1x2s14_coding coding, bool enableStatusHdr = false, bool enableSpiCrc = false, bool enableRegCrc = false, bool cntRead = false, bool sdoDualMode = false);
 bool ads1x2s14_dataRate_config(spi_channel_dev_ctx* dev_ctx, bool globalChop, ads1x2s14_filter filter = ads1x2s14_filter_16, ads1x2s14_delay delay = ads1x2s14_delay_0);
 bool ads1x2s14_status_read(spi_channel_dev_ctx* dev_ctx, ads1x2s14_status* status);
-void ads1x2s14_status_deserialize(uint16_t data, ads1x2s14_status* status);
-bool ads1x2s14_data_read(spi_channel_dev_ctx* dev_ctx, uint8_t byteCount, uint8_t* data);
+void ads1x2s14_status_decode(uint16_t data, ads1x2s14_status* status);
+bool ads1x2s14_data_read(spi_channel_dev_ctx* dev_ctx, uint32_t* data);
 
 #ifdef __cplusplus
 }

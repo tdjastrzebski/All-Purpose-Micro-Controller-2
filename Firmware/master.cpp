@@ -6,13 +6,13 @@
 
 #include "Sub_RTC.h"
 #include "Timer.h"
-#include "ads1x2s14.h"
+#include "ads1x2s14_drv.h"
 #include "dwt_timer.h"
 #include "lvgl_sub.h"
-#include "m95p32.h"
+#include "m95p32_drv.h"
 #include "my_printf.h"
 #include "spi_drv.h"
-#include "st7789.h"
+#include "st7789_drv.h"
 #include "stm32u5xx_ll_utils.h"
 #include "terminal_colors.h"
 
@@ -111,7 +111,7 @@ void PostInit(void) {
 	dwt_delay(1000000);
 	uint32_t data = 0;
 	ads1x2s14_status status;
-	adcReady = ads1x2s14_data_read(&_adc_spi, 2, (uint8_t*)&data);
+	adcReady = ads1x2s14_data_read(&_adc_spi, &data);
 	adcReady = ads1x2s14_status_read(&_adc_spi, &status);
 
 	lvgl_init();
@@ -155,9 +155,9 @@ static void _rtcAlarmAEventCallback(RTC_HandleTypeDef* hrtc) {
 	if (flag) {
 		ads1x2s14_cnv_start(&_adc_spi);
 	} else {
-		ads1x2s14_data_read(&_adc_spi, 2, (uint8_t*)&data);
+		ads1x2s14_data_read(&_adc_spi, &data);
 		ads1x2s14_status_read(&_adc_spi, &status);
-		float value = (data / 65535.0) * 2.0 * 65.0;
+		float value = (data / 65535.0) * 65.0;
 		my_printf("adc %i, cnt %i, %.2f\n", data, status.conv_count, value);
 	}
 	flag = !flag;

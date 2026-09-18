@@ -2,7 +2,7 @@
  *  Copyright (c) 2026 Tomasz Jastrzębski. All rights reserved.
  *-------------------------------------------------------------------------------------------------*/
 
-#include "ads1x2s14.h"
+#include "ads1x2s14_drv.h"
 
 #include "dwt_timer.h"
 #include "main.h"
@@ -25,6 +25,8 @@
 #define REG_MAP_CRC 0x0f
 
 #define SET_BIT_STATE(value, bit, state) ((value) = ((value) & ~(1u << (bit))) | ((!!(state)) << (bit)))
+
+static ads1x2s14_resolution _resolution = ads1x2s14_resolution_unknown;  // TODO: keep resolution in user device state/info
 
 // https://www.ti.com/lit/ds/symlink/ads112s14.pdf
 // max CLK frequency is 16.67 MHz (see: 5.6 Timing Requirements)
@@ -57,7 +59,7 @@ static HAL_StatusTypeDef _readRegister(spi_channel_dev_ctx* dev_ctx, uint8_t reg
 	_chipSelect(dev_ctx);
 	result = HAL_SPI_TransmitReceive(dev_ctx->channel, (uint8_t*)&txData, (uint8_t*)&rxData, 2, 1000);
 	if (result != HAL_OK) return result;
-	*data = rxData;
+	*data = rxData;  // registry value is in the first received byte (Figure 7-23)
 	return result;
 }
 
@@ -70,7 +72,6 @@ static HAL_StatusTypeDef _writeRegister(spi_channel_dev_ctx* dev_ctx, uint8_t re
 
 	spi_drv_configureSpi(dev_ctx, spi_drv_direction_fullDuplex, spi_drv_mode_1);
 
-	// first write 16 zeros to clear buffer
 	_chipSelect(dev_ctx);
 	result = HAL_SPI_TransmitReceive(dev_ctx->channel, (uint8_t*)&txData, (uint8_t*)&rxData, 2, 1000);
 	_chipDeSelect(dev_ctx);
@@ -87,7 +88,8 @@ static HAL_StatusTypeDef _writeRegister(spi_channel_dev_ctx* dev_ctx, uint8_t re
 ads1x2s14_resolution ads1x2s14_init(spi_channel_dev_ctx* dev_ctx) {
 	HAL_StatusTypeDef result;
 	uint8_t data = 0;
-	ads1x2s14_resolution resolution = ads1x2s14_resolution_unknown;
+
+	_resolution = ads1x2s14_resolution_unknown;
 
 	// 8.5 CONVERSION_CTRL Register (Address = 04h) [Reset = 00h]
 	// reset device
@@ -105,10 +107,10 @@ ads1x2s14_resolution ads1x2s14_init(spi_channel_dev_ctx* dev_ctx) {
 
 	if (data == 0b1010) {
 		// 16 bit device
-		resolution = ads1x2s14_resolution_16b;
+		_resolution = ads1x2s14_resolution_16b;
 	} else if (data == 0b1011) {
 		// 24 bit device
-		resolution = ads1x2s14_resolution_24b;
+		_resolution = ads1x2s14_resolution_24b;
 	} else {
 		return ads1x2s14_resolution_unknown;
 	}
@@ -131,7 +133,7 @@ ads1x2s14_resolution ads1x2s14_init(spi_channel_dev_ctx* dev_ctx) {
 	result = _writeRegister(dev_ctx, STATUS_MSB, 0b11111110);
 	if (result != HAL_OK) return ads1x2s14_resolution_unknown;
 
-	return resolution;
+	return _resolution;
 }
 
 // 8 Registers
@@ -183,7 +185,7 @@ bool ads1x2s14_pga_setGain(spi_channel_dev_ctx* dev_ctx, ads1x2s14_gain gain) {
 	// 8.9 GAIN_CFG Register (Address = 08h) [Reset = 01h]
 	HAL_StatusTypeDef result;
 	uint8_t data = gain;
-	// TODO: allow for SYS_MON setup 
+	// TODO: allow for SYS_MON setup
 	result = _writeRegister(dev_ctx, GAIN_CFG, data);
 	if (result != HAL_OK) return false;
 
@@ -257,7 +259,7 @@ bool ads1x2s14_ref_set(spi_channel_dev_ctx* dev_ctx, ads1x2s14_ref ref) {
 	HAL_StatusTypeDef result;
 	uint8_t data = 0;
 
-	data &= ~0x03; // reset fits 1:0 for internal reference
+	data &= ~0x03;  // reset bits 1:0 for internal reference
 	SET_BIT_STATE(data, 2, ref);
 
 	result = _writeRegister(dev_ctx, REFERENCE_CFG, data);
@@ -301,21 +303,31 @@ bool ads1x2s14_dataRate_config(spi_channel_dev_ctx* dev_ctx, bool globalChop, ad
 	return true;
 }
 
-bool ads1x2s14_data_read(spi_channel_dev_ctx* dev_ctx, uint8_t byteCount, uint8_t* rxData) {
-	// 7.5.5 Continuous-Read Mode
+bool ads1x2s14_data_read(spi_channel_dev_ctx* dev_ctx, uint32_t* rxData) {
+	// 7.5.4.1 No Operation (Read Conversion Data)
 	HAL_StatusTypeDef result;
-	uint8_t txData[byteCount]{0};
+	const uint32_t txData = 0;
 
 	spi_drv_configureSpi(dev_ctx, spi_drv_direction_fullDuplex, spi_drv_mode_1);
 	_chipSelect(dev_ctx);
-	result = HAL_SPI_TransmitReceive(dev_ctx->channel, txData, rxData, byteCount, 1000);
+	result = HAL_SPI_TransmitReceive(dev_ctx->channel, (uint8_t*)&txData, (uint8_t*)rxData, _resolution, 1000);
 	_chipDeSelect(dev_ctx);
 	if (result != HAL_OK) return false;
+
+	*rxData = __REV(*rxData);  // reverse byte order back to little-endian
+
+	if (_resolution == ads1x2s14_resolution_16b) {
+		*rxData >>= 16;
+	} else if (_resolution == ads1x2s14_resolution_24b) {
+		*rxData >>= 8;
+	} else {
+		*rxData = 0;
+	}
 
 	return true;
 }
 
-void ads1x2s14_status_deserialize(uint16_t data, ads1x2s14_status* status) {
+void ads1x2s14_status_decode(uint16_t data, ads1x2s14_status* status) {
 	uint8_t lsb = data;
 	uint8_t msb = data >> 8;
 	status->reset_occured = !(msb & (0b1 << 7));
@@ -346,7 +358,7 @@ bool ads1x2s14_status_read(spi_channel_dev_ctx* dev_ctx, ads1x2s14_status* statu
 	result = _readRegister(dev_ctx, STATUS_MSB, &msb);
 	if (result != HAL_OK) return false;
 
-	ads1x2s14_status_deserialize((msb << 8) | lsb, status);
+	ads1x2s14_status_decode((msb << 8) | lsb, status);
 
 	return true;
 }

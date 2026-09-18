@@ -1,4 +1,4 @@
-#include "st7789.h"
+#include "st7789_drv.h"
 
 #include "main.h"
 #include "spi_drv.h"
